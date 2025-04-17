@@ -1,0 +1,30 @@
+.intro {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  color: #b57edc;
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+}

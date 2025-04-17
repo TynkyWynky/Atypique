@@ -1,0 +1,125 @@
+/* Home Page Specific Styles */
+.hero {
+  background-color: #000000;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #b57edc;
+  margin-bottom: 1.5rem;
+}
+
+.hero .main-logo {
+  width: 200px;
+  height: auto;
+  margin: 2rem 0;
+}
+
+.hero .tagline {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 3rem 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-logo-img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav h3,
+.footer-contact h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-nav a,
+.footer-contact a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+  color: #b57edc;
+  text-shadow: 0 0 5px #b57edc, 0 0 10px #b57edc, 0 0 15px #b57edc;
+}
+
+.footer-contact p {
+  margin: 0.5rem 0;
+}
+
+.socials {
+  margin-top: 1rem;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #b57edc;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+
+/* Responsive Footer for Mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo-img {
+    margin-bottom: 1rem;
+  }
+
+  .footer-nav,
+  .footer-contact {
+    width: 100%;
+  }
+}

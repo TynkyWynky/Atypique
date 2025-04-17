@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atypique</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">  
+  <link rel="icon" type="image/png" href="images/icon.png" />
+</head>
+
+<body class="main-page">
+  <nav class="navbar">
+    <div class="logo">Atypique</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+  <!-- Main Content Section with Logo -->
+  <section class="hero fade-in">
+    <h1>Welcome to Atypique</h1>
+    <!-- Logo inside the main content -->
+    <img src="images/Atypique_logo.png" alt="Atypique Logo" class="main-logo" />
+    <p class="tagline">A unique solution for every unique business.</p>
+  </section>
+
+  <section class="intro fade-in delay-1">
+    <p>We build tailored digital tools for entrepreneurs, artists, creators, and local businesses.</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
+      </div>
+  
+      <!-- Navigation Section -->
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products App</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Section -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
+        <div class="socials">
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Atypique | All Rights Reserved</p>
+    </div>
+  </footer>
+  
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', function() {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScroll > lastScrollTop) {
+        // Scroll naar beneden
+        navbar.classList.add('hidden');
+      } else {
+        // Scroll naar boven
+        navbar.classList.remove('hidden');
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Zorg ervoor dat het niet negatief wordt
+    });
+  </script>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>

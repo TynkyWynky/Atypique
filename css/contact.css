@@ -1,0 +1,114 @@
+/* Contact Page Specific Styles */
+main.intro {
+  background-color: #000; /* Black background for the contact section */
+  color: #fff;
+  padding: 4rem 2rem; /* Increased padding for better spacing */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centering content horizontally */
+  justify-content: center; /* Centering content vertically */
+  height: auto; /* Allow the height to adjust based on content */
+  min-height: 70vh; /* Ensures the section takes at least 70% of the viewport height */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+main.intro h1 {
+  font-size: 3rem; /* Larger heading for better impact */
+  color: #b57edc; /* Purple for the main heading */
+  margin-bottom: 1rem; /* Slightly increased margin for spacing */
+  font-weight: bold; /* Making the heading bold */
+}
+
+main.intro p {
+  font-size: 1.2rem; /* Slightly larger text for readability */
+  color: #ffffff; /* Light text for the paragraph */
+  margin-bottom: 2rem; /* Spacing between text and list */
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+  max-width: 600px; /* Limiting the width for better readability */
+  margin: 0 auto; /* Centering the contact list */
+}
+
+.contact-list li {
+  margin: 1rem 0; /* Increased space between list items */
+  padding-left: 1.5rem; /* Adjusted padding for better spacing */
+  position: relative;
+}
+
+.contact-list li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: #b57edc; /* Purple checkmark */
+  font-size: 1.2rem; /* Slightly larger checkmark for emphasis */
+}
+
+.instructions {
+  margin-top: 3rem;
+  text-align: left;
+  max-width: 700px; /* Max width for better content alignment */
+  margin: 0 auto; /* Centering the instructions */
+}
+
+.instructions h2 {
+  font-size: 2rem; /* Increased size for subheading */
+  color: #b57edc;
+  margin-bottom: 1rem;
+  font-weight: bold; /* Bold subheading */
+}
+
+.instructions p, .contact-list {
+  font-size: 1.1rem; /* Slightly larger text for readability */
+  color: #ffffff;
+}
+
+/* Footer Section */
+.footer {
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #111; /* Dark background for footer */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-logo-img {
+  width: 120px; /* Increased logo size for better visibility */
+  height: auto;
+  margin-bottom: 1rem; /* Spacing between logo and footer content */
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 2rem; /* Larger social icon size */
+  margin: 0 1rem; /* Spacing between social icons */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #b57edc; /* Purple hover effect */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .instructions {
+    text-align: center;
+  }
+  
+  .contact-list {
+    font-size: 1.2rem; /* Larger text on mobile for readability */
+  }
+  
+  main.intro {
+    padding: 3rem 1.5rem; /* Adjust padding on smaller screens */
+    min-height: 60vh; /* Ensures it's still comfortable to read on small screens */
+  }
+}
