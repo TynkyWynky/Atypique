@@ -1,22 +1,92 @@
-/* facturation.css (of products.css als je die naam behoudt) */
+/* facturation.css */
 
-.intro {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #ffffff;
-    text-align: center;
+.intro, .product-section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.product-card {
+  background-color: #1c1c1e;
+  border: 1px solid #2a2a2d;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 0 20px rgba(181, 126, 220, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card h2 {
+  color: #b57edc;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+}
+
+.product-features {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.product-features li {
+  margin: 1rem 0;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  color: #eee;
+}
+
+.product-features li i {
+  color: #b57edc;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.coming-soon {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #ccc;
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    padding: 1.5rem;
   }
-  
-  .intro h1 {
-    font-size: 2.5rem;
-    color: #b57edc;
-    margin-bottom: 1.5rem;
+
+  .product-card h2 {
+    font-size: 1.8rem;
   }
-  
-  .intro p {
-    margin-bottom: 1.2rem;
+
+  .product-subtitle {
+    font-size: 1rem;
   }
-  
+
+  .product-features li {
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+  }
+
+  .product-features li i {
+    margin-bottom: 5px;
+  }
+
+  .coming-soon {
+    font-size: 0.9rem;
+  }
+
+  .intro, .product-section {
+    padding: 0 1rem;
+  }
+}
