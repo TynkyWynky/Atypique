@@ -1,15 +1,24 @@
 /* Home Page Specific Styles */
 .hero {
-  background-color: #000000;
+  background:
+    linear-gradient(#b57edc, rgba(0, 0, 0, 0.6)),
+    url('../images/background_dark.jpg') no-repeat center center/cover;
   text-align: center;
   padding: 5rem 2rem;
+  min-height: 100vh;
 }
 
+
 .hero h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   color: #b57edc;
   margin-bottom: 1.5rem;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.7), 
+    0 0 15px rgba(181, 126, 220, 0.8),  
+    0 0 25px rgba(181, 126, 220, 0.6); 
 }
+
 
 
 .hero .main-logo {
@@ -159,10 +168,13 @@
 
 .product-cards {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: center;   /* Center items horizontally */
+  align-items: center;       /* Center items vertically */
+  flex-wrap: wrap;            /* Allow wrapping */
   gap: 2rem;
+  margin-top: 2rem;           /* Adjust this margin if needed */
 }
+
 
 .product-card-link {
   text-decoration: none;
@@ -173,10 +185,11 @@
   border: 1px solid #2a2a2d;
   border-radius: 15px;
   padding: 2rem;
-  width: 250px;
+  width: 250px;              /* You can adjust the width as needed */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   color: #fff;
+  margin: 0 auto;             /* Ensure cards are centered in flexbox */
 }
 
 .product-card-preview:hover {
@@ -204,13 +217,73 @@
 
 /* Responsive Products Section */
 @media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo-img {
+    margin-bottom: 1rem;
+  }
+
+  .footer-nav,
+  .footer-contact {
+    width: 100%;
+  }
+
+  /* Responsive Hero Section */
+  .hero {
+    padding: 3rem 2rem; /* Less padding for smaller screens */
+    min-height: 60vh;   /* Shorten the height for mobile */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Smaller font for mobile */
+    margin-bottom: 1rem;
+  }
+
+  .hero .main-logo {
+    width: 150px; /* Smaller logo */
+  }
+
+  .hero .tagline {
+    font-size: 1.2rem; /* Smaller tagline */
+  }
+
+  .intro {
+    padding: 1.5rem 0;
+    font-size: 1.1rem; /* Smaller font size */
+  }
+
+  /* Responsive Products Section */
+  .products-preview {
+    padding: 3rem 1rem;
+  }
+
+  .products-preview h2 {
+    font-size: 2rem;
+  }
+
   .product-cards {
     flex-direction: column;
     align-items: center;
   }
 
   .product-card-preview {
-    width: 80%;
+    width: 80%; /* Smaller card width for mobile */
+  }
+
+  .product-card-preview h3 {
+    font-size: 1.3rem;
+  }
+
+  .product-card-preview p {
+    font-size: 0.9rem;
   }
 }
-
