@@ -11,6 +11,7 @@
   margin-bottom: 1.5rem;
 }
 
+
 .hero .main-logo {
   width: 200px;
   height: auto;
@@ -187,6 +188,7 @@
   width: 100px;
   height: auto;
   margin-bottom: 1.5rem;
+  border-radius: 10%;
 }
 
 .product-card-preview h3 {
