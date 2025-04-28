@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atypique</title>
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/home.css">  
+  <link rel="stylesheet" href="css/home.css">
   <link rel="icon" type="image/png" href="images/icon.png" />
 </head>
 
@@ -38,6 +38,34 @@
   <section class="intro fade-in delay-1">
     <p>We build tailored digital tools for entrepreneurs, artists, creators, and local businesses.</p>
   </section>
+  <div class="flowy-divider">
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path d="M0,50 Q300,0 600,50 T1200,50" fill="transparent" stroke="#b57edc" stroke-width="2.5" />
+    </svg>
+  </div>
+  <section class="products-preview fade-in delay-2">
+    <h2>Our Products</h2>
+    <div class="product-cards">
+      <a href="products.html#facturamate" class="product-card-link">
+        <div class="product-card-preview">
+          <img src="images/FMLogo.png" alt="FacturaMate Logo" class="product-preview-logo">
+          <h3>FacturaMate</h3>
+          <p>Intuitive invoicing assistant built for entrepreneurs and small businesses.</p>
+        </div>
+      </a>
+
+      <!-- Later you can add more products here like below:
+    <a href="products.html#yourNextProduct" class="product-card-link">
+      <div class="product-card-preview">
+        <img src="images/your_product_logo.png" alt="Your Product Logo" class="product-preview-logo">
+        <h3>Your Next Product</h3>
+        <p>Short description of your new awesome tool.</p>
+      </div>
+    </a>
+    -->
+    </div>
+  </section>
+
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -46,7 +74,7 @@
       <div class="footer-logo">
         <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
       </div>
-  
+
       <!-- Navigation Section -->
       <div class="footer-nav">
         <h3>Quick Links</h3>
@@ -58,31 +86,33 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-  
+
       <!-- Contact Section -->
       <div class="footer-contact">
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i
+              class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
-  
+
     <!-- Bottom Footer -->
     <div class="footer-bottom">
       <p>&copy; 2025 Atypique | All Rights Reserved</p>
     </div>
   </footer>
-  
+
   <script>
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
+
+    window.addEventListener('scroll', function () {
       let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      
+
       if (currentScroll > lastScrollTop) {
         // Scroll naar beneden
         navbar.classList.add('hidden');
@@ -93,7 +123,7 @@
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Zorg ervoor dat het niet negatief wordt
     });
   </script>
-  
+
   <script>
     function toggleMenu() {
       document.getElementById('navLinks').classList.toggle('active');
