@@ -94,7 +94,14 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
+      const navLinks = document.getElementById('navLinks');
+      const hamburger = document.querySelector('.hamburger');
+
+      // Toggle the active class to show or hide the menu
+      navLinks.classList.toggle('active');
+
+      // Add an animation effect to the hamburger
+      hamburger.classList.toggle('open');
     }
   </script>
 </body>

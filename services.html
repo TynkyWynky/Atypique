@@ -64,8 +64,10 @@
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i
+              class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
@@ -90,9 +92,17 @@
       }
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
-
+  </script>
+  <script>
     function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
+      const navLinks = document.getElementById('navLinks');
+      const hamburger = document.querySelector('.hamburger');
+
+      // Toggle the active class to show or hide the menu
+      navLinks.classList.toggle('active');
+
+      // Add an animation effect to the hamburger
+      hamburger.classList.toggle('open');
     }
   </script>
 </body>

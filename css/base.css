@@ -76,6 +76,7 @@ a:hover {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .hamburger .bar {
@@ -83,6 +84,7 @@ a:hover {
   width: 25px;
   background-color: #fff;
   margin: 3px 0;
+  transition: all 0.3s ease; /* Add transition to all properties for smooth animation */
 }
 
 /* Hamburger Animation */
