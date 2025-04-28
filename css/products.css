@@ -21,10 +21,35 @@
   transform: translateY(-5px);
 }
 
+/* NEW FLEX LAYOUT FOR LOGO + INFO */
+.product-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* mobile responsive */
+}
+
+.product-image {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.facturamate-logo {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+}
+
+.product-info {
+  flex: 2 1 400px;
+  text-align: left;
+}
+
 .product-card h2 {
   color: #b57edc;
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
+  margin-top: 0; /* remove extra margin when next to logo */
 }
 
 .product-subtitle {
@@ -58,6 +83,19 @@
   margin-top: 2rem;
   font-style: italic;
   color: #ccc;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .product-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-info {
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
