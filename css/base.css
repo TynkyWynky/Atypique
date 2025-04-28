@@ -48,9 +48,22 @@ a:hover {
 }
 
 .nav-links {
-  display: flex;
+  display: none; /* Initially hide the menu */
   gap: 1.5rem;
   list-style: none;
+  transition: transform 0.3s ease;
+  transform: translateX(100%); /* Initially hide off-screen */
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.nav-links.active {
+  display: flex; /* Show the menu when active */
+  transform: translateX(0); /* Slide in when active */
 }
 
 .nav-links li a {
@@ -58,6 +71,7 @@ a:hover {
   font-weight: 500;
 }
 
+/* Hamburger Icon */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -71,20 +85,29 @@ a:hover {
   margin: 3px 0;
 }
 
+/* Hamburger Animation */
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg); /* Rotate the first bar */
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0; /* Hide the second bar */
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg); /* Rotate the third bar */
+}
+
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none; /* Ensure it's hidden initially on mobile */
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: #111;
-    padding: 1rem;
-    border-radius: 10px;
+    transform: translateX(100%); /* Initially off-screen */
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex; /* Show when active */
+    transform: translateX(0); /* Slide into view */
   }
 
   .hamburger {
