@@ -48,18 +48,12 @@ a:hover {
 }
 
 .nav-links {
-  display: none; /* Initially hide the menu */
+  display: flex; /* Show by default (desktop) */
   gap: 1.5rem;
   list-style: none;
-  transition: transform 0.3s ease;
-  transform: translateX(100%); /* Initially hide off-screen */
-  position: absolute;
-  top: 70px;
-  right: 20px;
-  background-color: #111;
-  padding: 1rem;
-  border-radius: 10px;
 }
+
+
 
 .nav-links.active {
   display: flex; /* Show the menu when active */
@@ -102,20 +96,28 @@ a:hover {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Ensure it's hidden initially on mobile */
+    display: none; /* Hide by default on mobile */
     flex-direction: column;
-    transform: translateX(100%); /* Initially off-screen */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #111;
+    padding: 1rem;
+    border-radius: 10px;
   }
 
   .nav-links.active {
-    display: flex; /* Show when active */
-    transform: translateX(0); /* Slide into view */
+    display: flex;
+    transform: translateX(0);
   }
 
   .hamburger {
     display: flex;
   }
 }
+
 
 /* Footer */
 .footer {
