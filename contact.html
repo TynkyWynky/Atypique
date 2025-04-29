@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/contact.css" />
   <link rel="icon" type="image/png" href="images/icon.png" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,42 +27,44 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="intro fade-in">
-    <h1>Contact</h1>
-    <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/atypique.enterprise/" target="_blank"
-        rel="noopener noreferrer">Atypique</a></p>
-    <br>
-    <hr>
-    <br>
+    <div class="contact-container">
+      <h1 class="animate-up">Let’s Connect</h1>
+      <p class="animate-up delay-1">
+        <i class="fas fa-envelope"></i> 
+        <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a>
+      </p>
+      <p class="animate-up delay-2">
+        <i class="fab fa-instagram"></i> 
+        <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer">Atypique</a>
+      </p>
+    </div>
 
-    <section class="instructions">
+    <section class="instructions animate-fade-in">
       <h2>How to Work With Us</h2>
-      <p>To help us deliver the best service possible, please include the following when you contact us:</p>
+      <p>To help us deliver the best service possible, please include the following:</p>
       <ul class="contact-list">
-        <li>📝 A short description of your project or problem</li>
-        <li>📂 Any relevant files (screenshots, documents, or examples)</li>
-        <li>🎯 Your goal or what you expect the app/service to do</li>
-        <li>🎨 Optional: Design inspiration or color preferences</li>
-        <li>📅 Preferred deadline (if any)</li>
+        <li><span>📝</span> A short description of your project</li>
+        <li><span>📂</span> Relevant files (screenshots or docs)</li>
+        <li><span>🎯</span> Your goals or expected outcomes</li>
+        <li><span>🎨</span> Design inspiration or color wishes</li>
+        <li><span>📅</span> Preferred timeline or deadline</li>
       </ul>
-      <p>You can send this information via email or Instagram DM. We’ll get back to you as soon as possible!</p>
+      <p>Send it via <strong>email</strong> or <strong>Instagram DM</strong>. We’ll respond fast & friendly ✨</p>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
-      <!-- Logo Section -->
       <div class="footer-logo">
         <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
       </div>
 
-      <!-- Navigation Section -->
       <div class="footer-nav">
         <h3>Quick Links</h3>
         <ul>
@@ -73,20 +76,15 @@
         </ul>
       </div>
 
-      <!-- Contact Section -->
       <div class="footer-contact">
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i
-              class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i
-              class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
-
-    <!-- Bottom Footer -->
     <div class="footer-bottom">
       <p>&copy; 2025 Atypique | All Rights Reserved</p>
     </div>
@@ -98,30 +96,30 @@
 
     window.addEventListener('scroll', function () {
       let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
       if (currentScroll > lastScrollTop) {
-        // Scroll naar beneden
         navbar.classList.add('hidden');
       } else {
-        // Scroll naar boven
         navbar.classList.remove('hidden');
       }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Zorg ervoor dat het niet negatief wordt
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
-  </script>
 
-  <script>
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
       const hamburger = document.querySelector('.hamburger');
-
-      // Toggle the active class to show or hide the menu
       navLinks.classList.toggle('active');
-
-      // Add an animation effect to the hamburger
       hamburger.classList.toggle('open');
     }
+
+    // Intersection animations
+    const animatedEls = document.querySelectorAll('.animate-up, .animate-fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    animatedEls.forEach(el => observer.observe(el));
   </script>
 </body>
-
 </html>
