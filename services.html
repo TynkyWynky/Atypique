@@ -33,21 +33,41 @@
   </header>
 
   <main class="intro fade-in">
-    <h1>Our Services</h1>
-    <p>
-      At Atypique, we focus on creating unique digital tools tailored to your needs. We offer personalized web and
-      mobile applications, consulting, and more.
-    </p>
+    <section class="services-hero">
+      <h1>Our Services</h1>
+      <p>Custom-built solutions to empower your business and bring your ideas to life.</p>
+    </section>
+
+    <section class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-laptop-code service-icon"></i>
+        <h2>Web Development</h2>
+        <p>Beautiful, responsive websites and custom platforms that connect you to your audience.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-mobile-alt service-icon"></i>
+        <h2>Mobile Apps</h2>
+        <p>Intuitive mobile applications tailored to your needs, whether Android, iOS, or both.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-cogs service-icon"></i>
+        <h2>Automation Solutions</h2>
+        <p>Save time and boost productivity by automating your daily tasks and workflows.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-lightbulb service-icon"></i>
+        <h2>Consulting</h2>
+        <p>From brainstorming to launching — expert advice to turn your vision into reality.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
-      <!-- Logo Section -->
       <div class="footer-logo">
         <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
       </div>
 
-      <!-- Navigation Section -->
       <div class="footer-nav">
         <h3>Quick Links</h3>
         <ul>
@@ -59,20 +79,16 @@
         </ul>
       </div>
 
-      <!-- Contact Section -->
       <div class="footer-contact">
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i
-              class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i
-              class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
 
-    <!-- Bottom Footer -->
     <div class="footer-bottom">
       <p>&copy; 2025 Atypique | All Rights Reserved</p>
     </div>
@@ -84,7 +100,6 @@
 
     window.addEventListener('scroll', function () {
       let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
       if (currentScroll > lastScrollTop) {
         navbar.classList.add('hidden');
       } else {
@@ -92,16 +107,11 @@
       }
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
-  </script>
-  <script>
+
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
       const hamburger = document.querySelector('.hamburger');
-
-      // Toggle the active class to show or hide the menu
       navLinks.classList.toggle('active');
-
-      // Add an animation effect to the hamburger
       hamburger.classList.toggle('open');
     }
   </script>

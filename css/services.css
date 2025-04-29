@@ -1,22 +1,72 @@
 /* services.css */
-
 .intro {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #ffffff;
-    text-align: center;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  color: #ffffff;
+}
+
+.services-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services-hero h1 {
+  font-size: 3rem;
+  color: #b57edc;
+  margin-bottom: 1rem;
+}
+
+.services-hero p {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+.service-card {
+  background: #2c2c3e;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: #3a3a50;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #b57edc;
+  margin-bottom: 1rem;
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #dcdcdc;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .services-hero h1 {
+    font-size: 2.2rem;
   }
-  
-  .intro h1 {
-    font-size: 2.5rem;
-    color: #b57edc;
-    margin-bottom: 1.5rem;
+  .services-hero p {
+    font-size: 1rem;
   }
-  
-  .intro p {
-    margin-bottom: 1.2rem;
+  .service-card h2 {
+    font-size: 1.3rem;
   }
-  
+}
