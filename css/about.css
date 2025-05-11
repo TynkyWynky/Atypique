@@ -1,13 +1,13 @@
-.intro {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 2rem;
+.about-page {
+  background-color: #121212;
   color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .about-hero {
   text-align: center;
-  margin-bottom: 4rem;
+  padding: 5rem 2rem 2rem;
+  background-color: #1a1a2e;
 }
 
 .about-hero h1 {
@@ -19,62 +19,54 @@
 .about-hero p {
   font-size: 1.2rem;
   color: #dcdcdc;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.about-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 4rem;
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
 }
 
-.card {
-  background: #2c2c3e;
-  padding: 2rem;
+.about-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
   border-radius: 20px;
-  text-align: center;
-  transition: transform 0.4s ease, background 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  background: #3a3a50;
+.about-text {
+  flex: 1 1 400px;
 }
 
-.card-icon {
-  font-size: 3rem;
+.about-text h2 {
   color: #b57edc;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.card h2 {
-  font-size: 1.5rem;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-
-.card p {
-  font-size: 1rem;
+.about-text p {
   color: #dcdcdc;
-  line-height: 1.6;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
 }
 
-.about-quote {
-  text-align: center;
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #b57edc;
-  margin-top: 3rem;
-}
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
 
-@media (max-width: 600px) {
-  .about-hero h1 {
-    font-size: 2.2rem;
-  }
-  .about-hero p {
-    font-size: 1rem;
-  }
-  .card h2 {
-    font-size: 1.3rem;
+  .about-text {
+    padding-top: 1rem;
   }
 }

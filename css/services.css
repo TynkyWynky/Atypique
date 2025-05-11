@@ -1,14 +1,21 @@
-/* services.css */
-.intro {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-  color: #ffffff;
+.services-page {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .services-hero {
+  background: linear-gradient(to bottom right, #1a1a2e, #121212), url('../images/bg-tech.jpg') no-repeat center center/cover;
   text-align: center;
-  margin-bottom: 4rem;
+  padding: 8rem 2rem 5rem;
+  position: relative;
+}
+
+.services-hero .overlay {
+  background-color: rgba(18, 18, 18, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  display: inline-block;
 }
 
 .services-hero h1 {
@@ -24,49 +31,81 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 2.5rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card {
-  background: #2c2c3e;
   padding: 2rem;
   border-radius: 20px;
   text-align: center;
-  transition: transform 0.4s ease, background 0.4s ease;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
-  background: #3a3a50;
+  transform: translateY(-8px);
 }
 
 .service-icon {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: #b57edc;
   margin-bottom: 1rem;
 }
 
 .service-card h2 {
-  font-size: 1.5rem;
-  color: #ffffff;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
 
 .service-card p {
-  font-size: 1rem;
   color: #dcdcdc;
+  font-size: 1rem;
   line-height: 1.6;
+}
+
+.glass {
+  background: rgba(44, 44, 62, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+}
+
+.call-to-action {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: #1a1a2e;
+}
+
+.call-to-action h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #b57edc;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #a26bd1;
 }
 
 @media (max-width: 600px) {
   .services-hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
   .services-hero p {
     font-size: 1rem;
-  }
-  .service-card h2 {
-    font-size: 1.3rem;
   }
 }

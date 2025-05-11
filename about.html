@@ -1,65 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atypique - About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Atypique</title>
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/about.css" />
   <link rel="icon" type="image/png" href="images/icon.png" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+<body class="about-page">
 
-<body>
-  <header class="navbar">
-    <a href="index.html">
-      <div class="logo">Atypique</div>
-    </a>
-    <nav>
-      <div class="hamburger" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navbar">
+    <div class="logo">Atypique</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
 
-  <main class="intro fade-in">
-    <section class="about-hero">
-      <h1>About Atypique</h1>
-      <p>Crafting solutions with creativity, heart, and a passion for simplicity.</p>
-    </section>
+  <section class="about-hero fade-in">
+    <h1>About Us</h1>
+    <p>We build unique digital tools that empower entrepreneurs, creators and small businesses to succeed.</p>
+  </section>
 
-    <section class="about-cards">
-      <div class="card">
-        <i class="fas fa-lightbulb card-icon"></i>
-        <h2>Vision</h2>
-        <p>Technology should simplify, not complicate. At Atypique, we believe innovation must be human-centered and empowering.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-rocket card-icon"></i>
-        <h2>Mission</h2>
-        <p>Transforming ideas into powerful tools. From concept to creation, we build with passion, precision, and purpose.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-heart card-icon"></i>
-        <h2>Values</h2>
-        <p>Authenticity, creativity, and care. Every project is a promise to deliver something meaningful, something different.</p>
-      </div>
-    </section>
+  <section class="about-content fade-in delay-1">
+    <div class="about-image">
+      <img src="images/aboutPic.png" alt="Our Team" />
+    </div>
+    <div class="about-text">
+      <h2>Our Mission</h2>
+      <p>
+        At Atypique, we believe in tailored innovation. Our mission is to bridge creativity and functionality
+        through intuitive digital tools that reflect your brand's essence. Whether you’re a startup or an artist,
+        we provide you with the tools to thrive in the digital age.
+      </p>
 
-    <section class="about-quote">
-      <p>"Atypique isn't just a name — it's a mindset: challenge the norms, inspire change, and create with soul."</p>
-    </section>
-  </main>
+      <h2>Our Story</h2>
+      <p>
+        What started as a passion for solving problems quickly grew into a team of visionaries and builders.
+        Atypique is a collective of developers, designers, and strategists who believe technology should be
+        personal, beautiful, and effective.
+      </p>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="footer-content">
@@ -87,26 +78,12 @@
         </div>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>&copy; 2025 Atypique | All Rights Reserved</p>
     </div>
   </footer>
 
   <script>
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
-
-    window.addEventListener('scroll', function () {
-      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll > lastScrollTop) {
-        navbar.classList.add('hidden');
-      } else {
-        navbar.classList.remove('hidden');
-      }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    });
-
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
       const hamburger = document.querySelector('.hamburger');
@@ -114,6 +91,6 @@
       hamburger.classList.toggle('open');
     }
   </script>
-</body>
 
+</body>
 </html>

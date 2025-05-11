@@ -6,7 +6,6 @@ main.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -43,7 +42,7 @@ a:hover {
   padding: 2.5rem;
   border-radius: 20px;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
   box-shadow: 0 0 20px rgba(181, 126, 220, 0.15);
   transition: transform 0.4s ease;
 }
@@ -85,7 +84,60 @@ a:hover {
   color: #b57edc;
 }
 
-/* Scroll animation classes */
+.contact-form-section {
+  background-color: #1a1a2e;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form-section h2 {
+  font-size: 2rem;
+  color: #b57edc;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  background-color: #2c2c3e;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  resize: vertical;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form button {
+  background-color: #b57edc;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #a26bd1;
+}
+
+/* Animaties */
 .animate-up {
   transform: translateY(30px);
   opacity: 0;
@@ -107,7 +159,7 @@ a:hover {
 .delay-1 { transition-delay: 0.2s; }
 .delay-2 { transition-delay: 0.4s; }
 
-/* Footer remains the same */
+/* Footer */
 .footer {
   color: #fff;
   padding: 3rem 2rem;
@@ -136,11 +188,12 @@ a:hover {
     font-size: 2.2rem;
   }
 
-  .instructions {
-    padding: 2rem 1.2rem;
+  .instructions,
+  .contact-form-section {
+    padding: 2rem 1rem;
   }
 
   .contact-list {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
