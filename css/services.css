@@ -1,111 +1,182 @@
+/* services.css */
 .services-page {
   background-color: #121212;
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.services-hero {
-  background: linear-gradient(to bottom right, #1a1a2e, #121212), url('../images/bg-tech.jpg') no-repeat center center/cover;
-  text-align: center;
-  padding: 8rem 2rem 5rem;
-  position: relative;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
-.services-hero .overlay {
-  background-color: rgba(18, 18, 18, 0.8);
-  padding: 2rem;
-  border-radius: 12px;
-  display: inline-block;
+.navbar .logo img {
+  height: 40px;
 }
 
-.services-hero h1 {
-  font-size: 3rem;
+.navbar .menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar .menu li {
+  margin-left: 2rem;
+}
+
+.navbar .menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover,
+.navbar .menu .active {
   color: #b57edc;
-  margin-bottom: 1rem;
 }
 
-.services-hero p {
-  font-size: 1.2rem;
-  color: #dcdcdc;
+.page-header {
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  background: linear-gradient(to bottom right, #1a1a2e, #121212),
+              url('../images/header-bg.jpg') center/cover no-repeat;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1.25rem;
+  opacity: 0.8;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .service-card {
+  background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
-  border-radius: 20px;
+  border-radius: 12px;
   text-align: center;
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 
-.service-icon {
-  font-size: 2.8rem;
-  color: #b57edc;
+.service-card i {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #b57edc;
 }
 
-.service-card h2 {
-  font-size: 1.4rem;
-  color: #fff;
+.service-card h3 {
   margin-bottom: 0.5rem;
 }
 
 .service-card p {
-  color: #dcdcdc;
-  font-size: 1rem;
-  line-height: 1.6;
+  opacity: 0.8;
 }
 
-.glass {
-  background: rgba(44, 44, 62, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+/* Slider styles */
+.site-slider {
+  max-width: 1000px;
+  margin: 4rem auto;
+  text-align: center;
 }
 
+.site-slider h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #b57edc;
+}
+
+.swiper-container {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #b57edc;
+}
+
+.swiper-pagination-bullet {
+  background: #b57edc;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+/* Call to action button */
 .call-to-action {
   text-align: center;
   padding: 5rem 2rem;
   background-color: #1a1a2e;
 }
-
 .call-to-action h2 {
   color: #fff;
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
-
 .cta-button {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #b57edc, #8f3fbf);
   padding: 0.8rem 2rem;
   font-size: 1.1rem;
+  font-weight: 600;
   color: #fff;
-  background-color: #b57edc;
   border: none;
-  border-radius: 30px;
+  border-radius: 50px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  box-shadow: 0 4px 15px rgba(181,126,220,0.5);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
-
+.cta-button span {
+  margin-right: 0.5rem;
+}
+.cta-button i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
 .cta-button:hover {
-  background-color: #a26bd1;
+  background: linear-gradient(135deg, #a26bd1, #7a2d9d);
+  transform: translateY(-3px);
+}
+.cta-button:hover i {
+  transform: translateX(5px);
 }
 
-@media (max-width: 600px) {
-  .services-hero h1 {
-    font-size: 2.3rem;
-  }
-  .services-hero p {
-    font-size: 1rem;
+@media (max-width: 768px) {
+  .site-slider h2 {
+    font-size: 1.6rem;
   }
 }

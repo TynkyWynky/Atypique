@@ -1,105 +1,104 @@
+<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atypique - Services</title>
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="icon" type="image/png" href="images/icon.png" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body class="services-page">
 
   <header class="navbar">
-    <a href="index.html"><div class="logo">Atypique</div></a>
-    <nav>
-      <div class="hamburger" onclick="toggleMenu()">
-        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-      </div>
-      <ul class="nav-links" id="navLinks">
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Atypique Logo"></a>
+    </div>
+    <nav class="menu">
+      <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
         <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="services-hero fade-in">
-    <div class="overlay">
-      <h1>Our Services</h1>
-      <p>Tech-forward solutions built to scale with your vision.</p>
-    </div>
+  <section class="page-header">
+    <h1>Our Services</h1>
+    <p>Innovative digital solutions to elevate your brand.</p>
   </section>
 
   <section class="services-grid fade-in delay-1">
-    <div class="service-card glass">
-      <i class="fas fa-laptop-code service-icon"></i>
-      <h2>Web Development</h2>
-      <p>Next-gen websites & platforms tailored for performance, accessibility and style.</p>
+    <div class="service-card">
+      <i class="fas fa-code"></i>
+      <h3>Web Development</h3>
+      <p>Responsive, performant, and secure websites built to scale.</p>
     </div>
-    <div class="service-card glass">
-      <i class="fas fa-mobile-alt service-icon"></i>
-      <h2>Mobile Apps</h2>
-      <p>Beautiful native & cross-platform apps that feel intuitive and responsive.</p>
+    <div class="service-card">
+      <i class="fas fa-paint-brush"></i>
+      <h3>UI/UX Design</h3>
+      <p>Intuitive interfaces and engaging experiences for all users.</p>
     </div>
-    <div class="service-card glass">
-      <i class="fas fa-robot service-icon"></i>
-      <h2>Automation</h2>
-      <p>Automate, integrate and accelerate with smart systems built just for you.</p>
+    <div class="service-card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Mobile Apps</h3>
+      <p>Cross-platform mobile applications with sleek design.</p>
     </div>
-    <div class="service-card glass">
-      <i class="fas fa-lightbulb service-icon"></i>
-      <h2>Consulting</h2>
-      <p>Strategy, UX, architecture — we help you build tech that actually works.</p>
+    <div class="service-card">
+      <i class="fas fa-search"></i>
+      <h3>SEO &amp; Marketing</h3>
+      <p>Grow your audience with data-driven marketing strategies.</p>
+    </div>
+  </section>
+
+  <!-- Slider: enkel één afbeelding zichtbaar, pijltjes om te navigeren -->
+  <section class="site-slider fade-in delay-2">
+    <h2>Featured Project: Interactive Demo</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/FMC/homeFMC.png" alt="Home"></div>
+        <div class="swiper-slide"><img src="images/FMC/midFMC.png" alt="Mid Section"></div>
+        <div class="swiper-slide"><img src="images/FMC/downmidFMC.png" alt="Lower Mid"></div>
+        <div class="swiper-slide"><img src="images/FMC/downFMC.png" alt="Footer"></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </section>
 
   <section class="call-to-action fade-in delay-2">
-    <h2>Ready to build something unique?</h2>
-    <a href="contact.html" class="cta-button">Let’s Talk</a>
+    <h2>Ready to start your project?</h2>
+    <a href="contact.html" class="cta-button">Get in Touch</a>
   </section>
 
   <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
-      </div>
-      <div class="footer-nav">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
-        <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Atypique | All Rights Reserved</p>
+    <p>&copy; 2025 Atypique. All rights reserved.</p>
+    <div class="social">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      const hamburger = document.querySelector('.hamburger');
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('open');
-    }
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      speed: 600,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      },
+      keyboard: { enabled: true },
+    });
   </script>
 </body>
 </html>
