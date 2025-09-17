@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="css/contact.css" />
   <link rel="icon" type="image/png" href="images/icon.png" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Optional small styles for status states */
+    .form-status { opacity:.9 }
+    .form-status.success { color: #45e6a3 }
+    .form-status.error { color: #ff8686 }
+    .is-loading { opacity:.7; pointer-events:none }
+  </style>
 </head>
 
 <body>
@@ -36,11 +43,11 @@
     <div class="contact-container">
       <h1 class="animate-up">Let’s Connect</h1>
       <p class="animate-up delay-1">
-        <i class="fas fa-envelope"></i> 
+        <i class="fas fa-envelope"></i>
         <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a>
       </p>
       <p class="animate-up delay-2">
-        <i class="fab fa-instagram"></i> 
+        <i class="fab fa-instagram"></i>
         <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer">Atypique</a>
       </p>
     </div>
@@ -60,11 +67,33 @@
 
     <section class="contact-form-section animate-fade-in">
       <h2>Or Send Us a Message</h2>
-      <form class="contact-form" action="mailto:atypique.professional@gmail.com" method="post" enctype="text/plain">
+
+      <!-- NETLIFY FORMS (AJAX, no redirect) -->
+      <form id="contactForm"
+            class="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            autocomplete="on"
+            novalidate>
+        <!-- Netlify requires this hidden input with the form name -->
+        <input type="hidden" name="form-name" value="contact" />
+        <!-- (Optional) Subject you'll see in notifications -->
+        <input type="hidden" name="_subject" value="New message from Atypique site" />
+        <!-- Honeypot field (hidden to humans) -->
+        <input type="text" name="bot-field" tabindex="-1" autocomplete="off"
+               style="position:absolute; left:-9999px" aria-hidden="true" />
+
         <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="email" placeholder="Your email" required />
         <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
-        <button type="submit">Send Message</button>
+
+        <!-- If you enable reCAPTCHA in Netlify, uncomment the next line -->
+        <!-- <div data-netlify-recaptcha="true"></div> -->
+
+        <button type="submit" id="submitBtn">Send Message</button>
+        <p id="formStatus" class="form-status" aria-live="polite" style="margin-top:0.75rem;"></p>
       </form>
     </section>
   </main>
@@ -101,19 +130,17 @@
   </footer>
 
   <script>
+    // Hide/show navbar on scroll
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
-
     window.addEventListener('scroll', function () {
-      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll > lastScrollTop) {
-        navbar.classList.add('hidden');
-      } else {
-        navbar.classList.remove('hidden');
-      }
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) { navbar.classList.add('hidden'); }
+      else { navbar.classList.remove('hidden'); }
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
 
+    // Hamburger toggle
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
       const hamburger = document.querySelector('.hamburger');
@@ -124,12 +151,69 @@
     // Intersection animations
     const animatedEls = document.querySelectorAll('.animate-up, .animate-fade-in');
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-
     animatedEls.forEach(el => observer.observe(el));
+
+    // -------- Netlify Forms: AJAX submit (no redirect) --------
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Basic HTML5 validation first
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      submitBtn.classList.add('is-loading');
+      statusEl.textContent = "";
+
+      // Build payload
+      const formData = new FormData(form);
+      // Netlify requires form-name in the encoded payload too
+      formData.set("form-name", form.getAttribute("name"));
+
+      // Abort if honeypot filled
+      if (formData.get('bot-field')) {
+        submitBtn.classList.remove('is-loading');
+        return;
+      }
+
+      try {
+        const res = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode(Object.fromEntries(formData.entries()))
+        });
+
+        if (res.ok) {
+          form.reset();
+          statusEl.textContent = "Thanks! Your message has been sent. We’ll get back to you soon.";
+          statusEl.classList.remove('error');
+          statusEl.classList.add('success');
+        } else {
+          statusEl.textContent = "Something went wrong. Please try again later or email us directly.";
+          statusEl.classList.remove('success');
+          statusEl.classList.add('error');
+        }
+      } catch (err) {
+        statusEl.textContent = "Network error. Please try again or email us directly.";
+        statusEl.classList.remove('success');
+        statusEl.classList.add('error');
+      } finally {
+        submitBtn.classList.remove('is-loading');
+      }
+    });
   </script>
 </body>
 </html>
