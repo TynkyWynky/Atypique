@@ -5,33 +5,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atypique - Services</title>
+
+  <!-- Shared styles -->
   <link rel="stylesheet" href="css/base.css" />
+  <!-- Page-specific styles -->
   <link rel="stylesheet" href="css/services.css" />
+
+  <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/icon.png" />
+
+  <!-- Font Awesome (same site-wide usage) -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="services-page">
-
-  <header class="navbar">
-    <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="Atypique Logo"></a>
+  <!-- NAVBAR (same structure as other pages) -->
+  <nav class="navbar">
+    <div class="logo">Atypique</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </nav>
 
-  <section class="page-header">
+  <!-- PAGE HEADER -->
+  <section class="page-header fade-in">
     <h1>Our Services</h1>
     <p>Innovative digital solutions to elevate your brand.</p>
   </section>
 
+  <!-- SERVICES GRID -->
   <section class="services-grid fade-in delay-1">
     <div class="service-card">
       <i class="fas fa-code"></i>
@@ -55,7 +69,7 @@
     </div>
   </section>
 
-  <!-- Slider: enkel één afbeelding zichtbaar, pijltjes om te navigeren -->
+  <!-- SLIDER -->
   <section class="site-slider fade-in delay-2">
     <h2>Featured Project: Interactive Demo</h2>
     <div class="swiper-container">
@@ -70,22 +84,77 @@
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="call-to-action fade-in delay-2">
     <h2>Ready to start your project?</h2>
     <a href="contact.html" class="cta-button">Get in Touch</a>
   </section>
 
+  <!-- FOOTER (same structure as other pages) -->
   <footer class="footer">
-    <p>&copy; 2025 Atypique. All rights reserved.</p>
-    <div class="social">
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
+    <div class="footer-content">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
+      </div>
+
+      <!-- Navigation Section -->
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products App</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
+        <div class="socials">
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Atypique | All Rights Reserved</p>
     </div>
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script>
+    // Hide/show navbar on scroll (same as home)
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function () {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop) {
+        navbar.classList.add('hidden'); // scrolling down
+      } else {
+        navbar.classList.remove('hidden'); // scrolling up
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
+    // Hamburger toggle (same as home)
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const hamburger = document.querySelector('.hamburger');
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    }
+
+    // Swiper init (single visible, arrows, fade)
     const swiper = new Swiper('.swiper-container', {
       loop: true,
       speed: 600,
