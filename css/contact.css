@@ -8,7 +8,7 @@ main.intro {
   border-radius: var(--radius-lg);
   padding: 2rem 1rem;
   text-align: center;
-  background: linear-gradient(165deg, rgba(22, 196, 184, 0.12), rgba(16, 39, 53, 0.9));
+  background: linear-gradient(165deg, rgba(181, 126, 220, 0.18), rgba(20, 15, 31, 0.9));
 }
 
 .contact-container h1 {
@@ -31,7 +31,7 @@ main.intro {
   margin-top: 1.2rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-  background: rgba(16, 39, 53, 0.86);
+  background: rgba(20, 15, 31, 0.88);
   padding: 1.4rem;
 }
 
@@ -73,7 +73,7 @@ main.intro {
   width: 100%;
   border-radius: 12px;
   border: 1px solid rgba(233, 244, 251, 0.18);
-  background: rgba(7, 19, 26, 0.82);
+  background: rgba(10, 6, 16, 0.85);
   color: var(--text);
   padding: 0.82rem;
   resize: vertical;
@@ -81,7 +81,7 @@ main.intro {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #8aa8ba;
+  color: #bda7d7;
 }
 
 .form-status {
@@ -90,11 +90,11 @@ main.intro {
 }
 
 .form-status.success {
-  color: #59e4b4;
+  color: #bfa0ef;
 }
 
 .form-status.error {
-  color: #ff9f84;
+  color: #f0b8cf;
 }
 
 .is-loading {
@@ -122,3 +122,4 @@ main.intro {
 .delay-2 {
   transition-delay: 0.24s;
 }
+

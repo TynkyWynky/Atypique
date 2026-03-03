@@ -6,7 +6,7 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 1.4rem;
-  background: linear-gradient(165deg, rgba(22, 196, 184, 0.11), rgba(16, 39, 53, 0.92));
+  background: linear-gradient(165deg, rgba(181, 126, 220, 0.18), rgba(20, 15, 31, 0.92));
   box-shadow: var(--shadow);
 }
 
@@ -21,7 +21,7 @@
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
   padding: 0.7rem;
-  background: rgba(7, 19, 26, 0.56);
+  background: rgba(10, 6, 16, 0.72);
 }
 
 .facturamate-logo {
@@ -55,8 +55,8 @@
 .product-features li {
   padding: 0.6rem 0.7rem;
   border-radius: 10px;
-  background: rgba(7, 19, 26, 0.52);
-  border: 1px solid rgba(233, 244, 251, 0.1);
+  background: rgba(10, 6, 16, 0.7);
+  border: 1px solid rgba(244, 238, 255, 0.14);
 }
 
 .coming-soon {
@@ -84,3 +84,4 @@
     justify-content: center;
   }
 }
+

@@ -8,7 +8,7 @@
   text-align: center;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-  background: linear-gradient(170deg, rgba(22, 196, 184, 0.13), rgba(16, 39, 53, 0.92));
+  background: linear-gradient(170deg, rgba(181, 126, 220, 0.2), rgba(20, 15, 31, 0.92));
 }
 
 .about-hero h1 {
@@ -47,7 +47,7 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 1.4rem;
-  background: rgba(16, 39, 53, 0.84);
+  background: rgba(20, 15, 31, 0.88);
 }
 
 .about-text h2 {
@@ -71,7 +71,7 @@
   padding: 0.9rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
-  background: rgba(7, 19, 26, 0.62);
+  background: rgba(10, 6, 16, 0.72);
 }
 
 .value-card h3 {
@@ -90,3 +90,4 @@
     grid-template-columns: 1fr;
   }
 }
+
