@@ -1,31 +1,27 @@
-<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Atypique - Services</title>
-  <meta name="description" content="Explore Atypique services: web development, UI/UX design, mobile apps, and digital growth support." />
-
-  <!-- Shared styles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atypique Services | Design, Development, Product Support</title>
+  <meta name="description" content="Atypique services include web development, UX design, mobile experiences and practical growth support." />
+  <link rel="canonical" href="https://atypique-enterprise.netlify.app/services.html" />
+  <meta property="og:title" content="Atypique Services" />
+  <meta property="og:description" content="Explore practical digital services built for business impact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/FMC/homeFMC.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/base.css" />
-  <!-- Page-specific styles -->
   <link rel="stylesheet" href="css/services.css" />
-
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/icon.png" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="icon" type="image/png" href="images/icon.png" />
 </head>
-
-<body class="services-page">
+<body class="services-page" data-analytics-domain="atypique-enterprise.netlify.app">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <!-- NAVBAR (same structure as other pages) -->
-  <nav class="navbar">
+
+  <nav class="navbar" aria-label="Main navigation">
     <a href="index.html" class="logo" aria-label="Atypique home">Atypique</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
@@ -35,146 +31,113 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
   </nav>
 
   <main id="main-content">
-  <!-- PAGE HEADER -->
-  <section class="page-header fade-in">
-    <h1>Our Services</h1>
-    <p>Innovative digital solutions to elevate your brand.</p>
-  </section>
+    <section class="page-header fade-in">
+      <span class="badge">Services</span>
+      <h1>From idea to launch, with zero guesswork.</h1>
+      <p>We provide targeted digital services that improve execution speed and customer experience.</p>
+    </section>
 
-  <!-- SERVICES GRID -->
-  <section class="services-grid fade-in delay-1">
-    <div class="service-card">
-      <i class="fas fa-code"></i>
-      <h3>Web Development</h3>
-      <p>Responsive, performant, and secure websites built to scale.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-paint-brush"></i>
-      <h3>UI/UX Design</h3>
-      <p>Intuitive interfaces and engaging experiences for all users.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-mobile-alt"></i>
-      <h3>Mobile Apps</h3>
-      <p>Cross-platform mobile applications with sleek design.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-search"></i>
-      <h3>SEO &amp; Marketing</h3>
-      <p>Grow your audience with data-driven marketing strategies.</p>
-    </div>
-  </section>
+    <section class="services-grid fade-in delay-1 section">
+      <article class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>High-performing websites and business platforms that stay maintainable after launch.</p>
+      </article>
+      <article class="service-card">
+        <i class="fas fa-palette"></i>
+        <h3>UI/UX Design</h3>
+        <p>Clear interfaces and interaction flows tailored to your users and business model.</p>
+      </article>
+      <article class="service-card">
+        <i class="fas fa-mobile-screen-button"></i>
+        <h3>Product Interfaces</h3>
+        <p>Cross-device design systems and front-end experiences with strong usability.</p>
+      </article>
+      <article class="service-card">
+        <i class="fas fa-magnifying-glass-chart"></i>
+        <h3>Growth Support</h3>
+        <p>SEO-ready structure, conversion-oriented pages and practical optimization loops.</p>
+      </article>
+    </section>
 
-  <!-- SLIDER -->
-  <section class="site-slider fade-in delay-2">
-    <h2>Featured Project: Interactive Demo</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/FMC/homeFMC.png" alt="Home"></div>
-        <div class="swiper-slide"><img src="images/FMC/midFMC.png" alt="Mid Section"></div>
-        <div class="swiper-slide"><img src="images/FMC/downmidFMC.png" alt="Lower Mid"></div>
-        <div class="swiper-slide"><img src="images/FMC/downFMC.png" alt="Footer"></div>
+    <section class="site-slider fade-in delay-2 section">
+      <h2>Recent Interface Snapshot</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/FMC/homeFMC.png" alt="FacturaMate home interface" loading="lazy" decoding="async" /></div>
+          <div class="swiper-slide"><img src="images/FMC/midFMC.png" alt="FacturaMate client section" loading="lazy" decoding="async" /></div>
+          <div class="swiper-slide"><img src="images/FMC/downmidFMC.png" alt="FacturaMate workflow section" loading="lazy" decoding="async" /></div>
+          <div class="swiper-slide"><img src="images/FMC/downFMC.png" alt="FacturaMate footer section" loading="lazy" decoding="async" /></div>
+        </div>
+        <div class="swiper-button-prev" aria-label="Previous slide"></div>
+        <div class="swiper-button-next" aria-label="Next slide"></div>
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="call-to-action fade-in delay-2">
-    <h2>Ready to start your project?</h2>
-    <a href="contact.html" class="cta-button">Get in Touch</a>
-  </section>
+    <section class="call-to-action fade-in delay-2">
+      <h2>Need a quote or roadmap for your project?</h2>
+      <p>Share your goals and constraints. We answer with practical next steps.</p>
+      <p><a href="contact.html" class="cta-btn">Get in Touch</a></p>
+    </section>
   </main>
 
-  <!-- FOOTER (same structure as other pages) -->
   <footer class="footer">
     <div class="footer-content">
-      <!-- Logo Section -->
       <div class="footer-logo">
-        <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
+        <img src="images/Atypique_logo.png" alt="Atypique logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
       </div>
-
-      <!-- Navigation Section -->
       <div class="footer-nav">
         <h3>Quick Links</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products App</a></li>
+          <li><a href="products.html">Products</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-
-      <!-- Contact Section -->
       <div class="footer-contact">
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
-
-    <!-- Bottom Footer -->
     <div class="footer-bottom">
       <p>&copy; <span id="currentYear"></span> Atypique | All Rights Reserved</p>
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+  <script src="js/site.js" defer></script>
   <script>
-    // Hide/show navbar on scroll (same as home)
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
-
-    window.addEventListener('scroll', function () {
-      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (currentScroll > lastScrollTop) {
-        navbar.classList.add('hidden'); // scrolling down
-      } else {
-        navbar.classList.remove('hidden'); // scrolling up
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof Swiper === 'undefined') {
+        return;
       }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      new Swiper('.swiper-container', {
+        loop: true,
+        speed: 550,
+        slidesPerView: 1,
+        effect: 'slide',
+        navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next'
+        },
+        keyboard: { enabled: true }
+      });
     });
-
-    // Hamburger toggle (same as home)
-    function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      const hamburger = document.querySelector('.hamburger');
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
-    }
-
-    // Swiper init (single visible, arrows, fade)
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      speed: 600,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      effect: 'fade',
-      fadeEffect: { crossFade: true },
-      navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      },
-      keyboard: { enabled: true },
-    });
-
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
+

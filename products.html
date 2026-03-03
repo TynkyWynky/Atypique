@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atypique - Products</title>
-  <meta name="description" content="Discover Atypique products like FacturaMate, built for modern entrepreneurs and small businesses." />
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/products.css">
+  <title>Atypique Products | FacturaMate and More</title>
+  <meta name="description" content="Discover Atypique products designed to simplify business workflows and improve operational clarity." />
+  <link rel="canonical" href="https://atypique-enterprise.netlify.app/products.html" />
+  <meta property="og:title" content="Atypique Products" />
+  <meta property="og:description" content="Focused software products made for small teams and entrepreneurs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/FMLogo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/products.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" href="images/icon.png" />
 </head>
-
-<body class="main-page">
+<body class="main-page" data-analytics-domain="atypique-enterprise.netlify.app">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <nav class="navbar">
+
+  <nav class="navbar" aria-label="Main navigation">
     <a href="index.html" class="logo" aria-label="Atypique home">Atypique</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
@@ -24,48 +30,49 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
   </nav>
 
   <main id="main-content">
-  <!-- Product Section -->
-  <section class="product-section fade-in delay-1">
-    <div class="product-card">
-      <div class="product-content">
-        <div class="product-image">
-          <img src="images/FMLogo.png" alt="FacturaMate Logo" class="facturamate-logo" />
-        </div>
-        <div class="product-info">
-          <h2>FacturaMate</h2>
-          <p class="product-subtitle">Your intuitive invoicing assistant</p>
-          <p><strong>FacturaMate</strong> is built for entrepreneurs and small businesses who want to handle invoicing
-            with ease and elegance.</p>
+    <section class="product-section fade-in delay-1" id="facturamate">
+      <article class="product-card">
+        <div class="product-content">
+          <div class="product-image">
+            <img src="images/FMLogo.png" alt="FacturaMate logo" class="facturamate-logo" width="180" height="180" fetchpriority="high" decoding="async" />
+          </div>
 
-          <ul class="product-features">
-            <li>👥 Easily register and manage clients</li>
-            <li>💼 Store details about your business</li>
-            <li>💵 Generate professional invoices in seconds</li>
-            <li>⚙️ Simple, clean, and powerful interface</li>
-          </ul>
+          <div class="product-info">
+            <span class="badge">Live Product</span>
+            <h2>FacturaMate</h2>
+            <p class="product-subtitle">Intuitive invoicing assistant for lean teams</p>
+            <p>FacturaMate helps freelancers and small businesses create invoices faster, keep client information organized and reduce repetitive admin work.</p>
 
-          <div class="coming-soon">
-            <em>More features are coming soon... Stay tuned!</em>
+            <ul class="product-features">
+              <li>Client registry with structured contact and billing details</li>
+              <li>Quick invoice creation with reusable templates</li>
+              <li>Business profile settings for consistent branding</li>
+              <li>Clean interface designed for daily use, not occasional use</li>
+            </ul>
+
+            <p class="coming-soon"><em>Roadmap in progress: payment tracking, smart reminders and export automation.</em></p>
+
+            <div class="product-cta">
+              <a href="contact.html" class="cta-btn">Request a Demo</a>
+              <a href="services.html" class="cta-btn alt">Need Custom Features?</a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-
-  </section>
+      </article>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
+        <img src="images/Atypique_logo.png" alt="Atypique logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
       </div>
 
       <div class="footer-nav">
@@ -74,7 +81,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products App</a></li>
+          <li><a href="products.html">Products</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -83,10 +90,8 @@
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i
-              class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i
-              class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
@@ -96,21 +101,8 @@
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      const hamburger = document.querySelector('.hamburger');
-
-      // Toggle the active class to show or hide the menu
-      navLinks.classList.toggle('active');
-
-      // Add an animation effect to the hamburger
-      hamburger.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
-    }
-
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
+  <script src="js/site.js" defer></script>
 </body>
-
 </html>
+
+

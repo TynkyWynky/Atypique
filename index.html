@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atypique</title>
-  <meta name="description" content="Atypique builds tailored digital tools for entrepreneurs, artists, creators, and local businesses." />
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/home.css">
+  <title>Atypique | Digital Tools for Ambitious Small Businesses</title>
+  <meta name="description" content="Atypique builds practical digital tools, websites and product experiences for entrepreneurs, creators and local businesses." />
+  <link rel="canonical" href="https://atypique-enterprise.netlify.app/" />
+  <meta property="og:title" content="Atypique | Digital Tools for Ambitious Small Businesses" />
+  <meta property="og:description" content="Web products, UX design and practical automation tailored to your business reality." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/Atypique_logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" href="images/icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Atypique",
+    "email": "atypique.professional@gmail.com",
+    "sameAs": [
+      "https://www.instagram.com/atypique.enterprise/",
+      "https://www.linkedin.com/company/atypique-enterprise/"
+    ]
+  }
+  </script>
 </head>
-
-<body class="main-page">
+<body class="main-page" data-analytics-domain="atypique-enterprise.netlify.app">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <nav class="navbar">
+
+  <nav class="navbar" aria-label="Main navigation">
     <a href="index.html" class="logo" aria-label="Atypique home">Atypique</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active" aria-current="page">Home</a></li>
@@ -24,126 +43,110 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
   </nav>
 
-  <!-- Main Content Section with Logo -->
   <main id="main-content">
-  <section class="hero fade-in">
-    <h1>Welcome to Atypique</h1>
-    <!-- Logo inside the main content -->
-    <img src="images/Atypique_logo.png" alt="Atypique Logo" class="main-logo" />
-    <p class="tagline">A unique solution for every unique business.</p>
-  </section>
-
-  <section class="intro fade-in delay-1">
-    <p>We build tailored digital tools for entrepreneurs, artists, creators, and local businesses.</p>
-  </section>
-  <div class="flowy-divider">
-    <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
-      <path d="M0,50 Q300,0 600,50 T1200,50" fill="transparent" stroke="#b57edc" stroke-width="2.5" />
-    </svg>
-  </div>
-  <section class="products-preview fade-in delay-2">
-    <h2>Our Products</h2>
-    <div class="product-cards">
-      <a href="products.html#facturamate" class="product-card-link">
-        <div class="product-card-preview">
-          <img src="images/FMLogo.png" alt="FacturaMate Logo" class="product-preview-logo">
-          <h3>FacturaMate</h3>
-          <p>Intuitive invoicing assistant built for entrepreneurs and small businesses.</p>
+    <section class="hero fade-in">
+      <div>
+        <span class="badge">Built for Real Businesses</span>
+        <h1>Digital products that actually move your business forward.</h1>
+        <img src="images/Atypique_logo.png" alt="Atypique Logo" class="main-logo" width="210" height="210" fetchpriority="high" decoding="async" />
+        <p class="tagline">From first concept to launch, we create practical and polished tools for entrepreneurs, artists and local brands.</p>
+        <div class="home-cta">
+          <a href="contact.html" class="cta-btn">Start a Project</a>
+          <a href="services.html" class="cta-btn alt">See Services</a>
         </div>
-      </a>
-
-      <!-- Later you can add more products here like below:
-    <a href="products.html#yourNextProduct" class="product-card-link">
-      <div class="product-card-preview">
-        <img src="images/your_product_logo.png" alt="Your Product Logo" class="product-preview-logo">
-        <h3>Your Next Product</h3>
-        <p>Short description of your new awesome tool.</p>
       </div>
-    </a>
-    -->
+    </section>
+
+    <section class="intro fade-in delay-1 section">
+      <p>Most teams do not need complexity. They need clear structure, reliable execution and a partner that understands business constraints. That is where Atypique fits in.</p>
+    </section>
+
+    <div class="flowy-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+        <path d="M0,50 Q300,0 600,50 T1200,50" fill="transparent" stroke-width="2.5" />
+      </svg>
     </div>
-  </section>
+
+    <section class="products-preview fade-in delay-2 section">
+      <h2>Products You Can Use Immediately</h2>
+      <p>Focused software made to save time, reduce friction and improve quality.</p>
+      <div class="product-cards">
+        <a href="products.html#facturamate" class="product-card-link" aria-label="Open FacturaMate details">
+          <article class="product-card-preview">
+            <img src="images/FMLogo.png" alt="FacturaMate logo" class="product-preview-logo" width="68" height="68" loading="lazy" decoding="async" />
+            <h3>FacturaMate</h3>
+            <p>Fast and elegant invoicing support for small businesses that need control without admin overhead.</p>
+          </article>
+        </a>
+
+        <article class="product-card-preview" aria-label="Upcoming product">
+          <img src="images/icon.png" alt="Upcoming product icon" class="product-preview-logo" width="68" height="68" loading="lazy" decoding="async" />
+          <h3>ClientFlow (Soon)</h3>
+          <p>Lead tracking and client follow-up in one compact workflow built for local services.</p>
+        </article>
+
+        <article class="product-card-preview" aria-label="Upcoming product">
+          <img src="images/icon.png" alt="Upcoming product icon" class="product-preview-logo" width="68" height="68" loading="lazy" decoding="async" />
+          <h3>StudioBoard (Soon)</h3>
+          <p>A lightweight planner for creators to manage content, deadlines and client feedback.</p>
+        </article>
+      </div>
+
+      <div class="metrics">
+        <article class="metric-card">
+          <strong>48h</strong>
+          <span>Typical first response</span>
+        </article>
+        <article class="metric-card">
+          <strong>100%</strong>
+          <span>Custom-fit projects</span>
+        </article>
+        <article class="metric-card">
+          <strong>1 Team</strong>
+          <span>Design + build + delivery</span>
+        </article>
+      </div>
+    </section>
   </main>
 
-
-  <!-- Footer Section -->
   <footer class="footer">
     <div class="footer-content">
-      <!-- Logo Section -->
       <div class="footer-logo">
-        <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
+        <img src="images/Atypique_logo.png" alt="Atypique logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
       </div>
 
-      <!-- Navigation Section -->
       <div class="footer-nav">
         <h3>Quick Links</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products App</a></li>
+          <li><a href="products.html">Products</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
 
-      <!-- Contact Section -->
       <div class="footer-contact">
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i
-              class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i
-              class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
 
-    <!-- Bottom Footer -->
     <div class="footer-bottom">
       <p>&copy; <span id="currentYear"></span> Atypique | All Rights Reserved</p>
     </div>
   </footer>
 
-  <script>
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
-
-    window.addEventListener('scroll', function () {
-      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (currentScroll > lastScrollTop) {
-        // Scroll naar beneden
-        navbar.classList.add('hidden');
-      } else {
-        // Scroll naar boven
-        navbar.classList.remove('hidden');
-      }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Zorg ervoor dat het niet negatief wordt
-    });
-  </script>
-
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      const hamburger = document.querySelector('.hamburger');
-
-      // Toggle the active class to show or hide the menu
-      navLinks.classList.toggle('active');
-
-      // Add an animation effect to the hamburger
-      hamburger.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
-    }
-
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
+  <script src="js/site.js" defer></script>
 </body>
-
 </html>

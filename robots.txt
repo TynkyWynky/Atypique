@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atypique-enterprise.netlify.app/sitemap.xml

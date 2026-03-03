@@ -1,182 +1,104 @@
-/* services.css */
 .services-page {
-  background-color: #121212;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(10px);
-}
-
-.navbar .logo img {
-  height: 40px;
-}
-
-.navbar .menu ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-}
-
-.navbar .menu li {
-  margin-left: 2rem;
-}
-
-.navbar .menu a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar .menu a:hover,
-.navbar .menu .active {
-  color: #b57edc;
+  color: var(--text);
 }
 
 .page-header {
+  margin-top: 0.6rem;
   text-align: center;
-  padding: 8rem 2rem 4rem;
-  background: linear-gradient(to bottom right, #1a1a2e, #121212),
-              url('../images/header-bg.jpg') center/cover no-repeat;
+  padding: 3.1rem 1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(165deg, rgba(22, 196, 184, 0.12), rgba(16, 39, 53, 0.9)),
+    url('../images/header-bg.jpg') center/cover no-repeat;
 }
 
 .page-header h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  margin-bottom: 0.4rem;
 }
 
 .page-header p {
-  font-size: 1.25rem;
-  opacity: 0.8;
+  color: var(--text-muted);
 }
 
 .services-grid {
+  margin-top: 1.4rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 4rem 2rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--line);
+  background: rgba(16, 39, 53, 0.86);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  text-align: left;
 }
 
 .service-card i {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #b57edc;
+  font-size: 1.35rem;
+  color: var(--secondary);
+  margin-bottom: 0.45rem;
 }
 
 .service-card h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .service-card p {
-  opacity: 0.8;
+  color: var(--text-muted);
 }
 
-/* Slider styles */
 .site-slider {
-  max-width: 1000px;
-  margin: 4rem auto;
+  margin-top: 1.8rem;
   text-align: center;
 }
 
 .site-slider h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #b57edc;
+  margin-bottom: 0.8rem;
 }
 
 .swiper-container {
-  width: 100%;
-  padding-bottom: 2rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
 .swiper-slide img {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  max-height: 520px;
+  object-fit: cover;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #b57edc;
+  color: var(--secondary);
 }
 
-.swiper-pagination-bullet {
-  background: #b57edc;
-  opacity: 0.7;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-}
-/* Call to action button */
 .call-to-action {
+  margin-top: 2rem;
   text-align: center;
-  padding: 5rem 2rem;
-  background-color: #1a1a2e;
-}
-.call-to-action h2 {
-  color: #fff;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  background: linear-gradient(135deg, #b57edc, #8f3fbf);
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(181,126,220,0.5);
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-.cta-button span {
-  margin-right: 0.5rem;
-}
-.cta-button i {
-  font-size: 1rem;
-  transition: transform 0.3s ease;
-}
-.cta-button:hover {
-  background: linear-gradient(135deg, #a26bd1, #7a2d9d);
-  transform: translateY(-3px);
-}
-.cta-button:hover i {
-  transform: translateX(5px);
+  padding: 2rem 1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(16, 39, 53, 0.82);
 }
 
-@media (max-width: 768px) {
-  .site-slider h2 {
-    font-size: 1.6rem;
+.call-to-action h2 {
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 1020px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }

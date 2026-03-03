@@ -2,18 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - Atypique</title>
-  <meta name="description" content="Learn about Atypique's mission, story, and the team building unique digital tools." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Atypique | Practical Digital Craft</title>
+  <meta name="description" content="Atypique combines design clarity and engineering discipline to build practical digital solutions for growing businesses." />
+  <link rel="canonical" href="https://atypique-enterprise.netlify.app/about.html" />
+  <meta property="og:title" content="About Atypique" />
+  <meta property="og:description" content="Meet the team philosophy behind Atypique: practical, elegant and business-oriented digital work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/aboutPic.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" href="images/icon.png" />
 </head>
-<body class="about-page">
+<body class="about-page" data-analytics-domain="atypique-enterprise.netlify.app">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <a href="index.html" class="logo" aria-label="Atypique home">Atypique</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
@@ -23,44 +30,60 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
   </nav>
 
   <main id="main-content">
-  <section class="about-hero fade-in">
-    <h1>About Us</h1>
-    <p>We build unique digital tools that empower entrepreneurs, creators and small businesses to succeed.</p>
-  </section>
+    <section class="about-hero fade-in">
+      <span class="badge">About Atypique</span>
+      <h1>We build with business reality in mind.</h1>
+      <p>Our work focuses on useful outcomes: cleaner workflows, stronger digital presence and products your team can run confidently.</p>
+    </section>
 
-  <section class="about-content fade-in delay-1">
-    <div class="about-image">
-      <img src="images/aboutPic.png" alt="Our Team" />
-    </div>
-    <div class="about-text">
-      <h2>Our Mission</h2>
-      <p>
-        At Atypique, we believe in tailored innovation. Our mission is to bridge creativity and functionality
-        through intuitive digital tools that reflect your brand's essence. Whether you’re a startup or an artist,
-        we provide you with the tools to thrive in the digital age.
-      </p>
+    <section class="about-content fade-in delay-1 section">
+      <div class="about-image">
+        <img src="images/aboutPic.png" alt="Atypique team at work" width="700" height="500" loading="lazy" decoding="async" />
+      </div>
 
-      <h2>Our Story</h2>
-      <p>
-        What started as a passion for solving problems quickly grew into a team of visionaries and builders.
-        Atypique is a collective of developers, designers, and strategists who believe technology should be
-        personal, beautiful, and effective.
-      </p>
-    </div>
-  </section>
+      <div class="about-text">
+        <h2>Our Mission</h2>
+        <p>Atypique helps entrepreneurs and small organizations translate ideas into clear digital products. We prioritize usability, speed and long-term maintainability over short-lived hype.</p>
+
+        <h2>How We Work</h2>
+        <p>Every project starts with constraints: timeline, budget, priorities and existing tools. Then we design and build around those constraints so the final result fits your daily operations.</p>
+
+        <h2>What Makes Us Different</h2>
+        <p>We keep the team compact, communicate directly and deliver in iterative milestones. You always know what is done, what is next and why each decision was made.</p>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <h3>Clarity First</h3>
+            <p>No ambiguity in scope, timeline or deliverables.</p>
+          </article>
+          <article class="value-card">
+            <h3>Craft + Utility</h3>
+            <p>Strong visual identity with practical UX decisions.</p>
+          </article>
+          <article class="value-card">
+            <h3>Long-Term Fit</h3>
+            <p>Solutions that stay useful as your business grows.</p>
+          </article>
+        </div>
+
+        <p>
+          <a href="contact.html" class="cta-btn">Discuss Your Project</a>
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="images/Atypique_logo.png" alt="Atypique Logo" class="footer-logo-img" />
+        <img src="images/Atypique_logo.png" alt="Atypique logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
       </div>
 
       <div class="footer-nav">
@@ -78,27 +101,19 @@
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">
       <p>&copy; <span id="currentYear"></span> Atypique | All Rights Reserved</p>
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      const hamburger = document.querySelector('.hamburger');
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
-    }
-
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
-
+  <script src="js/site.js" defer></script>
 </body>
 </html>
+
+
