@@ -5,29 +5,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atypique - Products</title>
+  <meta name="description" content="Discover Atypique products like FacturaMate, built for modern entrepreneurs and small businesses." />
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" href="images/icon.png" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="main-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="navbar">
-    <div class="logo">Atypique</div>
+    <a href="index.html" class="logo" aria-label="Atypique home">Atypique</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="products.html" class="active" aria-current="page">Products</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
-    </div>
+    </button>
   </nav>
 
+  <main id="main-content">
   <!-- Product Section -->
   <section class="product-section fade-in delay-1">
     <div class="product-card">
@@ -56,6 +59,7 @@
     </div>
 
   </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -79,16 +83,16 @@
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i
               class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i
               class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Atypique | All Rights Reserved</p>
+      <p>&copy; <span id="currentYear"></span> Atypique | All Rights Reserved</p>
     </div>
   </footer>
 
@@ -102,7 +106,10 @@
 
       // Add an animation effect to the hamburger
       hamburger.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
     }
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 </body>
 

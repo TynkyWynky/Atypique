@@ -13,6 +13,22 @@ html, body {
   scroll-behavior: smooth;
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  z-index: 2000;
+  background: #b57edc;
+  color: #111;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -65,12 +81,22 @@ a:hover {
   font-weight: 500;
 }
 
+.nav-links li a.active,
+.nav-links li a[aria-current="page"] {
+  color: #b57edc;
+  text-shadow: 0 0 5px rgba(181, 126, 220, 0.65);
+}
+
 /* Hamburger Icon */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   transition: transform 0.3s ease;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
 }
 
 .hamburger .bar {
@@ -79,6 +105,12 @@ a:hover {
   background-color: #fff;
   margin: 3px 0;
   transition: all 0.3s ease; /* Add transition to all properties for smooth animation */
+}
+
+.hamburger:focus-visible,
+a:focus-visible {
+  outline: 2px solid #b57edc;
+  outline-offset: 3px;
 }
 
 /* Hamburger Animation */

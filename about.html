@@ -4,28 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - Atypique</title>
+  <meta name="description" content="Learn about Atypique's mission, story, and the team building unique digital tools." />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" href="images/icon.png" />
 </head>
 <body class="about-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <nav class="navbar">
-    <div class="logo">Atypique</div>
+    <a href="index.html" class="logo" aria-label="Atypique home">Atypique</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
+      <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
-    </div>
+    </button>
   </nav>
 
+  <main id="main-content">
   <section class="about-hero fade-in">
     <h1>About Us</h1>
     <p>We build unique digital tools that empower entrepreneurs, creators and small businesses to succeed.</p>
@@ -51,6 +55,7 @@
       </p>
     </div>
   </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-content">
@@ -73,13 +78,13 @@
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Atypique | All Rights Reserved</p>
+      <p>&copy; <span id="currentYear"></span> Atypique | All Rights Reserved</p>
     </div>
   </footer>
 
@@ -89,7 +94,10 @@
       const hamburger = document.querySelector('.hamburger');
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
     }
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 
 </body>

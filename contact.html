@@ -5,10 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atypique - Contact</title>
+  <meta name="description" content="Contact Atypique for custom digital tools and project collaboration." />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" href="images/icon.png" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     /* Optional small styles for status states */
     .form-status { opacity:.9 }
@@ -19,27 +20,26 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="navbar">
-    <a href="index.html">
-      <div class="logo">Atypique</div>
-    </a>
+    <a href="index.html" class="logo" aria-label="Atypique home">Atypique</a>
     <nav>
-      <div class="hamburger" onclick="toggleMenu()">
+      <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-      </div>
+      </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="intro fade-in">
+  <main id="main-content" class="intro fade-in">
     <div class="contact-container">
       <h1 class="animate-up">Let’s Connect</h1>
       <p class="animate-up delay-1">
@@ -62,7 +62,7 @@
         <li><span>🎨</span> Design inspiration or color wishes</li>
         <li><span>📅</span> Preferred timeline or deadline</li>
       </ul>
-      <p>Send it via <strong>email</strong> or <strong>Instagram DM</strong>. We’ll respond fast & friendly ✨</p>
+      <p>Send it via <strong>email</strong> or <strong>Instagram DM</strong>. We will respond quickly.</p>
     </section>
 
     <section class="contact-form-section animate-fade-in">
@@ -119,13 +119,13 @@
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Atypique | All Rights Reserved</p>
+      <p>&copy; <span id="currentYear"></span> Atypique | All Rights Reserved</p>
     </div>
   </footer>
 
@@ -146,6 +146,7 @@
       const hamburger = document.querySelector('.hamburger');
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
     }
 
     // Intersection animations
@@ -214,6 +215,8 @@
         submitBtn.classList.remove('is-loading');
       }
     });
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
