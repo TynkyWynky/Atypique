@@ -66,13 +66,14 @@
 
 .product-cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
 }
 
 .product-card-link {
   display: block;
+  height: 100%;
 }
 
 .product-card-preview {
@@ -95,6 +96,21 @@
   height: 68px;
   border-radius: 12px;
   margin-bottom: 0.8rem;
+}
+
+.product-preview-mark {
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
+  margin-bottom: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  background: linear-gradient(145deg, rgba(181, 126, 220, 0.44), rgba(67, 178, 255, 0.18));
+  border: 1px solid rgba(244, 238, 255, 0.18);
 }
 
 .product-card-preview h3 {

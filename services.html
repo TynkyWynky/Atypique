@@ -9,13 +9,12 @@
   <meta property="og:title" content="Atypique Services" />
   <meta property="og:description" content="Explore practical digital services built for business impact." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/FMC/homeFMC.png" />
+  <meta property="og:image" content="images/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/services.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="icon" type="image/png" href="images/icon.png" />
 </head>
 <body class="services-page" data-analytics-domain="atypique-enterprise.netlify.app">
@@ -27,7 +26,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="services.html" class="active" aria-current="page">Services</a></li>
-      <li><a href="products.html">Products</a></li>
+      <li><a href="products.html">Work</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
@@ -68,16 +67,21 @@
     </section>
 
     <section class="site-slider fade-in delay-2 section">
-      <h2>Recent Interface Snapshot</h2>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="images/FMC/homeFMC.png" alt="FacturaMate home interface" loading="lazy" decoding="async" /></div>
-          <div class="swiper-slide"><img src="images/FMC/midFMC.png" alt="FacturaMate client section" loading="lazy" decoding="async" /></div>
-          <div class="swiper-slide"><img src="images/FMC/downmidFMC.png" alt="FacturaMate workflow section" loading="lazy" decoding="async" /></div>
-          <div class="swiper-slide"><img src="images/FMC/downFMC.png" alt="FacturaMate footer section" loading="lazy" decoding="async" /></div>
-        </div>
-        <div class="swiper-button-prev" aria-label="Previous slide"></div>
-        <div class="swiper-button-next" aria-label="Next slide"></div>
+      <h2>Recent Website Launches</h2>
+      <p>Live examples of public-facing websites designed and developed by Atypique.</p>
+      <div class="case-grid">
+        <article class="case-card">
+          <span class="badge">Live Website</span>
+          <h3>Eventium</h3>
+          <p>Event discovery platform for local concerts and happenings, designed to feel playful, fast and easy to browse.</p>
+          <a href="https://www.eventium.be/" class="case-link" target="_blank" rel="noopener noreferrer">Visit eventium.be</a>
+        </article>
+        <article class="case-card">
+          <span class="badge">Community Website</span>
+          <h3>Chiro Negenmanneke</h3>
+          <p>Clear information hub for parents, members and volunteers with practical pages for registration, activities and contact.</p>
+          <a href="https://www.chironegenmanneke.be/" class="case-link" target="_blank" rel="noopener noreferrer">Visit chironegenmanneke.be</a>
+        </article>
       </div>
     </section>
 
@@ -99,7 +103,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="products.html">Work</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -117,26 +121,7 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
   <script src="js/site.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (typeof Swiper === 'undefined') {
-        return;
-      }
-      new Swiper('.swiper-container', {
-        loop: true,
-        speed: 550,
-        slidesPerView: 1,
-        effect: 'slide',
-        navigation: {
-          prevEl: '.swiper-button-prev',
-          nextEl: '.swiper-button-next'
-        },
-        keyboard: { enabled: true }
-      });
-    });
-  </script>
 </body>
 </html>
 

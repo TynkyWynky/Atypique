@@ -1,5 +1,27 @@
+.page-header {
+  margin-top: 0.6rem;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: linear-gradient(165deg, rgba(181, 126, 220, 0.16), rgba(20, 15, 31, 0.92));
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 0.4rem;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  max-width: 60ch;
+  margin: 0.75rem auto 0;
+}
+
 .product-section {
-  margin-top: 1.1rem;
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 1.1rem;
 }
 
 .product-card {
@@ -22,13 +44,25 @@
   border: 1px solid var(--line);
   padding: 0.7rem;
   background: rgba(10, 6, 16, 0.72);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.facturamate-logo {
-  width: 100%;
-  max-width: 180px;
-  margin-inline: auto;
-  border-radius: 12px;
+.project-mark {
+  font-size: clamp(2.7rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--text);
+}
+
+.project-url {
+  margin-top: 0.85rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 .product-info h2 {
@@ -57,10 +91,6 @@
   border-radius: 10px;
   background: rgba(10, 6, 16, 0.7);
   border: 1px solid rgba(244, 238, 255, 0.14);
-}
-
-.coming-soon {
-  color: var(--text-muted);
 }
 
 .product-cta {
