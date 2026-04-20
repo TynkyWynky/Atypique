@@ -34,35 +34,99 @@ window.ATYPIQUE_I18N = {
       },
       home: {
         meta: {
-          title: 'Atypique | Digital Tools for Ambitious Small Businesses',
-          description: 'Atypique builds practical digital tools, websites and product experiences for entrepreneurs, creators and local businesses.',
-          ogTitle: 'Atypique | Digital Tools for Ambitious Small Businesses',
-          ogDescription: 'Web products, UX design and practical automation tailored to your business reality.'
+          title: 'Atypique | Web Apps, SaaS Products, and Digital Experiences',
+          description: 'Atypique is a digital studio building modern web apps, SaaS products, and conversion-focused websites for startups, creators, and small businesses.',
+          ogTitle: 'Atypique | Web Apps, SaaS Products, and Digital Experiences',
+          ogDescription: 'From product structure and interface design to polished front-end build, Atypique creates digital experiences that feel clear, fast, and intentional.'
         },
         hero: {
-          badge: 'Built for Real Businesses',
-          title: 'Digital products that actually move your business forward.',
-          logoAlt: 'Atypique logo',
-          tagline: 'From first concept to launch, we create practical and polished tools for entrepreneurs, artists and local brands.',
-          startProject: 'Start a Project',
-          seeServices: 'See Services'
-        },
-        intro: {
-          text: 'Most teams do not need complexity. They need clear structure, reliable execution and a partner that understands business constraints. That is where Atypique fits in.'
-        },
-        selected: {
-          title: 'Selected Websites',
-          description: 'Live website projects built to be useful, memorable and easy to navigate.',
-          eventiumAria: 'Visit Eventium website',
-          eventiumDescription: 'Concert and event discovery platform with smart filters, local focus and a playful visual identity.',
-          chiroAria: 'Visit Chiro Negenmanneke website',
-          chiroDescription: 'Community website with clear paths for registrations, practical info, activities and contact.'
+          badge: 'Digital Studio',
+          kicker: 'For startups, creators, and small businesses',
+          title: 'We build modern web apps, SaaS products, and digital experiences.',
+          tagline: 'From product structure and interface design to polished front-end build, Atypique helps teams turn ideas into digital products that feel clear, fast, and intentional.',
+          primaryCta: 'Start a Project',
+          secondaryCta: 'See Selected Work',
+          serviceOne: 'Web apps and SaaS products',
+          serviceTwo: 'Conversion-focused websites',
+          serviceThree: 'UX, interface, and front-end build',
+          proofTitle: 'What clients usually need help with',
+          proofOneTitle: 'Clearer positioning',
+          proofOneBody: 'Make the offer obvious fast, so visitors understand the value in seconds.',
+          proofTwoTitle: 'Sharper product experience',
+          proofTwoBody: 'Design flows and interfaces that feel easier to trust, use, and navigate.',
+          proofThreeTitle: 'A partner who can ship',
+          proofThreeBody: 'Move from concept to launch with strategy, design, and build aligned.'
         },
         metrics: {
-          firstResponse: 'Typical first response',
-          customProjects: 'Custom-fit projects',
-          teamCount: '1 Team',
-          teamDelivery: 'Design + build + delivery'
+          responseValue: '48h',
+          responseLabel: 'Typical first reply',
+          approachValue: 'Senior-led',
+          approachLabel: 'Strategy, design, and build',
+          deliveryValue: 'End-to-end',
+          deliveryLabel: 'From concept to launch'
+        },
+        services: {
+          badge: 'What We Build',
+          title: 'Services shaped for products that need to look sharp and work well.',
+          description: 'We help teams launch new ideas, sharpen existing products, and build digital experiences that are easier to understand and easier to trust.',
+          appTitle: 'Web apps and SaaS',
+          appBody: 'Interfaces, product flows, dashboards, and features designed for clarity, speed, and usability.',
+          websiteTitle: 'Websites with a job to do',
+          websiteBody: 'Brand, portfolio, and business websites that explain the offer quickly and push the right next step.',
+          designTitle: 'UX and interface design',
+          designBody: 'Structure, user journeys, wireframes, and visual systems that make the experience feel intentional.',
+          frontEndTitle: 'Front-end implementation',
+          frontEndBody: 'Responsive, polished build work with practical handoff and maintainable structure.'
+        },
+        selected: {
+          badge: 'Selected Work',
+          title: 'A few projects built to communicate better, feel better, and convert more clearly.',
+          description: 'Not just showcase pieces. Each project solves a real clarity, navigation, or product experience problem.',
+          allWork: 'See all case studies',
+          caseStudyLabel: 'Case Study',
+          eventiumAria: 'Open the Eventium case study',
+          eventiumSummary: 'Event discovery platform built to make browsing local concerts and events feel faster and more engaging.',
+          eventiumProblemTitle: 'Problem',
+          eventiumProblem: 'A large amount of event content needed to feel easy to scan without losing energy or personality.',
+          eventiumSolutionTitle: 'Solution',
+          eventiumSolution: 'A clearer browsing experience with stronger hierarchy, better filtering paths, and a more distinctive visual system.',
+          eventiumCta: 'View case study',
+          chiroAria: 'Open the Chiro Negenmanneke case study',
+          chiroSummary: 'Community website designed to help parents, members, and volunteers find the right information quickly.',
+          chiroProblemTitle: 'Problem',
+          chiroProblem: 'The site needed to handle practical information for different audiences without feeling messy or administrative.',
+          chiroSolutionTitle: 'Solution',
+          chiroSolution: 'A warmer, more structured website with clearer paths for activities, registration, contact, and practical updates.',
+          chiroCta: 'View case study'
+        },
+        trust: {
+          badge: 'Why Atypique',
+          title: 'Why clients choose to build with us',
+          description: 'We combine product thinking, interface care, and practical execution so the final result is not just attractive, but useful.',
+          strategyTitle: 'Strategy before decoration',
+          strategyBody: 'We clarify the offer, the audience, and the key action before polishing the visuals.',
+          endToEndTitle: 'Design and build stay aligned',
+          endToEndBody: 'The same thinking carries from structure to interface to front-end implementation.',
+          directTitle: 'Small team, direct collaboration',
+          directBody: 'Fewer handoffs, clearer decisions, and faster progress throughout the project.'
+        },
+        process: {
+          badge: 'How We Work',
+          title: 'A simple process that keeps projects moving',
+          description: 'We keep the process focused so decisions stay clear and momentum stays high.',
+          stepOneTitle: 'Clarify',
+          stepOneBody: 'We define the audience, the offer, and the most important user journeys first.',
+          stepTwoTitle: 'Shape',
+          stepTwoBody: 'We turn the direction into interface structure, layout, and a stronger visual system.',
+          stepThreeTitle: 'Build',
+          stepThreeBody: 'We ship a polished front-end experience that is responsive, usable, and ready to launch.'
+        },
+        cta: {
+          badge: 'Ready to Build',
+          title: 'If your website or product needs sharper execution, let’s talk.',
+          description: 'We can help with a new launch, a redesign, or a clearer product direction that turns more visitors into leads.',
+          primary: 'Start a Project',
+          secondary: 'Contact Us'
         }
       },
       about: {
@@ -134,35 +198,73 @@ window.ATYPIQUE_I18N = {
       },
       products: {
         meta: {
-          title: 'Atypique Work | Selected Websites',
-          description: 'Explore live websites designed and developed by Atypique for communities, brands and growing organizations.',
-          ogTitle: 'Atypique Work',
-          ogDescription: 'Selected live websites built by Atypique.'
+          title: 'Atypique Work | Case Studies and Digital Projects',
+          description: 'Explore case studies from Atypique covering product websites, digital experiences, UX decisions, and front-end implementation for real teams.',
+          ogTitle: 'Atypique Work | Case Studies and Digital Projects',
+          ogDescription: 'Each project starts with a practical problem, then gets shaped into a cleaner, more credible digital experience.'
         },
         header: {
-          badge: 'Selected Work',
-          title: 'Websites built around real people, clear journeys and lasting usefulness.',
-          description: 'Two live examples developed by Atypique for discovery, communication and community engagement.'
+          badge: 'Case Studies',
+          title: 'Selected projects built for clarity, usability, and momentum.',
+          description: 'Each project starts with a practical problem, then gets shaped into a cleaner, more credible digital experience.',
+          primaryCta: 'Start a Project',
+          secondaryCta: 'Jump to Projects'
+        },
+        overview: {
+          caseStudiesValue: '2 Live',
+          caseStudiesLabel: 'Public case studies',
+          scopeValue: 'Senior-led',
+          scopeLabel: 'Product, design, and build',
+          focusValue: 'Clarity-first',
+          focusLabel: 'Clearer journeys and stronger trust'
+        },
+        labels: {
+          problem: 'Problem',
+          solution: 'Solution',
+          features: 'Key Features',
+          stack: 'Stack',
+          outcome: 'Outcome'
         },
         eventium: {
-          badge: 'Live Website',
-          subtitle: 'Concert and event discovery platform',
-          body: 'Eventium helps people discover local concerts and events through a lively interface, clearer browsing flows and a distinctive brand presence.',
-          featureOne: 'Search-led event discovery designed for quick scanning',
-          featureTwo: 'Playful branding translated into a polished digital experience',
-          featureThree: 'Mobile-friendly interface built for on-the-go browsing',
-          visit: 'Visit Website',
-          similar: 'Start Something Similar'
+          badge: 'Case Study',
+          type: 'Web Platform',
+          summary: 'Eventium is a discovery platform that helps people find concerts, nightlife, and local events through a faster, more engaging browsing experience.',
+          problem: 'The platform had to present a large amount of event content in a way that felt lively and distinctive, while still being quick to scan and easy to navigate.',
+          solution: 'We shaped a clearer interface with stronger hierarchy, simpler browsing paths, and a playful but more controlled visual language that supports discovery.',
+          featureOne: 'Search-led browsing and clearer event scanning',
+          featureTwo: 'Stronger category, filter, and navigation structure',
+          featureThree: 'Mobile-friendly experience built for on-the-go discovery',
+          stackOne: 'Responsive front-end build',
+          stackTwo: 'Custom UI components',
+          stackThree: 'Brand-led interface system',
+          stackFour: 'SEO-ready content structure',
+          outcome: 'A more polished digital presence that makes discovery easier and gives the brand a sharper, more memorable identity.',
+          visit: 'View Project',
+          similar: 'Build Something Similar'
         },
         chiro: {
-          badge: 'Community Website',
-          subtitle: 'Official site for a local youth movement',
-          body: 'Chiro Negenmanneke gives parents, members and volunteers a clear place for registrations, practical information, activities and contact details.',
-          featureOne: 'Structured information architecture for parents and members',
-          featureTwo: 'Warm, community-first presentation with practical navigation',
-          featureThree: 'Pages for registrations, groups, activities and outreach',
-          visit: 'Visit Website',
-          discuss: 'Discuss a Website'
+          badge: 'Case Study',
+          type: 'Community Website',
+          summary: 'Chiro Negenmanneke is a community website built to help parents, members, and volunteers quickly access practical information, registrations, and activities.',
+          problem: 'The website needed to serve different audiences with a lot of practical content, without feeling cluttered or difficult to browse.',
+          solution: 'We organized the information into clearer user paths and designed a friendlier front-end experience that supports day-to-day communication.',
+          featureOne: 'Audience-based information structure',
+          featureTwo: 'Clear pages for activities, groups, and practical updates',
+          featureThree: 'Simple access to contact and registration actions',
+          stackOne: 'Responsive website architecture',
+          stackTwo: 'Content-first page design',
+          stackThree: 'Accessible navigation patterns',
+          stackFour: 'Maintainable front-end structure',
+          outcome: 'A clearer digital home for the community, with less friction around practical information and a more approachable overall experience.',
+          visit: 'View Project',
+          discuss: 'Discuss a Similar Project'
+        },
+        cta: {
+          badge: 'Need something at this level?',
+          title: 'We turn ideas, websites, and early products into clearer digital experiences.',
+          description: 'If you need a more premium product presence, a sharper interface, or a build partner who can carry the work through, let’s talk.',
+          primary: 'Start a Project',
+          secondary: 'Contact Us'
         }
       },
       contact: {
@@ -233,35 +335,99 @@ window.ATYPIQUE_I18N = {
       },
       home: {
         meta: {
-          title: 'Atypique | Outils numériques pour les petites entreprises ambitieuses',
-          description: 'Atypique conçoit des outils numériques, des sites web et des expériences produit pratiques pour les entrepreneurs, créateurs et commerces locaux.',
-          ogTitle: 'Atypique | Outils numériques pour les petites entreprises ambitieuses',
-          ogDescription: 'Produits web, design UX et automatisations concrètes adaptés à la réalité de votre activité.'
+          title: 'Atypique | Web apps, produits SaaS et expériences digitales',
+          description: 'Atypique est un studio digital qui conçoit des web apps, produits SaaS et sites orientés conversion pour les startups, créateurs et petites entreprises.',
+          ogTitle: 'Atypique | Web apps, produits SaaS et expériences digitales',
+          ogDescription: 'De la structure produit au front-end final, Atypique crée des expériences digitales claires, rapides et intentionnelles.'
         },
         hero: {
-          badge: 'Conçu pour les vraies entreprises',
-          title: 'Des produits numériques qui font réellement avancer votre activité.',
-          logoAlt: 'Logo Atypique',
-          tagline: 'Du premier concept au lancement, nous créons des outils pratiques et soignés pour les entrepreneurs, artistes et marques locales.',
-          startProject: 'Démarrer un projet',
-          seeServices: 'Voir les services'
-        },
-        intro: {
-          text: "La plupart des équipes n'ont pas besoin de complexité. Elles ont besoin d'une structure claire, d'une exécution fiable et d'un partenaire qui comprend les contraintes métier. C'est là qu'Atypique intervient."
-        },
-        selected: {
-          title: 'Sites sélectionnés',
-          description: 'Des projets web en ligne conçus pour être utiles, mémorables et faciles à parcourir.',
-          eventiumAria: 'Visiter le site Eventium',
-          eventiumDescription: "Plateforme de découverte de concerts et d'événements avec des filtres intelligents, un ancrage local et une identité visuelle ludique.",
-          chiroAria: 'Visiter le site Chiro Negenmanneke',
-          chiroDescription: 'Site communautaire avec des parcours clairs pour les inscriptions, les infos pratiques, les activités et le contact.'
+          badge: 'Studio digital',
+          kicker: 'Pour les startups, les créateurs et les petites entreprises',
+          title: 'Nous créons des web apps, produits SaaS et expériences digitales modernes.',
+          tagline: 'De la structure produit et du design d’interface jusqu’au front-end final, Atypique aide les équipes à transformer leurs idées en produits numériques clairs, rapides et soignés.',
+          primaryCta: 'Démarrer un projet',
+          secondaryCta: 'Voir les réalisations',
+          serviceOne: 'Web apps et produits SaaS',
+          serviceTwo: 'Sites pensés pour convertir',
+          serviceThree: 'UX, interface et front-end',
+          proofTitle: 'Ce que les clients viennent souvent chercher',
+          proofOneTitle: 'Un positionnement plus clair',
+          proofOneBody: 'Rendre l’offre compréhensible en quelques secondes dès la première visite.',
+          proofTwoTitle: 'Une meilleure expérience produit',
+          proofTwoBody: 'Concevoir des parcours et des interfaces plus simples à comprendre, utiliser et croire.',
+          proofThreeTitle: 'Un partenaire qui peut livrer',
+          proofThreeBody: 'Avancer du concept au lancement avec stratégie, design et build alignés.'
         },
         metrics: {
-          firstResponse: 'Première réponse habituelle',
-          customProjects: 'Projets sur mesure',
-          teamCount: '1 équipe',
-          teamDelivery: 'Design + développement + livraison'
+          responseValue: '48h',
+          responseLabel: 'Délai de première réponse habituel',
+          approachValue: 'Senior-led',
+          approachLabel: 'Stratégie, design et build',
+          deliveryValue: 'De bout en bout',
+          deliveryLabel: 'Du concept au lancement'
+        },
+        services: {
+          badge: 'Ce Que Nous Créons',
+          title: 'Des services pensés pour des produits qui doivent être beaux et efficaces.',
+          description: 'Nous aidons les équipes à lancer de nouvelles idées, affiner des produits existants et créer des expériences digitales plus faciles à comprendre et à faire confiance.',
+          appTitle: 'Web apps et SaaS',
+          appBody: 'Interfaces, flux produit, dashboards et fonctionnalités conçus pour la clarté, la rapidité et l’utilisabilité.',
+          websiteTitle: 'Des sites qui ont un rôle précis',
+          websiteBody: 'Sites de marque, portfolios et sites business qui expliquent rapidement l’offre et poussent la bonne action.',
+          designTitle: 'UX et design d’interface',
+          designBody: 'Structure, parcours, wireframes et systèmes visuels qui donnent une vraie intention à l’expérience.',
+          frontEndTitle: 'Implémentation front-end',
+          frontEndBody: 'Un build responsive et soigné, avec une structure maintenable et une livraison pratique.'
+        },
+        selected: {
+          badge: 'Réalisations',
+          title: 'Quelques projets conçus pour mieux expliquer, mieux guider et mieux convertir.',
+          description: 'Pas de simples vitrines. Chaque projet répond à un vrai problème de clarté, de navigation ou d’expérience produit.',
+          allWork: 'Voir toutes les études de cas',
+          caseStudyLabel: 'Étude de cas',
+          eventiumAria: "Ouvrir l'étude de cas Eventium",
+          eventiumSummary: 'Plateforme de découverte d’événements pensée pour rendre les concerts et sorties locaux plus rapides et plus engageants à parcourir.',
+          eventiumProblemTitle: 'Problème',
+          eventiumProblem: 'Une grande quantité de contenu événementiel devait rester facile à scanner sans perdre en énergie ni en personnalité.',
+          eventiumSolutionTitle: 'Solution',
+          eventiumSolution: 'Une expérience de navigation plus claire, avec une meilleure hiérarchie, des chemins de filtrage plus évidents et un système visuel plus distinctif.',
+          eventiumCta: "Voir l'étude de cas",
+          chiroAria: "Ouvrir l'étude de cas Chiro Negenmanneke",
+          chiroSummary: 'Site communautaire conçu pour aider parents, membres et bénévoles à trouver rapidement la bonne information.',
+          chiroProblemTitle: 'Problème',
+          chiroProblem: 'Le site devait gérer beaucoup d’informations pratiques pour plusieurs publics sans devenir brouillon ou trop administratif.',
+          chiroSolutionTitle: 'Solution',
+          chiroSolution: 'Un site plus chaleureux et structuré, avec des parcours plus clairs pour les activités, les inscriptions, le contact et les mises à jour pratiques.',
+          chiroCta: "Voir l'étude de cas"
+        },
+        trust: {
+          badge: 'Pourquoi Atypique',
+          title: 'Pourquoi les clients choisissent de travailler avec nous',
+          description: 'Nous combinons réflexion produit, soin de l’interface et exécution concrète pour obtenir un résultat non seulement beau, mais vraiment utile.',
+          strategyTitle: 'La stratégie avant la décoration',
+          strategyBody: 'Nous clarifions l’offre, le public et l’action clé avant de polir le visuel.',
+          endToEndTitle: 'Le design et le build avancent ensemble',
+          endToEndBody: 'La même logique guide la structure, l’interface et l’implémentation front-end.',
+          directTitle: 'Petite équipe, échanges directs',
+          directBody: 'Moins de relais, des décisions plus nettes et une progression plus rapide tout au long du projet.'
+        },
+        process: {
+          badge: 'Notre Méthode',
+          title: 'Un processus simple qui garde le projet en mouvement',
+          description: 'Nous gardons le process concentré pour que les décisions restent claires et que la dynamique ne retombe pas.',
+          stepOneTitle: 'Clarifier',
+          stepOneBody: 'Nous définissons d’abord le public, l’offre et les parcours utilisateurs les plus importants.',
+          stepTwoTitle: 'Structurer',
+          stepTwoBody: 'Nous transformons cette direction en structure d’interface, en layout et en système visuel plus fort.',
+          stepThreeTitle: 'Construire',
+          stepThreeBody: 'Nous livrons une expérience front-end soignée, responsive, utilisable et prête à être lancée.'
+        },
+        cta: {
+          badge: 'Prêt à Construire',
+          title: 'Si votre site ou produit a besoin d’une exécution plus nette, parlons-en.',
+          description: 'Nous pouvons intervenir pour un nouveau lancement, une refonte ou une direction produit plus claire qui transforme davantage de visiteurs en leads.',
+          primary: 'Démarrer un projet',
+          secondary: 'Nous contacter'
         }
       },
       about: {
@@ -289,7 +455,7 @@ window.ATYPIQUE_I18N = {
           craftTitle: 'Soin + utilité',
           craftBody: 'Une identité visuelle forte soutenue par des choix UX concrets.',
           fitTitle: 'Pensé pour durer',
-          fitBody: "Des solutions qui restent utiles à mesure que votre activité grandit.",
+          fitBody: 'Des solutions qui restent utiles à mesure que votre activité grandit.',
           cta: 'Parler de votre projet'
         }
       },
@@ -333,35 +499,73 @@ window.ATYPIQUE_I18N = {
       },
       products: {
         meta: {
-          title: 'Réalisations Atypique | Sites sélectionnés',
-          description: 'Découvrez des sites en ligne conçus et développés par Atypique pour des communautés, des marques et des organisations en croissance.',
-          ogTitle: 'Réalisations Atypique',
-          ogDescription: 'Une sélection de sites en ligne créés par Atypique.'
+          title: 'Réalisations Atypique | Études de cas et projets digitaux',
+          description: 'Découvrez des études de cas Atypique autour des sites produits, expériences digitales, choix UX et implémentations front-end pour de vrais projets.',
+          ogTitle: 'Réalisations Atypique | Études de cas et projets digitaux',
+          ogDescription: 'Chaque projet part d’un problème concret puis devient une expérience digitale plus claire et plus crédible.'
         },
         header: {
-          badge: 'Réalisations sélectionnées',
-          title: 'Des sites pensés pour de vraies personnes, des parcours clairs et une utilité durable.',
-          description: 'Deux exemples en ligne développés par Atypique pour la découverte, la communication et l’engagement communautaire.'
+          badge: 'Études de cas',
+          title: 'Des projets choisis pour leur clarté, leur utilisabilité et leur impact.',
+          description: 'Chaque projet part d’un problème concret puis devient une expérience digitale plus claire et plus crédible.',
+          primaryCta: 'Démarrer un projet',
+          secondaryCta: 'Voir les projets'
+        },
+        overview: {
+          caseStudiesValue: '2 live',
+          caseStudiesLabel: 'Études de cas publiques',
+          scopeValue: 'Senior-led',
+          scopeLabel: 'Produit, design et build',
+          focusValue: 'Clarté d’abord',
+          focusLabel: 'Parcours plus lisibles et confiance renforcée'
+        },
+        labels: {
+          problem: 'Problème',
+          solution: 'Solution',
+          features: 'Fonctionnalités clés',
+          stack: 'Stack',
+          outcome: 'Résultat'
         },
         eventium: {
-          badge: 'Site en ligne',
-          subtitle: 'Plateforme de découverte de concerts et d’événements',
-          body: 'Eventium aide le public à découvrir des concerts et événements locaux grâce à une interface dynamique, une navigation plus claire et une présence de marque distinctive.',
-          featureOne: 'Découverte guidée par la recherche, pensée pour un scan rapide',
-          featureTwo: 'Un branding ludique transformé en expérience digitale soignée',
-          featureThree: 'Une interface mobile pensée pour la navigation en déplacement',
-          visit: 'Visiter le site',
-          similar: 'Lancer un projet similaire'
+          badge: 'Étude de cas',
+          type: 'Plateforme web',
+          summary: 'Eventium est une plateforme de découverte qui aide les utilisateurs à trouver concerts, sorties et événements locaux grâce à une navigation plus rapide et plus engageante.',
+          problem: 'La plateforme devait présenter beaucoup de contenu événementiel de façon vivante et distinctive, tout en restant rapide à scanner et simple à parcourir.',
+          solution: 'Nous avons conçu une interface plus lisible, avec une hiérarchie plus forte, des parcours plus simples et un langage visuel ludique mais plus maîtrisé.',
+          featureOne: 'Navigation guidée par la recherche et scan des événements plus rapide',
+          featureTwo: 'Structure plus claire des catégories, filtres et parcours',
+          featureThree: 'Expérience mobile pensée pour la découverte en déplacement',
+          stackOne: 'Build front-end responsive',
+          stackTwo: 'Composants UI sur mesure',
+          stackThree: 'Système d’interface guidé par la marque',
+          stackFour: 'Structure de contenu prête pour le SEO',
+          outcome: 'Une présence digitale plus nette, qui rend la découverte plus fluide et donne à la marque une identité en ligne plus forte.',
+          visit: 'Voir le projet',
+          similar: 'Créer quelque chose de similaire'
         },
         chiro: {
-          badge: 'Site communautaire',
-          subtitle: "Site officiel d'un mouvement de jeunesse local",
-          body: 'Chiro Negenmanneke offre aux parents, membres et bénévoles un endroit clair pour les inscriptions, les informations pratiques, les activités et le contact.',
-          featureOne: 'Une architecture d’information structurée pour les parents et les membres',
-          featureTwo: 'Une présentation chaleureuse, pensée pour la communauté et la praticité',
-          featureThree: 'Des pages pour les inscriptions, les groupes, les activités et la communication',
-          visit: 'Visiter le site',
-          discuss: 'Parler d’un site web'
+          badge: 'Étude de cas',
+          type: 'Site communautaire',
+          summary: 'Chiro Negenmanneke est un site communautaire conçu pour aider parents, membres et bénévoles à accéder rapidement aux informations pratiques, inscriptions et activités.',
+          problem: 'Le site devait servir plusieurs publics avec beaucoup de contenu pratique, sans devenir encombré ni difficile à parcourir.',
+          solution: 'Nous avons organisé l’information en parcours plus clairs et conçu une expérience front-end plus chaleureuse pour la communication du quotidien.',
+          featureOne: 'Structure d’information pensée selon les différents publics',
+          featureTwo: 'Pages claires pour les activités, les groupes et les infos pratiques',
+          featureThree: 'Accès simple au contact et aux inscriptions',
+          stackOne: 'Architecture de site responsive',
+          stackTwo: 'Design de pages centré sur le contenu',
+          stackThree: 'Schémas de navigation accessibles',
+          stackFour: 'Structure front-end facile à maintenir',
+          outcome: 'Un espace digital plus clair pour la communauté, avec moins de friction sur les informations pratiques et une expérience plus accueillante.',
+          visit: 'Voir le projet',
+          discuss: 'Parler d’un projet similaire'
+        },
+        cta: {
+          badge: 'Besoin du même niveau d’exigence ?',
+          title: 'Nous transformons des idées, des sites et des produits naissants en expériences digitales plus claires.',
+          description: 'Si vous avez besoin d’une présence produit plus premium, d’une interface plus forte ou d’un partenaire capable de mener le projet jusqu’au bout, parlons-en.',
+          primary: 'Démarrer un projet',
+          secondary: 'Nous contacter'
         }
       },
       contact: {
@@ -432,35 +636,99 @@ window.ATYPIQUE_I18N = {
       },
       home: {
         meta: {
-          title: 'Atypique | Digitale tools voor ambitieuze kleine ondernemingen',
-          description: 'Atypique bouwt praktische digitale tools, websites en productervaringen voor ondernemers, makers en lokale bedrijven.',
-          ogTitle: 'Atypique | Digitale tools voor ambitieuze kleine ondernemingen',
-          ogDescription: 'Webproducten, UX-design en praktische automatisering op maat van je bedrijfsrealiteit.'
+          title: 'Atypique | Web apps, SaaS-producten en digitale ervaringen',
+          description: 'Atypique is een digitaal studio dat moderne web apps, SaaS-producten en conversiegerichte websites bouwt voor startups, creators en kleine bedrijven.',
+          ogTitle: 'Atypique | Web apps, SaaS-producten en digitale ervaringen',
+          ogDescription: 'Van productstructuur tot afgewerkte front-end bouwt Atypique digitale ervaringen die helder, snel en doordacht aanvoelen.'
         },
         hero: {
-          badge: 'Gebouwd voor echte bedrijven',
-          title: 'Digitale producten die je bedrijf echt vooruithelpen.',
-          logoAlt: 'Atypique-logo',
-          tagline: 'Van eerste concept tot lancering bouwen we praktische en verzorgde tools voor ondernemers, artiesten en lokale merken.',
-          startProject: 'Start een project',
-          seeServices: 'Bekijk diensten'
-        },
-        intro: {
-          text: 'De meeste teams hebben geen complexiteit nodig. Ze hebben nood aan een duidelijke structuur, betrouwbare uitvoering en een partner die de bedrijfsrealiteit begrijpt. Daar past Atypique in.'
-        },
-        selected: {
-          title: 'Geselecteerde websites',
-          description: 'Live websiteprojecten die nuttig, memorabel en makkelijk te gebruiken zijn.',
-          eventiumAria: 'Bezoek de Eventium-website',
-          eventiumDescription: 'Platform voor concert- en eventontdekking met slimme filters, lokale focus en een speelse visuele identiteit.',
-          chiroAria: 'Bezoek de Chiro Negenmanneke-website',
-          chiroDescription: 'Communitywebsite met duidelijke routes voor inschrijvingen, praktische info, activiteiten en contact.'
+          badge: 'Digitale studio',
+          kicker: 'Voor startups, creators en kleine bedrijven',
+          title: 'We bouwen moderne web apps, SaaS-producten en digitale ervaringen.',
+          tagline: 'Van productstructuur en interface design tot een verzorgde front-end build helpt Atypique teams om ideeën om te zetten in digitale producten die helder, snel en intentioneel aanvoelen.',
+          primaryCta: 'Start een project',
+          secondaryCta: 'Bekijk geselecteerd werk',
+          serviceOne: 'Web apps en SaaS-producten',
+          serviceTwo: 'Conversiegerichte websites',
+          serviceThree: 'UX, interface en front-end build',
+          proofTitle: 'Waar klanten meestal hulp bij zoeken',
+          proofOneTitle: 'Duidelijkere positionering',
+          proofOneBody: 'Het aanbod sneller helder maken, zodat bezoekers de waarde meteen begrijpen.',
+          proofTwoTitle: 'Sterkere productervaring',
+          proofTwoBody: 'Flows en interfaces ontwerpen die makkelijker te vertrouwen, te gebruiken en te navigeren zijn.',
+          proofThreeTitle: 'Een partner die kan opleveren',
+          proofThreeBody: 'Van concept tot lancering met strategie, design en build die op elkaar afgestemd blijven.'
         },
         metrics: {
-          firstResponse: 'Typische eerste reactie',
-          customProjects: 'Projecten op maat',
-          teamCount: '1 team',
-          teamDelivery: 'Design + bouw + oplevering'
+          responseValue: '48u',
+          responseLabel: 'Typische eerste reactie',
+          approachValue: 'Senior-led',
+          approachLabel: 'Strategie, design en build',
+          deliveryValue: 'End-to-end',
+          deliveryLabel: 'Van concept tot lancering'
+        },
+        services: {
+          badge: 'Wat We Bouwen',
+          title: 'Diensten voor producten die er scherp moeten uitzien en goed moeten werken.',
+          description: 'We helpen teams nieuwe ideeën lanceren, bestaande producten aanscherpen en digitale ervaringen bouwen die sneller duidelijk worden en meer vertrouwen wekken.',
+          appTitle: 'Web apps en SaaS',
+          appBody: 'Interfaces, productflows, dashboards en features ontworpen voor duidelijkheid, snelheid en bruikbaarheid.',
+          websiteTitle: 'Websites met een duidelijke taak',
+          websiteBody: 'Merk-, portfolio- en businesswebsites die het aanbod snel uitleggen en de juiste volgende stap sturen.',
+          designTitle: 'UX en interface design',
+          designBody: 'Structuur, user journeys, wireframes en visuele systemen die de ervaring bewust en sterk laten aanvoelen.',
+          frontEndTitle: 'Front-end implementatie',
+          frontEndBody: 'Responsive en verzorgde buildkwaliteit met een praktische overdracht en een onderhoudbare structuur.'
+        },
+        selected: {
+          badge: 'Geselecteerd werk',
+          title: 'Een paar projecten gebouwd om beter te communiceren, beter aan te voelen en duidelijker te converteren.',
+          description: 'Geen losse showcase. Elk project lost een echt probleem op rond duidelijkheid, navigatie of productervaring.',
+          allWork: 'Bekijk alle case studies',
+          caseStudyLabel: 'Case Study',
+          eventiumAria: 'Open de Eventium case study',
+          eventiumSummary: 'Eventplatform gebouwd om lokale concerten en evenementen sneller en aantrekkelijker doorzoekbaar te maken.',
+          eventiumProblemTitle: 'Probleem',
+          eventiumProblem: 'Een grote hoeveelheid eventcontent moest makkelijk scanbaar blijven zonder energie of persoonlijkheid te verliezen.',
+          eventiumSolutionTitle: 'Oplossing',
+          eventiumSolution: 'Een duidelijkere browse-ervaring met sterkere hiërarchie, betere filterpaden en een meer onderscheidend visueel systeem.',
+          eventiumCta: 'Bekijk case study',
+          chiroAria: 'Open de Chiro Negenmanneke case study',
+          chiroSummary: 'Communitywebsite ontworpen om ouders, leden en vrijwilligers snel naar de juiste informatie te leiden.',
+          chiroProblemTitle: 'Probleem',
+          chiroProblem: 'De site moest veel praktische informatie voor verschillende doelgroepen bevatten zonder rommelig of administratief aan te voelen.',
+          chiroSolutionTitle: 'Oplossing',
+          chiroSolution: 'Een warmere en beter gestructureerde website met duidelijkere routes voor activiteiten, inschrijvingen, contact en praktische updates.',
+          chiroCta: 'Bekijk case study'
+        },
+        trust: {
+          badge: 'Waarom Atypique',
+          title: 'Waarom klanten met ons bouwen',
+          description: 'We combineren productdenken, interfacezorg en praktische uitvoering zodat het eindresultaat niet alleen mooi is, maar ook bruikbaar.',
+          strategyTitle: 'Strategie voor decoratie',
+          strategyBody: 'We maken het aanbod, het publiek en de hoofdactie eerst scherp voor we het visueel oppoetsen.',
+          endToEndTitle: 'Design en build blijven op elkaar afgestemd',
+          endToEndBody: 'Dezelfde denklijn loopt door van structuur naar interface tot front-end implementatie.',
+          directTitle: 'Klein team, directe samenwerking',
+          directBody: 'Minder overdrachten, duidelijkere beslissingen en sneller momentum doorheen het project.'
+        },
+        process: {
+          badge: 'Hoe We Werken',
+          title: 'Een eenvoudig proces dat projecten vooruit laat gaan',
+          description: 'We houden het proces scherp zodat beslissingen duidelijk blijven en de vaart erin blijft.',
+          stepOneTitle: 'Verhelderen',
+          stepOneBody: 'We bepalen eerst het publiek, het aanbod en de belangrijkste user journeys.',
+          stepTwoTitle: 'Vormgeven',
+          stepTwoBody: 'We vertalen die richting naar interfacestructuur, layout en een sterker visueel systeem.',
+          stepThreeTitle: 'Bouwen',
+          stepThreeBody: 'We leveren een verzorgde front-end ervaring die responsive, bruikbaar en klaar voor lancering is.'
+        },
+        cta: {
+          badge: 'Klaar om te bouwen',
+          title: 'Als je website of product een scherpere uitvoering nodig heeft, laten we praten.',
+          description: 'We kunnen helpen met een nieuwe lancering, een redesign of een duidelijkere productrichting die meer bezoekers omzet in leads.',
+          primary: 'Start een project',
+          secondary: 'Neem contact op'
         }
       },
       about: {
@@ -532,35 +800,73 @@ window.ATYPIQUE_I18N = {
       },
       products: {
         meta: {
-          title: 'Atypique Werk | Geselecteerde websites',
-          description: 'Ontdek live websites ontworpen en ontwikkeld door Atypique voor communities, merken en groeiende organisaties.',
-          ogTitle: 'Atypique Werk',
-          ogDescription: 'Een selectie live websites gebouwd door Atypique.'
+          title: 'Atypique Werk | Case studies en digitale projecten',
+          description: 'Ontdek case studies van Atypique rond productwebsites, digitale ervaringen, UX-keuzes en front-end implementatie voor echte teams.',
+          ogTitle: 'Atypique Werk | Case studies en digitale projecten',
+          ogDescription: 'Elk project vertrekt vanuit een praktisch probleem en groeit uit tot een duidelijkere en geloofwaardigere digitale ervaring.'
         },
         header: {
-          badge: 'Geselecteerd werk',
-          title: 'Websites gebouwd rond echte mensen, duidelijke trajecten en blijvende bruikbaarheid.',
-          description: 'Twee live voorbeelden ontwikkeld door Atypique voor ontdekking, communicatie en communitywerking.'
+          badge: 'Case studies',
+          title: 'Geselecteerde projecten gebouwd voor duidelijkheid, gebruiksgemak en momentum.',
+          description: 'Elk project vertrekt vanuit een praktisch probleem en groeit uit tot een duidelijkere en geloofwaardigere digitale ervaring.',
+          primaryCta: 'Start een project',
+          secondaryCta: 'Ga naar projecten'
+        },
+        overview: {
+          caseStudiesValue: '2 live',
+          caseStudiesLabel: 'Publieke case studies',
+          scopeValue: 'Senior-led',
+          scopeLabel: 'Product, design en build',
+          focusValue: 'Clarity-first',
+          focusLabel: 'Duidelijkere journeys en meer vertrouwen'
+        },
+        labels: {
+          problem: 'Probleem',
+          solution: 'Oplossing',
+          features: 'Belangrijkste features',
+          stack: 'Stack',
+          outcome: 'Resultaat'
         },
         eventium: {
-          badge: 'Live website',
-          subtitle: 'Platform voor concert- en eventontdekking',
-          body: 'Eventium helpt mensen lokale concerten en evenementen ontdekken via een levendige interface, duidelijkere browseflows en een onderscheidende merkuitstraling.',
-          featureOne: 'Eventontdekking met een zoekgerichte structuur voor snel scannen',
-          featureTwo: 'Speelse branding vertaald naar een verzorgde digitale ervaring',
-          featureThree: 'Mobielvriendelijke interface voor onderweg',
-          visit: 'Bezoek website',
-          similar: 'Start iets gelijkaardigs'
+          badge: 'Case study',
+          type: 'Webplatform',
+          summary: 'Eventium is een discoveryplatform dat mensen helpt concerten, nightlife en lokale events te vinden via een snellere en aantrekkelijkere browse-ervaring.',
+          problem: 'Het platform moest veel eventcontent op een levendige en onderscheidende manier tonen, terwijl het tegelijk snel scanbaar en eenvoudig navigeerbaar bleef.',
+          solution: 'We vormden een duidelijkere interface met sterkere hiërarchie, eenvoudigere browsepaden en een speelse maar beter gecontroleerde visuele taal.',
+          featureOne: 'Zoekgerichte browsing en sneller events scannen',
+          featureTwo: 'Sterkere categorie-, filter- en navigatiestructuur',
+          featureThree: 'Mobielvriendelijke ervaring voor discovery onderweg',
+          stackOne: 'Responsive front-end build',
+          stackTwo: 'Custom UI-componenten',
+          stackThree: 'Merkgedreven interfacesysteem',
+          stackFour: 'SEO-klare contentstructuur',
+          outcome: 'Een meer verzorgde digitale presence die discovery eenvoudiger maakt en het merk een scherpere, memorabele identiteit geeft.',
+          visit: 'Bekijk project',
+          similar: 'Bouw iets gelijkaardigs'
         },
         chiro: {
-          badge: 'Communitywebsite',
-          subtitle: 'Officiële site van een lokale jeugdbeweging',
-          body: 'Chiro Negenmanneke geeft ouders, leden en vrijwilligers een duidelijke plek voor inschrijvingen, praktische info, activiteiten en contactgegevens.',
-          featureOne: 'Gestructureerde informatiearchitectuur voor ouders en leden',
-          featureTwo: 'Warme, communitygerichte presentatie met praktische navigatie',
-          featureThree: 'Pagina’s voor inschrijvingen, groepen, activiteiten en outreach',
-          visit: 'Bezoek website',
-          discuss: 'Bespreek een website'
+          badge: 'Case study',
+          type: 'Communitywebsite',
+          summary: 'Chiro Negenmanneke is een communitywebsite die ouders, leden en vrijwilligers snel toegang geeft tot praktische info, inschrijvingen en activiteiten.',
+          problem: 'De website moest verschillende doelgroepen bedienen met veel praktische content, zonder druk of moeilijk doorzoekbaar aan te voelen.',
+          solution: 'We organiseerden de informatie in duidelijkere user paths en ontwierpen een vriendelijkere front-end ervaring voor de dagelijkse communicatie.',
+          featureOne: 'Informatiestructuur op basis van doelgroepen',
+          featureTwo: 'Duidelijke pagina’s voor activiteiten, groepen en praktische updates',
+          featureThree: 'Eenvoudige toegang tot contact en inschrijvingen',
+          stackOne: 'Responsive websitearchitectuur',
+          stackTwo: 'Content-first paginadesign',
+          stackThree: 'Toegankelijke navigatiepatronen',
+          stackFour: 'Onderhoudbare front-end structuur',
+          outcome: 'Een duidelijker digitaal thuis voor de community, met minder frictie rond praktische informatie en een toegankelijkere totale ervaring.',
+          visit: 'Bekijk project',
+          discuss: 'Bespreek een gelijkaardig project'
+        },
+        cta: {
+          badge: 'Nood aan hetzelfde niveau?',
+          title: 'We maken van ideeën, websites en vroege producten duidelijkere digitale ervaringen.',
+          description: 'Als je nood hebt aan een meer premium productpresence, een sterkere interface of een buildpartner die het werk echt doorzet, laat ons praten.',
+          primary: 'Start een project',
+          secondary: 'Neem contact op'
         }
       },
       contact: {

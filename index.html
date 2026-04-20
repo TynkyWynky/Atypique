@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="home.meta.title">Atypique | Digital Tools for Ambitious Small Businesses</title>
-  <meta name="description" data-i18n-content="home.meta.description" content="Atypique builds practical digital tools, websites and product experiences for entrepreneurs, creators and local businesses." />
+  <title data-i18n="home.meta.title">Atypique | Web Apps, SaaS Products, and Digital Experiences</title>
+  <meta name="description" data-i18n-content="home.meta.description" content="Atypique is a digital studio building modern web apps, SaaS products, and conversion-focused websites for startups, creators, and small businesses." />
   <link rel="canonical" href="https://atypique-enterprise.netlify.app/" />
-  <meta property="og:title" data-i18n-content="home.meta.ogTitle" content="Atypique | Digital Tools for Ambitious Small Businesses" />
-  <meta property="og:description" data-i18n-content="home.meta.ogDescription" content="Web products, UX design and practical automation tailored to your business reality." />
+  <meta property="og:title" data-i18n-content="home.meta.ogTitle" content="Atypique | Web Apps, SaaS Products, and Digital Experiences" />
+  <meta property="og:description" data-i18n-content="home.meta.ogDescription" content="From product structure and interface design to polished front-end build, Atypique creates digital experiences that feel clear, fast, and intentional." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/atypique_logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -59,62 +59,208 @@
 
   <main id="main-content">
     <section class="hero fade-in">
-      <div>
-        <span class="badge" data-i18n="home.hero.badge">Built for Real Businesses</span>
-        <h1 data-i18n="home.hero.title">Digital products that actually move your business forward.</h1>
-        <img src="images/atypique_logo.png" data-i18n-alt="home.hero.logoAlt" alt="Atypique logo" class="main-logo" width="210" height="210" fetchpriority="high" decoding="async" />
-        <p class="tagline" data-i18n="home.hero.tagline">From first concept to launch, we create practical and polished tools for entrepreneurs, artists and local brands.</p>
+      <div class="hero-copy">
+        <span class="badge" data-i18n="home.hero.badge">Digital Studio</span>
+        <p class="hero-kicker" data-i18n="home.hero.kicker">For startups, creators, and small businesses</p>
+        <h1 data-i18n="home.hero.title">We build modern web apps, SaaS products, and digital experiences.</h1>
+        <p class="hero-tagline" data-i18n="home.hero.tagline">From product structure and interface design to polished front-end build, Atypique helps teams turn ideas into digital products that feel clear, fast, and intentional.</p>
         <div class="home-cta">
-          <a href="contact.html" class="cta-btn" data-i18n="home.hero.startProject">Start a Project</a>
-          <a href="services.html" class="cta-btn alt" data-i18n="home.hero.seeServices">See Services</a>
+          <a href="contact.html" class="cta-btn" data-i18n="home.hero.primaryCta">Start a Project</a>
+          <a href="#selected-work" class="cta-btn alt" data-i18n="home.hero.secondaryCta">See Selected Work</a>
         </div>
+        <ul class="hero-services" aria-label="Core offers">
+          <li data-i18n="home.hero.serviceOne">Web apps and SaaS products</li>
+          <li data-i18n="home.hero.serviceTwo">Conversion-focused websites</li>
+          <li data-i18n="home.hero.serviceThree">UX, interface, and front-end build</li>
+        </ul>
+      </div>
+
+      <aside class="hero-proof glass-card">
+        <p class="hero-proof-title" data-i18n="home.hero.proofTitle">What clients usually need help with</p>
+        <div class="hero-proof-list">
+          <article class="hero-proof-item">
+            <span class="hero-proof-index" aria-hidden="true">01</span>
+            <h2 data-i18n="home.hero.proofOneTitle">Clearer positioning</h2>
+            <p data-i18n="home.hero.proofOneBody">Make the offer obvious fast, so visitors understand the value in seconds.</p>
+          </article>
+          <article class="hero-proof-item">
+            <span class="hero-proof-index" aria-hidden="true">02</span>
+            <h2 data-i18n="home.hero.proofTwoTitle">Sharper product experience</h2>
+            <p data-i18n="home.hero.proofTwoBody">Design flows and interfaces that feel easier to trust, use, and navigate.</p>
+          </article>
+          <article class="hero-proof-item">
+            <span class="hero-proof-index" aria-hidden="true">03</span>
+            <h2 data-i18n="home.hero.proofThreeTitle">A partner who can ship</h2>
+            <p data-i18n="home.hero.proofThreeBody">Move from concept to launch with strategy, design, and build aligned.</p>
+          </article>
+        </div>
+
+        <div class="hero-metrics">
+          <article class="metric-card">
+            <strong data-i18n="home.metrics.responseValue">48h</strong>
+            <span data-i18n="home.metrics.responseLabel">Typical first reply</span>
+          </article>
+          <article class="metric-card">
+            <strong data-i18n="home.metrics.approachValue">Senior-led</strong>
+            <span data-i18n="home.metrics.approachLabel">Strategy, design, and build</span>
+          </article>
+          <article class="metric-card">
+            <strong data-i18n="home.metrics.deliveryValue">End-to-end</strong>
+            <span data-i18n="home.metrics.deliveryLabel">From concept to launch</span>
+          </article>
+        </div>
+      </aside>
+    </section>
+
+    <section class="services-overview fade-in delay-1 section">
+      <div class="section-intro centered">
+        <span class="badge" data-i18n="home.services.badge">What We Build</span>
+        <h2 data-i18n="home.services.title">Services shaped for products that need to look sharp and work well.</h2>
+        <p data-i18n="home.services.description">We help teams launch new ideas, sharpen existing products, and build digital experiences that are easier to understand and easier to trust.</p>
+      </div>
+
+      <div class="home-service-grid">
+        <article class="home-service-card glass-card">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-cubes"></i></div>
+          <h3 data-i18n="home.services.appTitle">Web apps and SaaS</h3>
+          <p data-i18n="home.services.appBody">Interfaces, product flows, dashboards, and features designed for clarity, speed, and usability.</p>
+        </article>
+        <article class="home-service-card glass-card">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-window-maximize"></i></div>
+          <h3 data-i18n="home.services.websiteTitle">Websites with a job to do</h3>
+          <p data-i18n="home.services.websiteBody">Brand, portfolio, and business websites that explain the offer quickly and push the right next step.</p>
+        </article>
+        <article class="home-service-card glass-card">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-pen-ruler"></i></div>
+          <h3 data-i18n="home.services.designTitle">UX and interface design</h3>
+          <p data-i18n="home.services.designBody">Structure, user journeys, wireframes, and visual systems that make the experience feel intentional.</p>
+        </article>
+        <article class="home-service-card glass-card">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
+          <h3 data-i18n="home.services.frontEndTitle">Front-end implementation</h3>
+          <p data-i18n="home.services.frontEndBody">Responsive, polished build work with practical handoff and maintainable structure.</p>
+        </article>
       </div>
     </section>
 
-    <section class="intro fade-in delay-1 section">
-      <p data-i18n="home.intro.text">Most teams do not need complexity. They need clear structure, reliable execution and a partner that understands business constraints. That is where Atypique fits in.</p>
-    </section>
-
-    <div class="flowy-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
-        <path d="M0,50 Q300,0 600,50 T1200,50" fill="transparent" stroke-width="2.5" />
-      </svg>
-    </div>
-
-    <section class="products-preview fade-in delay-2 section">
-      <h2 data-i18n="home.selected.title">Selected Websites</h2>
-      <p data-i18n="home.selected.description">Live website projects built to be useful, memorable and easy to navigate.</p>
-      <div class="product-cards">
-        <a href="https://www.eventium.be/" class="product-card-link" data-i18n-aria-label="home.selected.eventiumAria" aria-label="Visit Eventium website" target="_blank" rel="noopener noreferrer">
-          <article class="product-card-preview">
-            <div class="product-preview-mark" aria-hidden="true">EV</div>
-            <h3>Eventium</h3>
-            <p data-i18n="home.selected.eventiumDescription">Concert and event discovery platform with smart filters, local focus and a playful visual identity.</p>
-          </article>
-        </a>
-
-        <a href="https://www.chironegenmanneke.be/" class="product-card-link" data-i18n-aria-label="home.selected.chiroAria" aria-label="Visit Chiro Negenmanneke website" target="_blank" rel="noopener noreferrer">
-          <article class="product-card-preview">
-            <div class="product-preview-mark" aria-hidden="true">CN</div>
-            <h3>Chiro Negenmanneke</h3>
-            <p data-i18n="home.selected.chiroDescription">Community website with clear paths for registrations, practical info, activities and contact.</p>
-          </article>
-        </a>
+    <section class="work-section fade-in delay-1 section" id="selected-work">
+      <div class="section-head">
+        <div class="section-intro">
+          <span class="badge" data-i18n="home.selected.badge">Selected Work</span>
+          <h2 data-i18n="home.selected.title">A few projects built to communicate better, feel better, and convert more clearly.</h2>
+          <p data-i18n="home.selected.description">Not just showcase pieces. Each project solves a real clarity, navigation, or product experience problem.</p>
+        </div>
+        <a href="products.html" class="cta-btn alt" data-i18n="home.selected.allWork">See all case studies</a>
       </div>
 
-      <div class="metrics">
-        <article class="metric-card">
-          <strong>48h</strong>
-          <span data-i18n="home.metrics.firstResponse">Typical first response</span>
+      <div class="work-grid">
+        <article class="work-card glass-card">
+          <div class="work-card-top">
+            <span class="work-label" data-i18n="home.selected.caseStudyLabel">Case Study</span>
+            <div class="work-mark" aria-hidden="true">EV</div>
+          </div>
+          <h3>Eventium</h3>
+          <p class="work-summary" data-i18n="home.selected.eventiumSummary">Event discovery platform built to make browsing local concerts and events feel faster and more engaging.</p>
+          <div class="work-detail-grid">
+            <section class="work-detail">
+              <span data-i18n="home.selected.eventiumProblemTitle">Problem</span>
+              <p data-i18n="home.selected.eventiumProblem">A large amount of event content needed to feel easy to scan without losing energy or personality.</p>
+            </section>
+            <section class="work-detail">
+              <span data-i18n="home.selected.eventiumSolutionTitle">Solution</span>
+              <p data-i18n="home.selected.eventiumSolution">A clearer browsing experience with stronger hierarchy, better filtering paths, and a more distinctive visual system.</p>
+            </section>
+          </div>
+          <a href="products.html#eventium" class="work-link" data-i18n-aria-label="home.selected.eventiumAria" aria-label="Open the Eventium case study">
+            <span data-i18n="home.selected.eventiumCta">View case study</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
         </article>
-        <article class="metric-card">
-          <strong>100%</strong>
-          <span data-i18n="home.metrics.customProjects">Custom-fit projects</span>
+
+        <article class="work-card glass-card">
+          <div class="work-card-top">
+            <span class="work-label" data-i18n="home.selected.caseStudyLabel">Case Study</span>
+            <div class="work-mark" aria-hidden="true">CN</div>
+          </div>
+          <h3>Chiro Negenmanneke</h3>
+          <p class="work-summary" data-i18n="home.selected.chiroSummary">Community website designed to help parents, members, and volunteers find the right information quickly.</p>
+          <div class="work-detail-grid">
+            <section class="work-detail">
+              <span data-i18n="home.selected.chiroProblemTitle">Problem</span>
+              <p data-i18n="home.selected.chiroProblem">The site needed to handle practical information for different audiences without feeling messy or administrative.</p>
+            </section>
+            <section class="work-detail">
+              <span data-i18n="home.selected.chiroSolutionTitle">Solution</span>
+              <p data-i18n="home.selected.chiroSolution">A warmer, more structured website with clearer paths for activities, registration, contact, and practical updates.</p>
+            </section>
+          </div>
+          <a href="products.html#chiro-negenmanneke" class="work-link" data-i18n-aria-label="home.selected.chiroAria" aria-label="Open the Chiro Negenmanneke case study">
+            <span data-i18n="home.selected.chiroCta">View case study</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
         </article>
-        <article class="metric-card">
-          <strong data-i18n="home.metrics.teamCount">1 Team</strong>
-          <span data-i18n="home.metrics.teamDelivery">Design + build + delivery</span>
+      </div>
+    </section>
+
+    <section class="trust-section fade-in delay-2 section">
+      <div class="section-intro centered">
+        <span class="badge" data-i18n="home.trust.badge">Why Atypique</span>
+        <h2 data-i18n="home.trust.title">Why clients choose to build with us</h2>
+        <p data-i18n="home.trust.description">We combine product thinking, interface care, and practical execution so the final result is not just attractive, but useful.</p>
+      </div>
+
+      <div class="trust-grid">
+        <article class="trust-card glass-card">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-compass-drafting"></i></div>
+          <h3 data-i18n="home.trust.strategyTitle">Strategy before decoration</h3>
+          <p data-i18n="home.trust.strategyBody">We clarify the offer, the audience, and the key action before polishing the visuals.</p>
         </article>
+        <article class="trust-card glass-card">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
+          <h3 data-i18n="home.trust.endToEndTitle">Design and build stay aligned</h3>
+          <p data-i18n="home.trust.endToEndBody">The same thinking carries from structure to interface to front-end implementation.</p>
+        </article>
+        <article class="trust-card glass-card">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-comments"></i></div>
+          <h3 data-i18n="home.trust.directTitle">Small team, direct collaboration</h3>
+          <p data-i18n="home.trust.directBody">Fewer handoffs, clearer decisions, and faster progress throughout the project.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="process-section fade-in delay-2 section">
+      <div class="section-intro centered">
+        <span class="badge" data-i18n="home.process.badge">How We Work</span>
+        <h2 data-i18n="home.process.title">A simple process that keeps projects moving</h2>
+        <p data-i18n="home.process.description">We keep the process focused so decisions stay clear and momentum stays high.</p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card glass-card">
+          <span class="process-step" aria-hidden="true">01</span>
+          <h3 data-i18n="home.process.stepOneTitle">Clarify</h3>
+          <p data-i18n="home.process.stepOneBody">We define the audience, the offer, and the most important user journeys first.</p>
+        </article>
+        <article class="process-card glass-card">
+          <span class="process-step" aria-hidden="true">02</span>
+          <h3 data-i18n="home.process.stepTwoTitle">Shape</h3>
+          <p data-i18n="home.process.stepTwoBody">We turn the direction into interface structure, layout, and a stronger visual system.</p>
+        </article>
+        <article class="process-card glass-card">
+          <span class="process-step" aria-hidden="true">03</span>
+          <h3 data-i18n="home.process.stepThreeTitle">Build</h3>
+          <p data-i18n="home.process.stepThreeBody">We ship a polished front-end experience that is responsive, usable, and ready to launch.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-cta-band fade-in delay-2">
+      <span class="badge" data-i18n="home.cta.badge">Ready to Build</span>
+      <h2 data-i18n="home.cta.title">If your website or product needs sharper execution, let’s talk.</h2>
+      <p data-i18n="home.cta.description">We can help with a new launch, a redesign, or a clearer product direction that turns more visitors into leads.</p>
+      <div class="home-cta">
+        <a href="contact.html" class="cta-btn" data-i18n="home.cta.primary">Start a Project</a>
+        <a href="contact.html" class="cta-btn alt" data-i18n="home.cta.secondary">Contact Us</a>
       </div>
     </section>
   </main>
