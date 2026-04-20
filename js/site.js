@@ -1,6 +1,29 @@
 (function () {
   var STORAGE_KEY = 'atypique-locale';
   var i18nApi = null;
+  var reducedMotionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+
+  function prefersReducedMotion() {
+    return !!(reducedMotionQuery && reducedMotionQuery.matches);
+  }
+
+  function canUseScrollReveal() {
+    return !prefersReducedMotion() && 'IntersectionObserver' in window;
+  }
+
+  function primeMotionState() {
+    if (!document.body) {
+      return;
+    }
+
+    if (canUseScrollReveal()) {
+      document.body.classList.add('motion-ready');
+    } else {
+      document.body.classList.remove('motion-ready');
+    }
+  }
+
+  primeMotionState();
 
   function getI18nConfig() {
     return window.ATYPIQUE_I18N || null;
@@ -227,7 +250,7 @@
     var navbar = document.querySelector('.navbar');
     var navActions = document.querySelector('.nav-actions');
 
-    if (!navLinks || !hamburger) {
+    if (!navLinks || !hamburger || !navbar) {
       return;
     }
 
@@ -235,12 +258,31 @@
       navLinks.classList.remove('active');
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
+      navbar.classList.remove('hidden');
     }
+
+    function syncNavbarVisibility() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      var isMenuOpen = navLinks.classList.contains('active');
+
+      if (!isMenuOpen && currentScroll > syncNavbarVisibility.lastScroll && currentScroll > 96) {
+        navbar.classList.add('hidden');
+      } else {
+        navbar.classList.remove('hidden');
+      }
+
+      syncNavbarVisibility.lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+      syncNavbarVisibility.ticking = false;
+    }
+
+    syncNavbarVisibility.lastScroll = 0;
+    syncNavbarVisibility.ticking = false;
 
     window.toggleMenu = function () {
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
+      navbar.classList.remove('hidden');
     };
 
     navLinks.querySelectorAll('a').forEach(function (link) {
@@ -262,18 +304,17 @@
       }
     });
 
-    var lastScrollTop = 0;
-    if (navbar) {
-      window.addEventListener('scroll', function () {
-        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-        if (currentScroll > lastScrollTop && currentScroll > 80) {
-          navbar.classList.add('hidden');
-        } else {
-          navbar.classList.remove('hidden');
-        }
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-      });
-    }
+    window.addEventListener('scroll', function () {
+      if (syncNavbarVisibility.ticking) {
+        return;
+      }
+
+      syncNavbarVisibility.ticking = true;
+      window.requestAnimationFrame(syncNavbarVisibility);
+    }, { passive: true });
+
+    window.addEventListener('resize', syncNavbarVisibility);
+    syncNavbarVisibility();
   }
 
   function setupCurrentYear() {
@@ -285,21 +326,256 @@
 
   function setupRevealAnimations() {
     var animatedEls = document.querySelectorAll('.animate-up, .animate-fade-in');
-    if (!animatedEls.length || !('IntersectionObserver' in window)) {
+    if (!animatedEls.length) {
       return;
     }
 
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+    if (!canUseScrollReveal()) {
+      animatedEls.forEach(function (el) {
+        el.classList.add('visible');
       });
-    }, { threshold: 0.12 });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries, currentObserver) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add('visible');
+        currentObserver.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.14,
+      rootMargin: '0px 0px -10% 0px'
+    });
 
     animatedEls.forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      var alreadyInView = rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+
+      if (alreadyInView) {
+        el.classList.add('visible');
+        return;
+      }
+
       observer.observe(el);
     });
+  }
+
+  function setupScrollProgress() {
+    var navbar = document.querySelector('.navbar');
+    if (!navbar || prefersReducedMotion()) {
+      return;
+    }
+
+    var progress = document.createElement('div');
+    var bar = document.createElement('span');
+    var ticking = false;
+
+    progress.className = 'nav-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    bar.className = 'nav-progress-bar';
+    progress.appendChild(bar);
+    navbar.appendChild(progress);
+
+    function updateProgress() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      var ratio = maxScroll > 0 ? Math.min(scrollTop / maxScroll, 1) : 0;
+      bar.style.transform = 'scaleX(' + ratio + ')';
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+      window.requestAnimationFrame(updateProgress);
+    }, { passive: true });
+
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  }
+
+  function setupHomepageMotion() {
+    if (!document.body || !document.body.classList.contains('main-page') || prefersReducedMotion()) {
+      return;
+    }
+
+    if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') {
+      return;
+    }
+
+    var hero = document.querySelector('.hero');
+    if (!hero) {
+      return;
+    }
+
+    var gsap = window.gsap;
+    var ScrollTrigger = window.ScrollTrigger;
+    var media = typeof gsap.matchMedia === 'function' ? gsap.matchMedia() : null;
+
+    if (typeof gsap.registerPlugin === 'function') {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+
+    function buildDesktopMotion() {
+      var heroBackground = hero.querySelector('.hero-background');
+      var heroGrid = hero.querySelector('.hero-grid');
+      var heroOrbOne = hero.querySelector('.hero-orb-one');
+      var heroOrbTwo = hero.querySelector('.hero-orb-two');
+      var heroCopy = hero.querySelector('.hero-copy');
+      var heroProof = hero.querySelector('.hero-proof');
+      var heroRevealItems = hero.querySelectorAll('.hero-service-pill, .metric-card');
+      var workCards = document.querySelectorAll('.work-card');
+
+      workCards.forEach(function (card) {
+        card.classList.add('visible');
+      });
+
+      if (heroRevealItems.length) {
+        gsap.from(heroRevealItems, {
+          opacity: 0,
+          y: 22,
+          duration: 0.9,
+          stagger: 0.08,
+          ease: 'power2.out',
+          delay: 0.16,
+          clearProps: 'opacity,transform'
+        });
+      }
+
+      if (heroBackground) {
+        gsap.to(heroBackground, {
+          yPercent: 12,
+          scale: 1.08,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 0.8
+          }
+        });
+      }
+
+      if (heroGrid) {
+        gsap.to(heroGrid, {
+          yPercent: 8,
+          opacity: 0.22,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1
+          }
+        });
+      }
+
+      if (heroOrbOne) {
+        gsap.to(heroOrbOne, {
+          yPercent: -18,
+          xPercent: 6,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1.1
+          }
+        });
+      }
+
+      if (heroOrbTwo) {
+        gsap.to(heroOrbTwo, {
+          yPercent: 16,
+          xPercent: -5,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1.15
+          }
+        });
+      }
+
+      if (heroCopy) {
+        gsap.to(heroCopy, {
+          yPercent: -4,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 0.8
+          }
+        });
+      }
+
+      if (heroProof) {
+        gsap.to(heroProof, {
+          yPercent: -10,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1
+          }
+        });
+      }
+
+      workCards.forEach(function (card, index) {
+        gsap.fromTo(card, {
+          y: index === 0 ? 36 : 58,
+          opacity: index === 0 ? 0.45 : 0.3,
+          scale: index === 0 ? 0.985 : 0.965
+        }, {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 82%',
+            end: 'top 38%',
+            scrub: 0.9
+          }
+        });
+
+        ScrollTrigger.create({
+          trigger: card,
+          start: 'top 62%',
+          end: 'bottom 46%',
+          onToggle: function (state) {
+            card.classList.toggle('is-current', state.isActive);
+          }
+        });
+      });
+
+      ScrollTrigger.refresh();
+
+      return function () {
+        workCards.forEach(function (card) {
+          card.classList.remove('is-current');
+        });
+      };
+    }
+
+    if (media) {
+      media.add('(min-width: 981px)', buildDesktopMotion);
+      return;
+    }
+
+    if (window.innerWidth >= 981) {
+      buildDesktopMotion();
+    }
   }
 
   function setupContactForm() {
@@ -416,10 +692,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    primeMotionState();
     i18nApi = setupI18n();
     setupNavbar();
     setupCurrentYear();
     setupRevealAnimations();
+    setupScrollProgress();
+    setupHomepageMotion();
     setupContactForm();
     setupAnalytics();
   });

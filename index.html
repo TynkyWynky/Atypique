@@ -58,7 +58,14 @@
   </nav>
 
   <main id="main-content">
-    <section class="hero fade-in">
+    <section class="hero animate-fade-in">
+      <div class="hero-scene" aria-hidden="true">
+        <div class="hero-background"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+      </div>
+
       <div class="hero-copy">
         <span class="badge" data-i18n="home.hero.badge">Digital Studio</span>
         <p class="hero-kicker" data-i18n="home.hero.kicker">For startups, creators, and small businesses</p>
@@ -69,9 +76,9 @@
           <a href="#selected-work" class="cta-btn alt" data-i18n="home.hero.secondaryCta">See Selected Work</a>
         </div>
         <ul class="hero-services" aria-label="Core offers">
-          <li data-i18n="home.hero.serviceOne">Web apps and SaaS products</li>
-          <li data-i18n="home.hero.serviceTwo">Conversion-focused websites</li>
-          <li data-i18n="home.hero.serviceThree">UX, interface, and front-end build</li>
+          <li class="hero-service-pill" data-i18n="home.hero.serviceOne">Web apps and SaaS products</li>
+          <li class="hero-service-pill" data-i18n="home.hero.serviceTwo">Conversion-focused websites</li>
+          <li class="hero-service-pill" data-i18n="home.hero.serviceThree">UX, interface, and front-end build</li>
         </ul>
       </div>
 
@@ -112,7 +119,7 @@
       </aside>
     </section>
 
-    <section class="services-overview fade-in delay-1 section">
+    <section class="services-overview animate-fade-in section">
       <div class="section-intro centered">
         <span class="badge" data-i18n="home.services.badge">What We Build</span>
         <h2 data-i18n="home.services.title">Services shaped for products that need to look sharp and work well.</h2>
@@ -120,22 +127,22 @@
       </div>
 
       <div class="home-service-grid">
-        <article class="home-service-card glass-card">
+        <article class="home-service-card glass-card animate-up">
           <div class="service-icon" aria-hidden="true"><i class="fas fa-cubes"></i></div>
           <h3 data-i18n="home.services.appTitle">Web apps and SaaS</h3>
           <p data-i18n="home.services.appBody">Interfaces, product flows, dashboards, and features designed for clarity, speed, and usability.</p>
         </article>
-        <article class="home-service-card glass-card">
+        <article class="home-service-card glass-card animate-up">
           <div class="service-icon" aria-hidden="true"><i class="fas fa-window-maximize"></i></div>
           <h3 data-i18n="home.services.websiteTitle">Websites with a job to do</h3>
           <p data-i18n="home.services.websiteBody">Brand, portfolio, and business websites that explain the offer quickly and push the right next step.</p>
         </article>
-        <article class="home-service-card glass-card">
+        <article class="home-service-card glass-card animate-up">
           <div class="service-icon" aria-hidden="true"><i class="fas fa-pen-ruler"></i></div>
           <h3 data-i18n="home.services.designTitle">UX and interface design</h3>
           <p data-i18n="home.services.designBody">Structure, user journeys, wireframes, and visual systems that make the experience feel intentional.</p>
         </article>
-        <article class="home-service-card glass-card">
+        <article class="home-service-card glass-card animate-up">
           <div class="service-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
           <h3 data-i18n="home.services.frontEndTitle">Front-end implementation</h3>
           <p data-i18n="home.services.frontEndBody">Responsive, polished build work with practical handoff and maintainable structure.</p>
@@ -143,66 +150,68 @@
       </div>
     </section>
 
-    <section class="work-section fade-in delay-1 section" id="selected-work">
-      <div class="section-head">
-        <div class="section-intro">
-          <span class="badge" data-i18n="home.selected.badge">Selected Work</span>
-          <h2 data-i18n="home.selected.title">A few projects built to communicate better, feel better, and convert more clearly.</h2>
-          <p data-i18n="home.selected.description">Not just showcase pieces. Each project solves a real clarity, navigation, or product experience problem.</p>
+    <section class="work-section animate-fade-in section" id="selected-work">
+      <div class="work-showcase">
+        <div class="section-head">
+          <div class="section-intro">
+            <span class="badge" data-i18n="home.selected.badge">Selected Work</span>
+            <h2 data-i18n="home.selected.title">A few projects built to communicate better, feel better, and convert more clearly.</h2>
+            <p data-i18n="home.selected.description">Not just showcase pieces. Each project solves a real clarity, navigation, or product experience problem.</p>
+          </div>
+          <a href="products.html" class="cta-btn alt" data-i18n="home.selected.allWork">See all case studies</a>
         </div>
-        <a href="products.html" class="cta-btn alt" data-i18n="home.selected.allWork">See all case studies</a>
-      </div>
 
-      <div class="work-grid">
-        <article class="work-card glass-card">
-          <div class="work-card-top">
-            <span class="work-label" data-i18n="home.selected.caseStudyLabel">Case Study</span>
-            <div class="work-mark" aria-hidden="true">EV</div>
-          </div>
-          <h3>Eventium</h3>
-          <p class="work-summary" data-i18n="home.selected.eventiumSummary">Event discovery platform built to make browsing local concerts and events feel faster and more engaging.</p>
-          <div class="work-detail-grid">
-            <section class="work-detail">
-              <span data-i18n="home.selected.eventiumProblemTitle">Problem</span>
-              <p data-i18n="home.selected.eventiumProblem">A large amount of event content needed to feel easy to scan without losing energy or personality.</p>
-            </section>
-            <section class="work-detail">
-              <span data-i18n="home.selected.eventiumSolutionTitle">Solution</span>
-              <p data-i18n="home.selected.eventiumSolution">A clearer browsing experience with stronger hierarchy, better filtering paths, and a more distinctive visual system.</p>
-            </section>
-          </div>
-          <a href="products.html#eventium" class="work-link" data-i18n-aria-label="home.selected.eventiumAria" aria-label="Open the Eventium case study">
-            <span data-i18n="home.selected.eventiumCta">View case study</span>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </article>
+        <div class="work-grid">
+          <article class="work-card glass-card animate-up">
+            <div class="work-card-top">
+              <span class="work-label" data-i18n="home.selected.caseStudyLabel">Case Study</span>
+              <div class="work-mark" aria-hidden="true">EV</div>
+            </div>
+            <h3>Eventium</h3>
+            <p class="work-summary" data-i18n="home.selected.eventiumSummary">Event discovery platform built to make browsing local concerts and events feel faster and more engaging.</p>
+            <div class="work-detail-grid">
+              <section class="work-detail">
+                <span data-i18n="home.selected.eventiumProblemTitle">Problem</span>
+                <p data-i18n="home.selected.eventiumProblem">A large amount of event content needed to feel easy to scan without losing energy or personality.</p>
+              </section>
+              <section class="work-detail">
+                <span data-i18n="home.selected.eventiumSolutionTitle">Solution</span>
+                <p data-i18n="home.selected.eventiumSolution">A clearer browsing experience with stronger hierarchy, better filtering paths, and a more distinctive visual system.</p>
+              </section>
+            </div>
+            <a href="products.html#eventium" class="work-link" data-i18n-aria-label="home.selected.eventiumAria" aria-label="Open the Eventium case study">
+              <span data-i18n="home.selected.eventiumCta">View case study</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
 
-        <article class="work-card glass-card">
-          <div class="work-card-top">
-            <span class="work-label" data-i18n="home.selected.caseStudyLabel">Case Study</span>
-            <div class="work-mark" aria-hidden="true">CN</div>
-          </div>
-          <h3>Chiro Negenmanneke</h3>
-          <p class="work-summary" data-i18n="home.selected.chiroSummary">Community website designed to help parents, members, and volunteers find the right information quickly.</p>
-          <div class="work-detail-grid">
-            <section class="work-detail">
-              <span data-i18n="home.selected.chiroProblemTitle">Problem</span>
-              <p data-i18n="home.selected.chiroProblem">The site needed to handle practical information for different audiences without feeling messy or administrative.</p>
-            </section>
-            <section class="work-detail">
-              <span data-i18n="home.selected.chiroSolutionTitle">Solution</span>
-              <p data-i18n="home.selected.chiroSolution">A warmer, more structured website with clearer paths for activities, registration, contact, and practical updates.</p>
-            </section>
-          </div>
-          <a href="products.html#chiro-negenmanneke" class="work-link" data-i18n-aria-label="home.selected.chiroAria" aria-label="Open the Chiro Negenmanneke case study">
-            <span data-i18n="home.selected.chiroCta">View case study</span>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </article>
+          <article class="work-card glass-card animate-up">
+            <div class="work-card-top">
+              <span class="work-label" data-i18n="home.selected.caseStudyLabel">Case Study</span>
+              <div class="work-mark" aria-hidden="true">CN</div>
+            </div>
+            <h3>Chiro Negenmanneke</h3>
+            <p class="work-summary" data-i18n="home.selected.chiroSummary">Community website designed to help parents, members, and volunteers find the right information quickly.</p>
+            <div class="work-detail-grid">
+              <section class="work-detail">
+                <span data-i18n="home.selected.chiroProblemTitle">Problem</span>
+                <p data-i18n="home.selected.chiroProblem">The site needed to handle practical information for different audiences without feeling messy or administrative.</p>
+              </section>
+              <section class="work-detail">
+                <span data-i18n="home.selected.chiroSolutionTitle">Solution</span>
+                <p data-i18n="home.selected.chiroSolution">A warmer, more structured website with clearer paths for activities, registration, contact, and practical updates.</p>
+              </section>
+            </div>
+            <a href="products.html#chiro-negenmanneke" class="work-link" data-i18n-aria-label="home.selected.chiroAria" aria-label="Open the Chiro Negenmanneke case study">
+              <span data-i18n="home.selected.chiroCta">View case study</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="trust-section fade-in delay-2 section">
+    <section class="trust-section animate-fade-in delay-1 section">
       <div class="section-intro centered">
         <span class="badge" data-i18n="home.trust.badge">Why Atypique</span>
         <h2 data-i18n="home.trust.title">Why clients choose to build with us</h2>
@@ -210,17 +219,17 @@
       </div>
 
       <div class="trust-grid">
-        <article class="trust-card glass-card">
+        <article class="trust-card glass-card animate-up">
           <div class="service-icon" aria-hidden="true"><i class="fas fa-compass-drafting"></i></div>
           <h3 data-i18n="home.trust.strategyTitle">Strategy before decoration</h3>
           <p data-i18n="home.trust.strategyBody">We clarify the offer, the audience, and the key action before polishing the visuals.</p>
         </article>
-        <article class="trust-card glass-card">
+        <article class="trust-card glass-card animate-up">
           <div class="service-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
           <h3 data-i18n="home.trust.endToEndTitle">Design and build stay aligned</h3>
           <p data-i18n="home.trust.endToEndBody">The same thinking carries from structure to interface to front-end implementation.</p>
         </article>
-        <article class="trust-card glass-card">
+        <article class="trust-card glass-card animate-up">
           <div class="service-icon" aria-hidden="true"><i class="fas fa-comments"></i></div>
           <h3 data-i18n="home.trust.directTitle">Small team, direct collaboration</h3>
           <p data-i18n="home.trust.directBody">Fewer handoffs, clearer decisions, and faster progress throughout the project.</p>
@@ -228,7 +237,7 @@
       </div>
     </section>
 
-    <section class="process-section fade-in delay-2 section">
+    <section class="process-section animate-fade-in delay-2 section">
       <div class="section-intro centered">
         <span class="badge" data-i18n="home.process.badge">How We Work</span>
         <h2 data-i18n="home.process.title">A simple process that keeps projects moving</h2>
@@ -236,17 +245,17 @@
       </div>
 
       <div class="process-grid">
-        <article class="process-card glass-card">
+        <article class="process-card glass-card animate-up">
           <span class="process-step" aria-hidden="true">01</span>
           <h3 data-i18n="home.process.stepOneTitle">Clarify</h3>
           <p data-i18n="home.process.stepOneBody">We define the audience, the offer, and the most important user journeys first.</p>
         </article>
-        <article class="process-card glass-card">
+        <article class="process-card glass-card animate-up">
           <span class="process-step" aria-hidden="true">02</span>
           <h3 data-i18n="home.process.stepTwoTitle">Shape</h3>
           <p data-i18n="home.process.stepTwoBody">We turn the direction into interface structure, layout, and a stronger visual system.</p>
         </article>
-        <article class="process-card glass-card">
+        <article class="process-card glass-card animate-up">
           <span class="process-step" aria-hidden="true">03</span>
           <h3 data-i18n="home.process.stepThreeTitle">Build</h3>
           <p data-i18n="home.process.stepThreeBody">We ship a polished front-end experience that is responsive, usable, and ready to launch.</p>
@@ -254,7 +263,7 @@
       </div>
     </section>
 
-    <section class="home-cta-band fade-in delay-2">
+    <section class="home-cta-band animate-fade-in delay-2">
       <span class="badge" data-i18n="home.cta.badge">Ready to Build</span>
       <h2 data-i18n="home.cta.title">If your website or product needs sharper execution, let’s talk.</h2>
       <p data-i18n="home.cta.description">We can help with a new launch, a redesign, or a clearer product direction that turns more visitors into leads.</p>
@@ -297,6 +306,8 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
   <script src="js/translations.js" defer></script>
   <script src="js/site.js" defer></script>
 </body>
