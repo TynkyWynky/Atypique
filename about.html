@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Atypique | Practical Digital Craft</title>
-  <meta name="description" content="Atypique combines design clarity and engineering discipline to build practical digital solutions for growing businesses." />
+  <title data-i18n="about.meta.title">About Atypique | Practical Digital Craft</title>
+  <meta name="description" data-i18n-content="about.meta.description" content="Atypique combines design clarity and engineering discipline to build practical digital solutions for growing businesses." />
   <link rel="canonical" href="https://atypique-enterprise.netlify.app/about.html" />
-  <meta property="og:title" content="About Atypique" />
-  <meta property="og:description" content="Meet the team philosophy behind Atypique: practical, elegant and business-oriented digital work." />
+  <meta property="og:title" data-i18n-content="about.meta.ogTitle" content="About Atypique" />
+  <meta property="og:description" data-i18n-content="about.meta.ogDescription" content="Meet the team philosophy behind Atypique: practical, elegant and business-oriented digital work." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/aboutPic.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,63 +18,71 @@
   <link rel="icon" type="image/png" href="images/icon.png" />
 </head>
 <body class="about-page" data-analytics-domain="atypique-enterprise.netlify.app">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content" data-i18n="shared.skipLink">Skip to content</a>
 
-  <nav class="navbar" aria-label="Main navigation">
-    <a href="index.html" class="logo" aria-label="Atypique home">Atypique</a>
+  <nav class="navbar" data-i18n-aria-label="shared.nav.ariaLabel" aria-label="Main navigation">
+    <a href="index.html" class="logo" data-i18n-aria-label="shared.nav.logoAria" aria-label="Atypique home">Atypique</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="products.html">Work</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="shared.nav.home">Home</a></li>
+      <li><a href="about.html" class="active" aria-current="page" data-i18n="shared.nav.about">About Us</a></li>
+      <li><a href="services.html" data-i18n="shared.nav.services">Services</a></li>
+      <li><a href="products.html" data-i18n="shared.nav.work">Work</a></li>
+      <li><a href="contact.html" data-i18n="shared.nav.contact">Contact</a></li>
     </ul>
-    <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+    <div class="nav-actions">
+      <label class="sr-only" for="languageSelect" data-i18n="shared.language.label">Language</label>
+      <select id="languageSelect" class="language-select" data-i18n-aria-label="shared.language.selectAria" aria-label="Choose language">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="nl">Nederlands</option>
+      </select>
+      <button class="hamburger" type="button" data-i18n-aria-label="shared.nav.toggleAria" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
   </nav>
 
   <main id="main-content">
     <section class="about-hero fade-in">
-      <span class="badge">About Atypique</span>
-      <h1>We build with business reality in mind.</h1>
-      <p>Our work focuses on useful outcomes: cleaner workflows, stronger digital presence and products your team can run confidently.</p>
+      <span class="badge" data-i18n="about.hero.badge">About Atypique</span>
+      <h1 data-i18n="about.hero.title">We build with business reality in mind.</h1>
+      <p data-i18n="about.hero.description">Our work focuses on useful outcomes: cleaner workflows, stronger digital presence and products your team can run confidently.</p>
     </section>
 
     <section class="about-content fade-in delay-1 section">
       <div class="about-image">
-        <img src="images/aboutPic.png" alt="Atypique team at work" width="700" height="500" loading="lazy" decoding="async" />
+        <img src="images/aboutPic.png" data-i18n-alt="about.content.imageAlt" alt="Atypique team at work" width="700" height="500" loading="lazy" decoding="async" />
       </div>
 
       <div class="about-text">
-        <h2>Our Mission</h2>
-        <p>Atypique helps entrepreneurs and small organizations translate ideas into clear digital products. We prioritize usability, speed and long-term maintainability over short-lived hype.</p>
+        <h2 data-i18n="about.content.missionTitle">Our Mission</h2>
+        <p data-i18n="about.content.missionBody">Atypique helps entrepreneurs and small organizations translate ideas into clear digital products. We prioritize usability, speed and long-term maintainability over short-lived hype.</p>
 
-        <h2>How We Work</h2>
-        <p>Every project starts with constraints: timeline, budget, priorities and existing tools. Then we design and build around those constraints so the final result fits your daily operations.</p>
+        <h2 data-i18n="about.content.workTitle">How We Work</h2>
+        <p data-i18n="about.content.workBody">Every project starts with constraints: timeline, budget, priorities and existing tools. Then we design and build around those constraints so the final result fits your daily operations.</p>
 
-        <h2>What Makes Us Different</h2>
-        <p>We keep the team compact, communicate directly and deliver in iterative milestones. You always know what is done, what is next and why each decision was made.</p>
+        <h2 data-i18n="about.content.differenceTitle">What Makes Us Different</h2>
+        <p data-i18n="about.content.differenceBody">We keep the team compact, communicate directly and deliver in iterative milestones. You always know what is done, what is next and why each decision was made.</p>
 
         <div class="values-grid">
           <article class="value-card">
-            <h3>Clarity First</h3>
-            <p>No ambiguity in scope, timeline or deliverables.</p>
+            <h3 data-i18n="about.content.clarityTitle">Clarity First</h3>
+            <p data-i18n="about.content.clarityBody">No ambiguity in scope, timeline or deliverables.</p>
           </article>
           <article class="value-card">
-            <h3>Craft + Utility</h3>
-            <p>Strong visual identity with practical UX decisions.</p>
+            <h3 data-i18n="about.content.craftTitle">Craft + Utility</h3>
+            <p data-i18n="about.content.craftBody">Strong visual identity with practical UX decisions.</p>
           </article>
           <article class="value-card">
-            <h3>Long-Term Fit</h3>
-            <p>Solutions that stay useful as your business grows.</p>
+            <h3 data-i18n="about.content.fitTitle">Long-Term Fit</h3>
+            <p data-i18n="about.content.fitBody">Solutions that stay useful as your business grows.</p>
           </article>
         </div>
 
         <p>
-          <a href="contact.html" class="cta-btn">Discuss Your Project</a>
+          <a href="contact.html" class="cta-btn" data-i18n="about.content.cta">Discuss Your Project</a>
         </p>
       </div>
     </section>
@@ -83,35 +91,36 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="images/Atypique_logo.png" alt="Atypique logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
+        <img src="images/atypique_logo.png" data-i18n-alt="shared.footer.logoAlt" alt="Atypique logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
       </div>
 
       <div class="footer-nav">
-        <h3>Quick Links</h3>
+        <h3 data-i18n="shared.footer.quickLinks">Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Work</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="shared.nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="shared.nav.about">About Us</a></li>
+          <li><a href="services.html" data-i18n="shared.nav.services">Services</a></li>
+          <li><a href="products.html" data-i18n="shared.nav.work">Work</a></li>
+          <li><a href="contact.html" data-i18n="shared.nav.contact">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
+        <h3 data-i18n="shared.footer.contactUs">Contact Us</h3>
+        <p><span data-i18n="shared.footer.emailLabel">Email:</span> <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" data-i18n-aria-label="shared.social.instagramAria" aria-label="Atypique on Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" data-i18n-aria-label="shared.social.linkedinAria" aria-label="Atypique on LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; <span id="currentYear"></span> Atypique | All Rights Reserved</p>
+      <p>&copy; <span id="currentYear"></span> <span data-i18n="shared.footer.rights">Atypique | All Rights Reserved</span></p>
     </div>
   </footer>
 
+  <script src="js/translations.js" defer></script>
   <script src="js/site.js" defer></script>
 </body>
 </html>

@@ -59,7 +59,7 @@ main.intro {
   align-items: flex-start;
 }
 
-.contact-list li span {
+.contact-list li > span:first-child {
   color: var(--secondary);
 }
 

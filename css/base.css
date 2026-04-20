@@ -116,6 +116,12 @@ main {
   gap: 1.1rem;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
 .nav-links li a {
   color: var(--text-muted);
   font-weight: 600;
@@ -156,6 +162,45 @@ main {
 
 .hamburger.open .bar:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.language-select {
+  appearance: none;
+  min-width: 7.4rem;
+  padding: 0.58rem 2.2rem 0.58rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background-color: rgba(20, 15, 31, 0.92);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--secondary) 50%),
+    linear-gradient(135deg, var(--secondary) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 12px) calc(50% - 2px);
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.language-select option {
+  background: var(--panel);
+  color: var(--text);
 }
 
 a:focus-visible,
@@ -311,6 +356,10 @@ button[type='submit']:hover {
 }
 
 @media (max-width: 900px) {
+  .navbar {
+    position: sticky;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -332,6 +381,17 @@ button[type='submit']:hover {
 
   .hamburger {
     display: flex;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+    gap: 0.55rem;
+  }
+
+  .language-select {
+    min-width: 6.7rem;
+    padding: 0.5rem 2rem 0.5rem 0.8rem;
+    font-size: 0.88rem;
   }
 
   .footer-content {

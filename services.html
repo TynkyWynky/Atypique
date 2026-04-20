@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atypique Services | Design, Development, Product Support</title>
-  <meta name="description" content="Atypique services include web development, UX design, mobile experiences and practical growth support." />
+  <title data-i18n="services.meta.title">Atypique Services | Design, Development, Product Support</title>
+  <meta name="description" data-i18n-content="services.meta.description" content="Atypique services include web development, UX design, mobile experiences and practical growth support." />
   <link rel="canonical" href="https://atypique-enterprise.netlify.app/services.html" />
-  <meta property="og:title" content="Atypique Services" />
-  <meta property="og:description" content="Explore practical digital services built for business impact." />
+  <meta property="og:title" data-i18n-content="services.meta.ogTitle" content="Atypique Services" />
+  <meta property="og:description" data-i18n-content="services.meta.ogDescription" content="Explore practical digital services built for business impact." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,109 +18,118 @@
   <link rel="icon" type="image/png" href="images/icon.png" />
 </head>
 <body class="services-page" data-analytics-domain="atypique-enterprise.netlify.app">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content" data-i18n="shared.skipLink">Skip to content</a>
 
-  <nav class="navbar" aria-label="Main navigation">
-    <a href="index.html" class="logo" aria-label="Atypique home">Atypique</a>
+  <nav class="navbar" data-i18n-aria-label="shared.nav.ariaLabel" aria-label="Main navigation">
+    <a href="index.html" class="logo" data-i18n-aria-label="shared.nav.logoAria" aria-label="Atypique home">Atypique</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html" class="active" aria-current="page">Services</a></li>
-      <li><a href="products.html">Work</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="shared.nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="shared.nav.about">About Us</a></li>
+      <li><a href="services.html" class="active" aria-current="page" data-i18n="shared.nav.services">Services</a></li>
+      <li><a href="products.html" data-i18n="shared.nav.work">Work</a></li>
+      <li><a href="contact.html" data-i18n="shared.nav.contact">Contact</a></li>
     </ul>
-    <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+    <div class="nav-actions">
+      <label class="sr-only" for="languageSelect" data-i18n="shared.language.label">Language</label>
+      <select id="languageSelect" class="language-select" data-i18n-aria-label="shared.language.selectAria" aria-label="Choose language">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="nl">Nederlands</option>
+      </select>
+      <button class="hamburger" type="button" data-i18n-aria-label="shared.nav.toggleAria" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
   </nav>
 
   <main id="main-content">
     <section class="page-header fade-in">
-      <span class="badge">Services</span>
-      <h1>From idea to launch, with zero guesswork.</h1>
-      <p>We provide targeted digital services that improve execution speed and customer experience.</p>
+      <span class="badge" data-i18n="services.header.badge">Services</span>
+      <h1 data-i18n="services.header.title">From idea to launch, with zero guesswork.</h1>
+      <p data-i18n="services.header.description">We provide targeted digital services that improve execution speed and customer experience.</p>
     </section>
 
     <section class="services-grid fade-in delay-1 section">
       <article class="service-card">
         <i class="fas fa-code"></i>
-        <h3>Web Development</h3>
-        <p>High-performing websites and business platforms that stay maintainable after launch.</p>
+        <h3 data-i18n="services.cards.webTitle">Web Development</h3>
+        <p data-i18n="services.cards.webBody">High-performing websites and business platforms that stay maintainable after launch.</p>
       </article>
       <article class="service-card">
         <i class="fas fa-palette"></i>
-        <h3>UI/UX Design</h3>
-        <p>Clear interfaces and interaction flows tailored to your users and business model.</p>
+        <h3 data-i18n="services.cards.uxTitle">UI/UX Design</h3>
+        <p data-i18n="services.cards.uxBody">Clear interfaces and interaction flows tailored to your users and business model.</p>
       </article>
       <article class="service-card">
         <i class="fas fa-mobile-screen-button"></i>
-        <h3>Product Interfaces</h3>
-        <p>Cross-device design systems and front-end experiences with strong usability.</p>
+        <h3 data-i18n="services.cards.interfacesTitle">Product Interfaces</h3>
+        <p data-i18n="services.cards.interfacesBody">Cross-device design systems and front-end experiences with strong usability.</p>
       </article>
       <article class="service-card">
         <i class="fas fa-magnifying-glass-chart"></i>
-        <h3>Growth Support</h3>
-        <p>SEO-ready structure, conversion-oriented pages and practical optimization loops.</p>
+        <h3 data-i18n="services.cards.growthTitle">Growth Support</h3>
+        <p data-i18n="services.cards.growthBody">SEO-ready structure, conversion-oriented pages and practical optimization loops.</p>
       </article>
     </section>
 
     <section class="site-slider fade-in delay-2 section">
-      <h2>Recent Website Launches</h2>
-      <p>Live examples of public-facing websites designed and developed by Atypique.</p>
+      <h2 data-i18n="services.launches.title">Recent Website Launches</h2>
+      <p data-i18n="services.launches.description">Live examples of public-facing websites designed and developed by Atypique.</p>
       <div class="case-grid">
         <article class="case-card">
-          <span class="badge">Live Website</span>
+          <span class="badge" data-i18n="services.launches.eventiumBadge">Live Website</span>
           <h3>Eventium</h3>
-          <p>Event discovery platform for local concerts and happenings, designed to feel playful, fast and easy to browse.</p>
-          <a href="https://www.eventium.be/" class="case-link" target="_blank" rel="noopener noreferrer">Visit eventium.be</a>
+          <p data-i18n="services.launches.eventiumBody">Event discovery platform for local concerts and happenings, designed to feel playful, fast and easy to browse.</p>
+          <a href="https://www.eventium.be/" class="case-link" target="_blank" rel="noopener noreferrer" data-i18n="services.launches.eventiumLink">Visit eventium.be</a>
         </article>
         <article class="case-card">
-          <span class="badge">Community Website</span>
+          <span class="badge" data-i18n="services.launches.chiroBadge">Community Website</span>
           <h3>Chiro Negenmanneke</h3>
-          <p>Clear information hub for parents, members and volunteers with practical pages for registration, activities and contact.</p>
-          <a href="https://www.chironegenmanneke.be/" class="case-link" target="_blank" rel="noopener noreferrer">Visit chironegenmanneke.be</a>
+          <p data-i18n="services.launches.chiroBody">Clear information hub for parents, members and volunteers with practical pages for registration, activities and contact.</p>
+          <a href="https://www.chironegenmanneke.be/" class="case-link" target="_blank" rel="noopener noreferrer" data-i18n="services.launches.chiroLink">Visit chironegenmanneke.be</a>
         </article>
       </div>
     </section>
 
     <section class="call-to-action fade-in delay-2">
-      <h2>Need a quote or roadmap for your project?</h2>
-      <p>Share your goals and constraints. We answer with practical next steps.</p>
-      <p><a href="contact.html" class="cta-btn">Get in Touch</a></p>
+      <h2 data-i18n="services.cta.title">Need a quote or roadmap for your project?</h2>
+      <p data-i18n="services.cta.description">Share your goals and constraints. We answer with practical next steps.</p>
+      <p><a href="contact.html" class="cta-btn" data-i18n="services.cta.button">Get in Touch</a></p>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="images/Atypique_logo.png" alt="Atypique logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
+        <img src="images/atypique_logo.png" data-i18n-alt="shared.footer.logoAlt" alt="Atypique logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
       </div>
       <div class="footer-nav">
-        <h3>Quick Links</h3>
+        <h3 data-i18n="shared.footer.quickLinks">Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Work</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="shared.nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="shared.nav.about">About Us</a></li>
+          <li><a href="services.html" data-i18n="shared.nav.services">Services</a></li>
+          <li><a href="products.html" data-i18n="shared.nav.work">Work</a></li>
+          <li><a href="contact.html" data-i18n="shared.nav.contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
+        <h3 data-i18n="shared.footer.contactUs">Contact Us</h3>
+        <p><span data-i18n="shared.footer.emailLabel">Email:</span> <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
         <div class="socials">
-          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Atypique on LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/atypique.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" data-i18n-aria-label="shared.social.instagramAria" aria-label="Atypique on Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/atypique-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" data-i18n-aria-label="shared.social.linkedinAria" aria-label="Atypique on LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; <span id="currentYear"></span> Atypique | All Rights Reserved</p>
+      <p>&copy; <span id="currentYear"></span> <span data-i18n="shared.footer.rights">Atypique | All Rights Reserved</span></p>
     </div>
   </footer>
 
+  <script src="js/translations.js" defer></script>
   <script src="js/site.js" defer></script>
 </body>
 </html>
