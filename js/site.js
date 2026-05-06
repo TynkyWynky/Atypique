@@ -654,6 +654,25 @@
     }
   }
 
+  function setupAttentionTitle() {
+    var defaultTitle = document.title;
+    var hiddenTitle = 'Viens Ket!';
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        document.title = hiddenTitle;
+        return;
+      }
+
+      defaultTitle = getTranslationText(
+        i18nApi && typeof i18nApi.getLocale === 'function' ? i18nApi.getLocale() : getDefaultLocale(),
+        'home.meta.title',
+        defaultTitle
+      );
+      document.title = defaultTitle;
+    });
+  }
+
   function setupRevealAnimations() {
     var animatedEls = document.querySelectorAll('.animate-up, .animate-fade-in');
     if (!animatedEls.length) {
@@ -1024,6 +1043,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     primeMotionState();
     i18nApi = setupI18n();
+    setupAttentionTitle();
     setupNavbar();
     setupCurrentYear();
     setupRevealAnimations();
