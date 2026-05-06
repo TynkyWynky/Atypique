@@ -1,5 +1,12 @@
 (function () {
   var STORAGE_KEY = 'specialeke-locale';
+  var SITE_ORIGIN = 'https://specialeke-enterprise.netlify.app';
+  var DEFAULT_SOCIAL_IMAGE = SITE_ORIGIN + '/images/specialeke_logo.png';
+  var OG_LOCALE_MAP = {
+    en: 'en_US',
+    fr: 'fr_BE',
+    nl: 'nl_BE'
+  };
   var i18nApi = null;
   var reducedMotionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
 
@@ -148,6 +155,309 @@
     return normalizeLocale(readStoredLocale()) || detectBrowserLocale() || getDefaultLocale();
   }
 
+  function getCurrentPagePath() {
+    var pathname = window.location.pathname || '/';
+    if (pathname === '/index.html') {
+      return '/';
+    }
+    return pathname;
+  }
+
+  function buildLocalizedUrl(locale) {
+    var nextLocale = normalizeLocale(locale) || getDefaultLocale();
+    var url = new URL(getCurrentPagePath(), SITE_ORIGIN + '/');
+
+    url.search = '';
+    if (nextLocale !== getDefaultLocale()) {
+      url.searchParams.set('lang', nextLocale);
+    }
+
+    return url.toString();
+  }
+
+  function buildLocalizedPathUrl(path, locale) {
+    var nextLocale = normalizeLocale(locale) || getDefaultLocale();
+    var normalizedPath = path === '/index.html' ? '/' : path;
+    var url = new URL(normalizedPath, SITE_ORIGIN + '/');
+
+    url.search = '';
+    if (nextLocale !== getDefaultLocale()) {
+      url.searchParams.set('lang', nextLocale);
+    }
+
+    return url.toString();
+  }
+
+  function getMetaTag(selector) {
+    return document.querySelector(selector);
+  }
+
+  function getMetaContent(selector) {
+    var tag = getMetaTag(selector);
+    return tag ? tag.getAttribute('content') || '' : '';
+  }
+
+  function setHref(selector, value) {
+    var element = document.querySelector(selector);
+    if (element) {
+      element.setAttribute('href', value);
+    }
+  }
+
+  function setContent(selector, value) {
+    var element = getMetaTag(selector);
+    if (element) {
+      element.setAttribute('content', value);
+    }
+  }
+
+  function updateAlternateLinks(locale) {
+    var defaultUrl = buildLocalizedUrl(getDefaultLocale());
+    var currentLocale = normalizeLocale(locale) || getDefaultLocale();
+
+    getSupportedLocales().forEach(function (supportedLocale) {
+      var alternate = document.querySelector('link[rel="alternate"][hreflang="' + supportedLocale + '"]');
+      if (alternate) {
+        alternate.setAttribute('href', buildLocalizedUrl(supportedLocale));
+      }
+    });
+
+    var xDefault = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+    if (xDefault) {
+      xDefault.setAttribute('href', defaultUrl);
+    }
+
+    setHref('#seo-canonical', buildLocalizedUrl(currentLocale));
+  }
+
+  function getTranslationText(locale, key, fallback) {
+    var value = getTranslation(locale, key);
+    return typeof value === 'string' ? value : fallback;
+  }
+
+  function buildBreadcrumbItem(position, name, item) {
+    return {
+      '@type': 'ListItem',
+      position: position,
+      name: name,
+      item: item
+    };
+  }
+
+  function updateStructuredData(locale) {
+    var pagePath = getCurrentPagePath();
+    var pageUrl = buildLocalizedUrl(locale);
+    var pageName = document.title;
+    var pageDescription = getMetaContent('meta[name="description"]');
+    var pageImage = getMetaContent('meta[property="og:image"]') || DEFAULT_SOCIAL_IMAGE;
+    var websiteId = SITE_ORIGIN + '/#website';
+    var organizationId = SITE_ORIGIN + '/#organization';
+    var graph = [];
+    var organizationDescription = getTranslationText(
+      locale,
+      'home.meta.description',
+      'Specialeke is a digital studio building modern web apps, SaaS products, and conversion-focused websites.'
+    );
+    var pageType = 'WebPage';
+    var breadcrumbItems = [
+      buildBreadcrumbItem(1, getTranslationText(locale, 'shared.nav.home', 'Home'), buildLocalizedPathUrl('/', locale))
+    ];
+
+    graph.push({
+      '@type': 'ProfessionalService',
+      '@id': organizationId,
+      name: 'Specialeke',
+      url: SITE_ORIGIN + '/',
+      logo: {
+        '@type': 'ImageObject',
+        url: DEFAULT_SOCIAL_IMAGE
+      },
+      image: pageImage,
+      description: organizationDescription,
+      email: 'specialeke.professional@gmail.com',
+      sameAs: [
+        'https://www.instagram.com/specialeke.enterprise/',
+        'https://www.linkedin.com/company/specialeke-enterprise/'
+      ],
+      areaServed: ['BE', 'NL', 'FR', 'EU'],
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'sales',
+          email: 'specialeke.professional@gmail.com',
+          availableLanguage: getSupportedLocales()
+        }
+      ],
+      knowsAbout: [
+        'Web development',
+        'UX design',
+        'UI design',
+        'Front-end development',
+        'SEO-ready website structure',
+        'SaaS product design'
+      ]
+    });
+
+    graph.push({
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: SITE_ORIGIN + '/',
+      name: 'Specialeke',
+      description: organizationDescription,
+      inLanguage: locale,
+      publisher: {
+        '@id': organizationId
+      }
+    });
+
+    if (pagePath === '/about.html') {
+      pageType = 'AboutPage';
+      breadcrumbItems.push(buildBreadcrumbItem(2, getTranslationText(locale, 'shared.nav.about', 'About Us'), buildLocalizedPathUrl('/about.html', locale)));
+    } else if (pagePath === '/services.html') {
+      pageType = 'WebPage';
+      breadcrumbItems.push(buildBreadcrumbItem(2, getTranslationText(locale, 'shared.nav.services', 'Services'), buildLocalizedPathUrl('/services.html', locale)));
+      graph.push({
+        '@type': 'OfferCatalog',
+        '@id': SITE_ORIGIN + '/services.html#catalog',
+        name: getTranslationText(locale, 'services.header.title', 'From idea to launch, with zero guesswork.'),
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: getTranslationText(locale, 'services.cards.webTitle', 'Web Development'),
+              description: getTranslationText(locale, 'services.cards.webBody', 'High-performing websites and business platforms that stay maintainable after launch.')
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: getTranslationText(locale, 'services.cards.uxTitle', 'UI/UX Design'),
+              description: getTranslationText(locale, 'services.cards.uxBody', 'Clear interfaces and interaction flows tailored to your users and business model.')
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: getTranslationText(locale, 'services.cards.interfacesTitle', 'Product Interfaces'),
+              description: getTranslationText(locale, 'services.cards.interfacesBody', 'Cross-device design systems and front-end experiences with strong usability.')
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: getTranslationText(locale, 'services.cards.growthTitle', 'Growth Support'),
+              description: getTranslationText(locale, 'services.cards.growthBody', 'SEO-ready structure, conversion-oriented pages and practical optimization loops.')
+            }
+          }
+        ]
+      });
+    } else if (pagePath === '/products.html') {
+      pageType = 'CollectionPage';
+      breadcrumbItems.push(buildBreadcrumbItem(2, getTranslationText(locale, 'shared.nav.work', 'Work'), buildLocalizedPathUrl('/products.html', locale)));
+      graph.push({
+        '@type': 'ItemList',
+        '@id': SITE_ORIGIN + '/products.html#portfolio',
+        name: getTranslationText(locale, 'products.header.title', 'Selected projects built for clarity, usability, and momentum.'),
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            item: {
+              '@type': 'CreativeWork',
+              name: 'Eventium',
+              url: SITE_ORIGIN + '/products.html#eventium',
+              description: getTranslationText(locale, 'products.eventium.summary', 'Eventium is a discovery platform that helps people find concerts, nightlife, and local events.')
+            }
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            item: {
+              '@type': 'CreativeWork',
+              name: 'Chiro Negenmanneke',
+              url: SITE_ORIGIN + '/products.html#chiro-negenmanneke',
+              description: getTranslationText(locale, 'products.chiro.summary', 'Chiro Negenmanneke is a community website built to help parents, members, and volunteers quickly access practical information.')
+            }
+          }
+        ]
+      });
+    } else if (pagePath === '/contact.html') {
+      pageType = 'ContactPage';
+      breadcrumbItems.push(buildBreadcrumbItem(2, getTranslationText(locale, 'shared.nav.contact', 'Contact'), buildLocalizedPathUrl('/contact.html', locale)));
+    }
+
+    var pageNode = {
+      '@type': pageType,
+      '@id': pageUrl + '#webpage',
+      url: pageUrl,
+      name: pageName,
+      description: pageDescription,
+      inLanguage: locale,
+      isPartOf: {
+        '@id': websiteId
+      },
+      about: {
+        '@id': organizationId
+      },
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: pageImage
+      }
+    };
+
+    if (pagePath !== '/') {
+      pageNode.breadcrumb = {
+        '@id': pageUrl + '#breadcrumb'
+      };
+    }
+
+    graph.push(pageNode);
+
+    if (pagePath !== '/') {
+      graph.push({
+        '@type': 'BreadcrumbList',
+        '@id': pageUrl + '#breadcrumb',
+        itemListElement: breadcrumbItems
+      });
+    }
+
+    if (pagePath === '/contact.html') {
+      graph.push({
+        '@type': 'ContactPoint',
+        '@id': pageUrl + '#contact-point',
+        contactType: 'sales',
+        email: 'specialeke.professional@gmail.com',
+        availableLanguage: getSupportedLocales()
+      });
+    }
+
+    var schemaScript = document.getElementById('dynamic-structured-data');
+    if (!schemaScript) {
+      schemaScript = document.createElement('script');
+      schemaScript.type = 'application/ld+json';
+      schemaScript.id = 'dynamic-structured-data';
+      document.head.appendChild(schemaScript);
+    }
+
+    schemaScript.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': graph
+    });
+  }
+
+  function updateSeoSignals(locale) {
+    var nextLocale = normalizeLocale(locale) || getDefaultLocale();
+
+    updateAlternateLinks(nextLocale);
+    setContent('#meta-og-url', buildLocalizedUrl(nextLocale));
+    setContent('#meta-og-locale', OG_LOCALE_MAP[nextLocale] || OG_LOCALE_MAP.en);
+    updateStructuredData(nextLocale);
+  }
+
   function applyTranslatedValue(element, binding, value) {
     if (binding.mode === 'text') {
       element.textContent = value;
@@ -194,6 +504,8 @@
     if (languageSelect) {
       languageSelect.value = locale;
     }
+
+    updateSeoSignals(locale);
   }
 
   function translate(key, fallback) {
@@ -220,6 +532,9 @@
         storeLocale(nextLocale);
       }
       applyTranslations(nextLocale);
+      if (window.history && typeof window.history.replaceState === 'function') {
+        window.history.replaceState(null, '', buildLocalizedUrl(nextLocale));
+      }
       return nextLocale;
     }
 
