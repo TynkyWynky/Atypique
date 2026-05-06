@@ -175,6 +175,21 @@
     return url.toString();
   }
 
+  function buildLocalizedHistoryPath(locale) {
+    var nextLocale = normalizeLocale(locale) || getDefaultLocale();
+    var path = getCurrentPagePath();
+
+    if (path === '/index.html') {
+      path = '/';
+    }
+
+    if (nextLocale !== getDefaultLocale()) {
+      return path + '?lang=' + encodeURIComponent(nextLocale);
+    }
+
+    return path;
+  }
+
   function buildLocalizedPathUrl(path, locale) {
     var nextLocale = normalizeLocale(locale) || getDefaultLocale();
     var normalizedPath = path === '/index.html' ? '/' : path;
@@ -533,7 +548,7 @@
       }
       applyTranslations(nextLocale);
       if (window.history && typeof window.history.replaceState === 'function') {
-        window.history.replaceState(null, '', buildLocalizedUrl(nextLocale));
+        window.history.replaceState(null, '', buildLocalizedHistoryPath(nextLocale));
       }
       return nextLocale;
     }
