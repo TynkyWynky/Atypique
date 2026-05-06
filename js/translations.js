@@ -34,7 +34,7 @@ window.SPECIALEKE_I18N = {
       },
       home: {
         meta: {
-          title: 'Specialeke | Web Apps, SaaS Products, and Digital Experiences',
+          title: 'Specialeke',
           description: 'Specialeke is a digital studio building modern web apps, SaaS products, and conversion-focused websites for startups, creators, and small businesses.',
           ogTitle: 'Specialeke | Web Apps, SaaS Products, and Digital Experiences',
           ogDescription: 'From product structure and interface design to polished front-end build, Specialeke creates digital experiences that feel clear, fast, and intentional.'
@@ -335,7 +335,7 @@ window.SPECIALEKE_I18N = {
       },
       home: {
         meta: {
-          title: 'Specialeke | Web apps, produits SaaS et expériences digitales',
+          title: 'Specialeke',
           description: 'Specialeke est un studio digital qui conçoit des web apps, produits SaaS et sites orientés conversion pour les startups, créateurs et petites entreprises.',
           ogTitle: 'Specialeke | Web apps, produits SaaS et expériences digitales',
           ogDescription: 'De la structure produit au front-end final, Specialeke crée des expériences digitales claires, rapides et intentionnelles.'
@@ -636,7 +636,7 @@ window.SPECIALEKE_I18N = {
       },
       home: {
         meta: {
-          title: 'Specialeke | Web apps, SaaS-producten en digitale ervaringen',
+          title: 'Specialeke',
           description: 'Specialeke is een digitaal studio dat moderne web apps, SaaS-producten en conversiegerichte websites bouwt voor startups, creators en kleine bedrijven.',
           ogTitle: 'Specialeke | Web apps, SaaS-producten en digitale ervaringen',
           ogDescription: 'Van productstructuur tot afgewerkte front-end bouwt Specialeke digitale ervaringen die helder, snel en doordacht aanvoelen.'
