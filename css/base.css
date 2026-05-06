@@ -109,19 +109,10 @@ main {
 }
 
 .logo {
-  display: inline-flex;
-  align-items: center;
   font-family: 'Fraunces', Georgia, serif;
   font-size: 1.45rem;
   font-weight: 700;
   color: var(--text);
-}
-
-.logo-image {
-  display: block;
-  width: auto;
-  height: 56px;
-  object-fit: contain;
 }
 
 .nav-links {
