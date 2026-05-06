@@ -656,7 +656,7 @@
 
   function setupAttentionTitle() {
     var defaultTitle = document.title;
-    var hiddenTitle = 'Viens Ket!';
+    var hiddenTitle = 'Reviens Ket !';
 
     document.addEventListener('visibilitychange', function () {
       if (document.hidden) {
