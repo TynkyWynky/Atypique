@@ -1,5 +1,5 @@
 // Update multilingual website copy here. The HTML uses matching data-i18n keys.
-window.ATYPIQUE_I18N = {
+window.SPECIALEKE_I18N = {
   defaultLocale: 'en',
   supportedLocales: ['en', 'fr', 'nl'],
   locales: {
@@ -8,7 +8,7 @@ window.ATYPIQUE_I18N = {
         skipLink: 'Skip to content',
         nav: {
           ariaLabel: 'Main navigation',
-          logoAria: 'Atypique home',
+          logoAria: 'Specialeke home',
           toggleAria: 'Toggle navigation menu',
           home: 'Home',
           about: 'About Us',
@@ -21,29 +21,29 @@ window.ATYPIQUE_I18N = {
           selectAria: 'Choose language'
         },
         footer: {
-          logoAlt: 'Atypique logo',
+          logoAlt: 'Specialeke logo',
           quickLinks: 'Quick Links',
           contactUs: 'Contact Us',
           emailLabel: 'Email:',
-          rights: 'Atypique | All Rights Reserved'
+          rights: 'Specialeke | All Rights Reserved'
         },
         social: {
-          instagramAria: 'Atypique on Instagram',
-          linkedinAria: 'Atypique on LinkedIn'
+          instagramAria: 'Specialeke on Instagram',
+          linkedinAria: 'Specialeke on LinkedIn'
         }
       },
       home: {
         meta: {
-          title: 'Atypique | Web Apps, SaaS Products, and Digital Experiences',
-          description: 'Atypique is a digital studio building modern web apps, SaaS products, and conversion-focused websites for startups, creators, and small businesses.',
-          ogTitle: 'Atypique | Web Apps, SaaS Products, and Digital Experiences',
-          ogDescription: 'From product structure and interface design to polished front-end build, Atypique creates digital experiences that feel clear, fast, and intentional.'
+          title: 'Specialeke | Web Apps, SaaS Products, and Digital Experiences',
+          description: 'Specialeke is a digital studio building modern web apps, SaaS products, and conversion-focused websites for startups, creators, and small businesses.',
+          ogTitle: 'Specialeke | Web Apps, SaaS Products, and Digital Experiences',
+          ogDescription: 'From product structure and interface design to polished front-end build, Specialeke creates digital experiences that feel clear, fast, and intentional.'
         },
         hero: {
           badge: 'Digital Studio',
           kicker: 'For startups, creators, and small businesses',
           title: 'We build modern web apps, SaaS products, and digital experiences.',
-          tagline: 'From product structure and interface design to polished front-end build, Atypique helps teams turn ideas into digital products that feel clear, fast, and intentional.',
+          tagline: 'From product structure and interface design to polished front-end build, Specialeke helps teams turn ideas into digital products that feel clear, fast, and intentional.',
           primaryCta: 'Start a Project',
           secondaryCta: 'See Selected Work',
           serviceOne: 'Web apps and SaaS products',
@@ -100,7 +100,7 @@ window.ATYPIQUE_I18N = {
           chiroCta: 'View case study'
         },
         trust: {
-          badge: 'Why Atypique',
+          badge: 'Why Specialeke',
           title: 'Why clients choose to build with us',
           description: 'We combine product thinking, interface care, and practical execution so the final result is not just attractive, but useful.',
           strategyTitle: 'Strategy before decoration',
@@ -131,20 +131,20 @@ window.ATYPIQUE_I18N = {
       },
       about: {
         meta: {
-          title: 'About Atypique | Practical Digital Craft',
-          description: 'Atypique combines design clarity and engineering discipline to build practical digital solutions for growing businesses.',
-          ogTitle: 'About Atypique',
-          ogDescription: 'Meet the team philosophy behind Atypique: practical, elegant and business-oriented digital work.'
+          title: 'About Specialeke | Practical Digital Craft',
+          description: 'Specialeke combines design clarity and engineering discipline to build practical digital solutions for growing businesses.',
+          ogTitle: 'About Specialeke',
+          ogDescription: 'Meet the team philosophy behind Specialeke: practical, elegant and business-oriented digital work.'
         },
         hero: {
-          badge: 'About Atypique',
+          badge: 'About Specialeke',
           title: 'We build with business reality in mind.',
           description: 'Our work focuses on useful outcomes: cleaner workflows, stronger digital presence and products your team can run confidently.'
         },
         content: {
-          imageAlt: 'Atypique team at work',
+          imageAlt: 'Specialeke team at work',
           missionTitle: 'Our Mission',
-          missionBody: 'Atypique helps entrepreneurs and small organizations translate ideas into clear digital products. We prioritize usability, speed and long-term maintainability over short-lived hype.',
+          missionBody: 'Specialeke helps entrepreneurs and small organizations translate ideas into clear digital products. We prioritize usability, speed and long-term maintainability over short-lived hype.',
           workTitle: 'How We Work',
           workBody: 'Every project starts with constraints: timeline, budget, priorities and existing tools. Then we design and build around those constraints so the final result fits your daily operations.',
           differenceTitle: 'What Makes Us Different',
@@ -160,9 +160,9 @@ window.ATYPIQUE_I18N = {
       },
       services: {
         meta: {
-          title: 'Atypique Services | Design, Development, Product Support',
-          description: 'Atypique services include web development, UX design, mobile experiences and practical growth support.',
-          ogTitle: 'Atypique Services',
+          title: 'Specialeke Services | Design, Development, Product Support',
+          description: 'Specialeke services include web development, UX design, mobile experiences and practical growth support.',
+          ogTitle: 'Specialeke Services',
           ogDescription: 'Explore practical digital services built for business impact.'
         },
         header: {
@@ -182,7 +182,7 @@ window.ATYPIQUE_I18N = {
         },
         launches: {
           title: 'Recent Website Launches',
-          description: 'Live examples of public-facing websites designed and developed by Atypique.',
+          description: 'Live examples of public-facing websites designed and developed by Specialeke.',
           eventiumBadge: 'Live Website',
           eventiumBody: 'Event discovery platform for local concerts and happenings, designed to feel playful, fast and easy to browse.',
           eventiumLink: 'Visit eventium.be',
@@ -198,9 +198,9 @@ window.ATYPIQUE_I18N = {
       },
       products: {
         meta: {
-          title: 'Atypique Work | Case Studies and Digital Projects',
-          description: 'Explore case studies from Atypique covering product websites, digital experiences, UX decisions, and front-end implementation for real teams.',
-          ogTitle: 'Atypique Work | Case Studies and Digital Projects',
+          title: 'Specialeke Work | Case Studies and Digital Projects',
+          description: 'Explore case studies from Specialeke covering product websites, digital experiences, UX decisions, and front-end implementation for real teams.',
+          ogTitle: 'Specialeke Work | Case Studies and Digital Projects',
           ogDescription: 'Each project starts with a practical problem, then gets shaped into a cleaner, more credible digital experience.'
         },
         header: {
@@ -269,9 +269,9 @@ window.ATYPIQUE_I18N = {
       },
       contact: {
         meta: {
-          title: 'Contact Atypique | Start Your Project',
-          description: 'Contact Atypique for web products, UX design and tailored digital implementation.',
-          ogTitle: 'Contact Atypique',
+          title: 'Contact Specialeke | Start Your Project',
+          description: 'Contact Specialeke for web products, UX design and tailored digital implementation.',
+          ogTitle: 'Contact Specialeke',
           ogDescription: 'Share your project scope, goals and timeline. We will get back quickly with a practical next step.'
         },
         hero: {
@@ -290,7 +290,7 @@ window.ATYPIQUE_I18N = {
         },
         form: {
           title: 'Send your request directly',
-          subject: 'New message from Atypique website',
+          subject: 'New message from Specialeke website',
           namePlaceholder: 'Your name',
           emailPlaceholder: 'Your email',
           messagePlaceholder: 'Your message (at least 20 characters)',
@@ -300,7 +300,7 @@ window.ATYPIQUE_I18N = {
           validationEmail: 'Please enter a valid email address.',
           validationMessage: 'Please provide at least 20 characters in your message.',
           success: 'Thanks. Your message was sent successfully.',
-          error: 'Something went wrong. Email us directly at atypique.professional@gmail.com.'
+          error: 'Something went wrong. Email us directly at specialeke.professional@gmail.com.'
         }
       }
     },
@@ -309,7 +309,7 @@ window.ATYPIQUE_I18N = {
         skipLink: 'Aller au contenu',
         nav: {
           ariaLabel: 'Navigation principale',
-          logoAria: "Accueil d'Atypique",
+          logoAria: 'Accueil de Specialeke',
           toggleAria: 'Ouvrir ou fermer le menu',
           home: 'Accueil',
           about: 'À propos',
@@ -322,29 +322,29 @@ window.ATYPIQUE_I18N = {
           selectAria: 'Choisir la langue'
         },
         footer: {
-          logoAlt: 'Logo Atypique',
+          logoAlt: 'Logo Specialeke',
           quickLinks: 'Liens rapides',
           contactUs: 'Contactez-nous',
           emailLabel: 'E-mail :',
-          rights: 'Atypique | Tous droits réservés'
+          rights: 'Specialeke | Tous droits réservés'
         },
         social: {
-          instagramAria: 'Atypique sur Instagram',
-          linkedinAria: 'Atypique sur LinkedIn'
+          instagramAria: 'Specialeke sur Instagram',
+          linkedinAria: 'Specialeke sur LinkedIn'
         }
       },
       home: {
         meta: {
-          title: 'Atypique | Web apps, produits SaaS et expériences digitales',
-          description: 'Atypique est un studio digital qui conçoit des web apps, produits SaaS et sites orientés conversion pour les startups, créateurs et petites entreprises.',
-          ogTitle: 'Atypique | Web apps, produits SaaS et expériences digitales',
-          ogDescription: 'De la structure produit au front-end final, Atypique crée des expériences digitales claires, rapides et intentionnelles.'
+          title: 'Specialeke | Web apps, produits SaaS et expériences digitales',
+          description: 'Specialeke est un studio digital qui conçoit des web apps, produits SaaS et sites orientés conversion pour les startups, créateurs et petites entreprises.',
+          ogTitle: 'Specialeke | Web apps, produits SaaS et expériences digitales',
+          ogDescription: 'De la structure produit au front-end final, Specialeke crée des expériences digitales claires, rapides et intentionnelles.'
         },
         hero: {
           badge: 'Studio digital',
           kicker: 'Pour les startups, les créateurs et les petites entreprises',
           title: 'Nous créons des web apps, produits SaaS et expériences digitales modernes.',
-          tagline: 'De la structure produit et du design d’interface jusqu’au front-end final, Atypique aide les équipes à transformer leurs idées en produits numériques clairs, rapides et soignés.',
+          tagline: 'De la structure produit et du design d’interface jusqu’au front-end final, Specialeke aide les équipes à transformer leurs idées en produits numériques clairs, rapides et soignés.',
           primaryCta: 'Démarrer un projet',
           secondaryCta: 'Voir les réalisations',
           serviceOne: 'Web apps et produits SaaS',
@@ -401,7 +401,7 @@ window.ATYPIQUE_I18N = {
           chiroCta: "Voir l'étude de cas"
         },
         trust: {
-          badge: 'Pourquoi Atypique',
+          badge: 'Pourquoi Specialeke',
           title: 'Pourquoi les clients choisissent de travailler avec nous',
           description: 'Nous combinons réflexion produit, soin de l’interface et exécution concrète pour obtenir un résultat non seulement beau, mais vraiment utile.',
           strategyTitle: 'La stratégie avant la décoration',
@@ -432,20 +432,20 @@ window.ATYPIQUE_I18N = {
       },
       about: {
         meta: {
-          title: "À propos d'Atypique | Savoir-faire numérique concret",
-          description: "Atypique associe clarté du design et rigueur technique pour créer des solutions numériques concrètes pour les entreprises en croissance.",
-          ogTitle: "À propos d'Atypique",
-          ogDescription: "Découvrez la philosophie d'équipe derrière Atypique : un travail numérique concret, élégant et orienté business."
+          title: 'À propos de Specialeke | Savoir-faire numérique concret',
+          description: "Specialeke associe clarté du design et rigueur technique pour créer des solutions numériques concrètes pour les entreprises en croissance.",
+          ogTitle: 'À propos de Specialeke',
+          ogDescription: "Découvrez la philosophie d'équipe derrière Specialeke : un travail numérique concret, élégant et orienté business."
         },
         hero: {
-          badge: "À propos d'Atypique",
+          badge: 'À propos de Specialeke',
           title: 'Nous concevons en gardant la réalité terrain en tête.',
           description: 'Notre travail vise des résultats utiles : des flux plus simples, une présence numérique plus forte et des produits que votre équipe peut gérer avec confiance.'
         },
         content: {
-          imageAlt: "L'équipe Atypique au travail",
+          imageAlt: "L'équipe Specialeke au travail",
           missionTitle: 'Notre mission',
-          missionBody: "Atypique aide les entrepreneurs et les petites organisations à transformer leurs idées en produits numériques clairs. Nous privilégions l'utilisabilité, la rapidité et la maintenabilité sur le long terme plutôt que les effets de mode.",
+          missionBody: "Specialeke aide les entrepreneurs et les petites organisations à transformer leurs idées en produits numériques clairs. Nous privilégions l'utilisabilité, la rapidité et la maintenabilité sur le long terme plutôt que les effets de mode.",
           workTitle: 'Notre méthode',
           workBody: "Chaque projet commence par ses contraintes : délai, budget, priorités et outils existants. Nous concevons ensuite autour de ces contraintes pour que le résultat final s'intègre à vos opérations quotidiennes.",
           differenceTitle: 'Ce qui nous distingue',
@@ -461,9 +461,9 @@ window.ATYPIQUE_I18N = {
       },
       services: {
         meta: {
-          title: 'Services Atypique | Design, développement, accompagnement produit',
-          description: "Les services d'Atypique couvrent le développement web, le design UX, les expériences mobiles et un accompagnement de croissance concret.",
-          ogTitle: 'Services Atypique',
+          title: 'Services Specialeke | Design, développement, accompagnement produit',
+          description: 'Les services de Specialeke couvrent le développement web, le design UX, les expériences mobiles et un accompagnement de croissance concret.',
+          ogTitle: 'Services Specialeke',
           ogDescription: "Découvrez des services numériques concrets conçus pour créer un vrai impact métier."
         },
         header: {
@@ -483,7 +483,7 @@ window.ATYPIQUE_I18N = {
         },
         launches: {
           title: 'Lancements récents',
-          description: "Exemples en ligne de sites publics conçus et développés par Atypique.",
+          description: "Exemples en ligne de sites publics conçus et développés par Specialeke.",
           eventiumBadge: 'Site en ligne',
           eventiumBody: "Plateforme de découverte d'événements locaux, pensée pour être ludique, rapide et facile à parcourir.",
           eventiumLink: 'Visiter eventium.be',
@@ -499,9 +499,9 @@ window.ATYPIQUE_I18N = {
       },
       products: {
         meta: {
-          title: 'Réalisations Atypique | Études de cas et projets digitaux',
-          description: 'Découvrez des études de cas Atypique autour des sites produits, expériences digitales, choix UX et implémentations front-end pour de vrais projets.',
-          ogTitle: 'Réalisations Atypique | Études de cas et projets digitaux',
+          title: 'Réalisations Specialeke | Études de cas et projets digitaux',
+          description: 'Découvrez des études de cas Specialeke autour des sites produits, expériences digitales, choix UX et implémentations front-end pour de vrais projets.',
+          ogTitle: 'Réalisations Specialeke | Études de cas et projets digitaux',
           ogDescription: 'Chaque projet part d’un problème concret puis devient une expérience digitale plus claire et plus crédible.'
         },
         header: {
@@ -570,9 +570,9 @@ window.ATYPIQUE_I18N = {
       },
       contact: {
         meta: {
-          title: 'Contacter Atypique | Lancez votre projet',
-          description: "Contactez Atypique pour des produits web, du design UX et une mise en œuvre numérique sur mesure.",
-          ogTitle: 'Contacter Atypique',
+          title: 'Contacter Specialeke | Lancez votre projet',
+          description: "Contactez Specialeke pour des produits web, du design UX et une mise en œuvre numérique sur mesure.",
+          ogTitle: 'Contacter Specialeke',
           ogDescription: 'Partagez la portée, les objectifs et le calendrier de votre projet. Nous revenons vite avec une prochaine étape concrète.'
         },
         hero: {
@@ -591,7 +591,7 @@ window.ATYPIQUE_I18N = {
         },
         form: {
           title: 'Envoyez votre demande directement',
-          subject: 'Nouveau message depuis le site Atypique',
+          subject: 'Nouveau message depuis le site Specialeke',
           namePlaceholder: 'Votre nom',
           emailPlaceholder: 'Votre e-mail',
           messagePlaceholder: 'Votre message (au moins 20 caractères)',
@@ -601,7 +601,7 @@ window.ATYPIQUE_I18N = {
           validationEmail: 'Veuillez entrer une adresse e-mail valide.',
           validationMessage: 'Veuillez écrire au moins 20 caractères dans votre message.',
           success: 'Merci. Votre message a bien été envoyé.',
-          error: 'Un problème est survenu. Écrivez-nous directement à atypique.professional@gmail.com.'
+          error: 'Un problème est survenu. Écrivez-nous directement à specialeke.professional@gmail.com.'
         }
       }
     },
@@ -610,7 +610,7 @@ window.ATYPIQUE_I18N = {
         skipLink: 'Ga naar de inhoud',
         nav: {
           ariaLabel: 'Hoofdnavigatie',
-          logoAria: 'Atypique home',
+          logoAria: 'Specialeke home',
           toggleAria: 'Navigatiemenu openen of sluiten',
           home: 'Home',
           about: 'Over ons',
@@ -623,29 +623,29 @@ window.ATYPIQUE_I18N = {
           selectAria: 'Kies een taal'
         },
         footer: {
-          logoAlt: 'Atypique-logo',
+          logoAlt: 'Specialeke-logo',
           quickLinks: 'Snelle links',
           contactUs: 'Contact',
           emailLabel: 'E-mail:',
-          rights: 'Atypique | Alle rechten voorbehouden'
+          rights: 'Specialeke | Alle rechten voorbehouden'
         },
         social: {
-          instagramAria: 'Atypique op Instagram',
-          linkedinAria: 'Atypique op LinkedIn'
+          instagramAria: 'Specialeke op Instagram',
+          linkedinAria: 'Specialeke op LinkedIn'
         }
       },
       home: {
         meta: {
-          title: 'Atypique | Web apps, SaaS-producten en digitale ervaringen',
-          description: 'Atypique is een digitaal studio dat moderne web apps, SaaS-producten en conversiegerichte websites bouwt voor startups, creators en kleine bedrijven.',
-          ogTitle: 'Atypique | Web apps, SaaS-producten en digitale ervaringen',
-          ogDescription: 'Van productstructuur tot afgewerkte front-end bouwt Atypique digitale ervaringen die helder, snel en doordacht aanvoelen.'
+          title: 'Specialeke | Web apps, SaaS-producten en digitale ervaringen',
+          description: 'Specialeke is een digitaal studio dat moderne web apps, SaaS-producten en conversiegerichte websites bouwt voor startups, creators en kleine bedrijven.',
+          ogTitle: 'Specialeke | Web apps, SaaS-producten en digitale ervaringen',
+          ogDescription: 'Van productstructuur tot afgewerkte front-end bouwt Specialeke digitale ervaringen die helder, snel en doordacht aanvoelen.'
         },
         hero: {
           badge: 'Digitale studio',
           kicker: 'Voor startups, creators en kleine bedrijven',
           title: 'We bouwen moderne web apps, SaaS-producten en digitale ervaringen.',
-          tagline: 'Van productstructuur en interface design tot een verzorgde front-end build helpt Atypique teams om ideeën om te zetten in digitale producten die helder, snel en intentioneel aanvoelen.',
+          tagline: 'Van productstructuur en interface design tot een verzorgde front-end build helpt Specialeke teams om ideeën om te zetten in digitale producten die helder, snel en intentioneel aanvoelen.',
           primaryCta: 'Start een project',
           secondaryCta: 'Bekijk geselecteerd werk',
           serviceOne: 'Web apps en SaaS-producten',
@@ -702,7 +702,7 @@ window.ATYPIQUE_I18N = {
           chiroCta: 'Bekijk case study'
         },
         trust: {
-          badge: 'Waarom Atypique',
+          badge: 'Waarom Specialeke',
           title: 'Waarom klanten met ons bouwen',
           description: 'We combineren productdenken, interfacezorg en praktische uitvoering zodat het eindresultaat niet alleen mooi is, maar ook bruikbaar.',
           strategyTitle: 'Strategie voor decoratie',
@@ -733,20 +733,20 @@ window.ATYPIQUE_I18N = {
       },
       about: {
         meta: {
-          title: 'Over Atypique | Praktisch digitaal vakwerk',
-          description: 'Atypique combineert ontwerphelderheid en technische discipline om praktische digitale oplossingen te bouwen voor groeiende bedrijven.',
-          ogTitle: 'Over Atypique',
-          ogDescription: 'Maak kennis met de visie achter Atypique: praktisch, elegant en gericht op echte bedrijfsnoden.'
+          title: 'Over Specialeke | Praktisch digitaal vakwerk',
+          description: 'Specialeke combineert ontwerphelderheid en technische discipline om praktische digitale oplossingen te bouwen voor groeiende bedrijven.',
+          ogTitle: 'Over Specialeke',
+          ogDescription: 'Maak kennis met de visie achter Specialeke: praktisch, elegant en gericht op echte bedrijfsnoden.'
         },
         hero: {
-          badge: 'Over Atypique',
+          badge: 'Over Specialeke',
           title: 'We bouwen met de bedrijfsrealiteit in gedachten.',
           description: 'Ons werk draait om bruikbare resultaten: vlottere workflows, een sterkere digitale aanwezigheid en producten die je team met vertrouwen kan beheren.'
         },
         content: {
-          imageAlt: 'Het Atypique-team aan het werk',
+          imageAlt: 'Het Specialeke-team aan het werk',
           missionTitle: 'Onze missie',
-          missionBody: 'Atypique helpt ondernemers en kleine organisaties om ideeën te vertalen naar duidelijke digitale producten. We geven prioriteit aan gebruiksgemak, snelheid en onderhoudbaarheid op lange termijn boven kortstondige hype.',
+          missionBody: 'Specialeke helpt ondernemers en kleine organisaties om ideeën te vertalen naar duidelijke digitale producten. We geven prioriteit aan gebruiksgemak, snelheid en onderhoudbaarheid op lange termijn boven kortstondige hype.',
           workTitle: 'Hoe we werken',
           workBody: 'Elk project start met beperkingen: timing, budget, prioriteiten en bestaande tools. Daarna ontwerpen en bouwen we rond die realiteit zodat het eindresultaat past binnen je dagelijkse werking.',
           differenceTitle: 'Wat ons anders maakt',
@@ -762,9 +762,9 @@ window.ATYPIQUE_I18N = {
       },
       services: {
         meta: {
-          title: 'Atypique Diensten | Design, ontwikkeling en productondersteuning',
-          description: 'De diensten van Atypique omvatten webontwikkeling, UX-design, mobiele ervaringen en praktische groeiondersteuning.',
-          ogTitle: 'Atypique Diensten',
+          title: 'Specialeke Diensten | Design, ontwikkeling en productondersteuning',
+          description: 'De diensten van Specialeke omvatten webontwikkeling, UX-design, mobiele ervaringen en praktische groeiondersteuning.',
+          ogTitle: 'Specialeke Diensten',
           ogDescription: 'Ontdek praktische digitale diensten gebouwd voor echte bedrijfsimpact.'
         },
         header: {
@@ -784,7 +784,7 @@ window.ATYPIQUE_I18N = {
         },
         launches: {
           title: 'Recente lanceringen',
-          description: 'Live voorbeelden van publieksgerichte websites ontworpen en gebouwd door Atypique.',
+          description: 'Live voorbeelden van publieksgerichte websites ontworpen en gebouwd door Specialeke.',
           eventiumBadge: 'Live website',
           eventiumBody: 'Platform voor lokale concerten en events, ontworpen om speels, snel en makkelijk door te bladeren te zijn.',
           eventiumLink: 'Bezoek eventium.be',
@@ -800,9 +800,9 @@ window.ATYPIQUE_I18N = {
       },
       products: {
         meta: {
-          title: 'Atypique Werk | Case studies en digitale projecten',
-          description: 'Ontdek case studies van Atypique rond productwebsites, digitale ervaringen, UX-keuzes en front-end implementatie voor echte teams.',
-          ogTitle: 'Atypique Werk | Case studies en digitale projecten',
+          title: 'Specialeke Werk | Case studies en digitale projecten',
+          description: 'Ontdek case studies van Specialeke rond productwebsites, digitale ervaringen, UX-keuzes en front-end implementatie voor echte teams.',
+          ogTitle: 'Specialeke Werk | Case studies en digitale projecten',
           ogDescription: 'Elk project vertrekt vanuit een praktisch probleem en groeit uit tot een duidelijkere en geloofwaardigere digitale ervaring.'
         },
         header: {
@@ -871,9 +871,9 @@ window.ATYPIQUE_I18N = {
       },
       contact: {
         meta: {
-          title: 'Contacteer Atypique | Start je project',
-          description: 'Contacteer Atypique voor webproducten, UX-design en digitale uitvoering op maat.',
-          ogTitle: 'Contacteer Atypique',
+          title: 'Contacteer Specialeke | Start je project',
+          description: 'Contacteer Specialeke voor webproducten, UX-design en digitale uitvoering op maat.',
+          ogTitle: 'Contacteer Specialeke',
           ogDescription: 'Deel de scope, doelen en timing van je project. We koppelen snel terug met een concrete volgende stap.'
         },
         hero: {
@@ -892,7 +892,7 @@ window.ATYPIQUE_I18N = {
         },
         form: {
           title: 'Stuur je aanvraag rechtstreeks',
-          subject: 'Nieuw bericht via de website van Atypique',
+          subject: 'Nieuw bericht via de website van Specialeke',
           namePlaceholder: 'Je naam',
           emailPlaceholder: 'Je e-mail',
           messagePlaceholder: 'Je bericht (minstens 20 tekens)',
@@ -902,7 +902,7 @@ window.ATYPIQUE_I18N = {
           validationEmail: 'Vul een geldig e-mailadres in.',
           validationMessage: 'Voorzie minstens 20 tekens in je bericht.',
           success: 'Bedankt. Je bericht is succesvol verzonden.',
-          error: 'Er liep iets mis. Mail ons rechtstreeks via atypique.professional@gmail.com.'
+          error: 'Er liep iets mis. Mail ons rechtstreeks via specialeke.professional@gmail.com.'
         }
       }
     }

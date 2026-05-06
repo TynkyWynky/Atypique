@@ -1,5 +1,5 @@
 (function () {
-  var STORAGE_KEY = 'atypique-locale';
+  var STORAGE_KEY = 'specialeke-locale';
   var i18nApi = null;
   var reducedMotionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
 
@@ -26,7 +26,7 @@
   primeMotionState();
 
   function getI18nConfig() {
-    return window.ATYPIQUE_I18N || null;
+    return window.SPECIALEKE_I18N || null;
   }
 
   function getSupportedLocales() {
@@ -667,7 +667,7 @@
         })
         .catch(function () {
           setStatus(
-            translate('contact.form.error', 'Something went wrong. Email us directly at atypique.professional@gmail.com.'),
+            translate('contact.form.error', 'Something went wrong. Email us directly at specialeke.professional@gmail.com.'),
             'error'
           );
         })
