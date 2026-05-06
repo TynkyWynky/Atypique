@@ -1,6 +1,6 @@
 (function () {
   var STORAGE_KEY = 'specialeke-locale';
-  var SITE_ORIGIN = 'https://www.specialeke.com';
+  var SITE_ORIGIN = 'https://specialeke.com';
   var DEFAULT_SOCIAL_IMAGE = SITE_ORIGIN + '/images/specialeke_logo.png';
   var OG_LOCALE_MAP = {
     en: 'en_US',

@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.specialeke.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.specialeke.com/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.specialeke.com/?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.specialeke.com/?lang=nl" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.specialeke.com/" />
+    <loc>https://specialeke.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://specialeke.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://specialeke.com/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://specialeke.com/?lang=nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://specialeke.com/" />
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.specialeke.com/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.specialeke.com/about.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.specialeke.com/about.html?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.specialeke.com/about.html?lang=nl" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.specialeke.com/about.html" />
+    <loc>https://specialeke.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://specialeke.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://specialeke.com/about.html?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://specialeke.com/about.html?lang=nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://specialeke.com/about.html" />
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.specialeke.com/services.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.specialeke.com/services.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.specialeke.com/services.html?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.specialeke.com/services.html?lang=nl" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.specialeke.com/services.html" />
+    <loc>https://specialeke.com/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://specialeke.com/services.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://specialeke.com/services.html?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://specialeke.com/services.html?lang=nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://specialeke.com/services.html" />
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.specialeke.com/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.specialeke.com/products.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.specialeke.com/products.html?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.specialeke.com/products.html?lang=nl" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.specialeke.com/products.html" />
+    <loc>https://specialeke.com/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://specialeke.com/products.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://specialeke.com/products.html?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://specialeke.com/products.html?lang=nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://specialeke.com/products.html" />
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.specialeke.com/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.specialeke.com/contact.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.specialeke.com/contact.html?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.specialeke.com/contact.html?lang=nl" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.specialeke.com/contact.html" />
+    <loc>https://specialeke.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://specialeke.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://specialeke.com/contact.html?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://specialeke.com/contact.html?lang=nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://specialeke.com/contact.html" />
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

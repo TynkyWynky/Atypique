@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.specialeke.com/sitemap.xml
+Sitemap: https://specialeke.com/sitemap.xml
