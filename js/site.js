@@ -289,7 +289,7 @@
       },
       image: pageImage,
       description: organizationDescription,
-      email: 'specialeke.professional@gmail.com',
+      email: 'atypique.professional@gmail.com',
       sameAs: [
         'https://www.instagram.com/specialeke.enterprise/',
         'https://www.linkedin.com/company/specialeke-enterprise/'
@@ -299,7 +299,7 @@
         {
           '@type': 'ContactPoint',
           contactType: 'sales',
-          email: 'specialeke.professional@gmail.com',
+          email: 'atypique.professional@gmail.com',
           availableLanguage: getSupportedLocales()
         }
       ],
@@ -445,7 +445,7 @@
         '@type': 'ContactPoint',
         '@id': pageUrl + '#contact-point',
         contactType: 'sales',
-        email: 'specialeke.professional@gmail.com',
+        email: 'atypique.professional@gmail.com',
         availableLanguage: getSupportedLocales()
       });
     }
@@ -997,7 +997,7 @@
         })
         .catch(function () {
           setStatus(
-            translate('contact.form.error', 'Something went wrong. Email us directly at specialeke.professional@gmail.com.'),
+            translate('contact.form.error', 'Something went wrong. Email us directly at atypique.professional@gmail.com.'),
             'error'
           );
         })

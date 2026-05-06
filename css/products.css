@@ -103,6 +103,17 @@
   letter-spacing: 0.12em;
 }
 
+.case-study-logo {
+  width: min(140px, 62%);
+  height: auto;
+  margin: 1.25rem 0 1rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.7rem;
+  border: 1px solid rgba(244, 238, 255, 0.18);
+  object-fit: contain;
+}
+
 .project-url {
   color: var(--text-muted);
   font-size: 0.95rem;

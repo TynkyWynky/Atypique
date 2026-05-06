@@ -86,6 +86,16 @@
   color: var(--text-muted);
 }
 
+.launch-logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.55rem;
+  border: 1px solid rgba(244, 238, 255, 0.14);
+  object-fit: contain;
+}
+
 .case-link {
   color: var(--secondary);
   font-weight: 700;

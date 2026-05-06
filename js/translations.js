@@ -300,7 +300,7 @@ window.SPECIALEKE_I18N = {
           validationEmail: 'Please enter a valid email address.',
           validationMessage: 'Please provide at least 20 characters in your message.',
           success: 'Thanks. Your message was sent successfully.',
-          error: 'Something went wrong. Email us directly at specialeke.professional@gmail.com.'
+          error: 'Something went wrong. Email us directly at atypique.professional@gmail.com.'
         }
       }
     },
@@ -601,7 +601,7 @@ window.SPECIALEKE_I18N = {
           validationEmail: 'Veuillez entrer une adresse e-mail valide.',
           validationMessage: 'Veuillez écrire au moins 20 caractères dans votre message.',
           success: 'Merci. Votre message a bien été envoyé.',
-          error: 'Un problème est survenu. Écrivez-nous directement à specialeke.professional@gmail.com.'
+          error: 'Un problème est survenu. Écrivez-nous directement à atypique.professional@gmail.com.'
         }
       }
     },
@@ -902,7 +902,7 @@ window.SPECIALEKE_I18N = {
           validationEmail: 'Vul een geldig e-mailadres in.',
           validationMessage: 'Voorzie minstens 20 tekens in je bericht.',
           success: 'Bedankt. Je bericht is succesvol verzonden.',
-          error: 'Er liep iets mis. Mail ons rechtstreeks via specialeke.professional@gmail.com.'
+          error: 'Er liep iets mis. Mail ons rechtstreeks via atypique.professional@gmail.com.'
         }
       }
     }
