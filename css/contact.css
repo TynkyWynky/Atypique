@@ -16,6 +16,8 @@
   align-items: flex-start;
 }
 .contact-email {
+  max-width: 100%;
+  overflow-wrap: anywhere;
   font-size: clamp(18px, 1.7vw, 28px);
   padding-bottom: 8px;
   border-bottom: 1px solid var(--ink);

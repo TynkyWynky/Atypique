@@ -82,7 +82,7 @@ try {
       assert.ok(metadata.image.endsWith("/images/SpecialekeLogo.png"));
       assert.ok(
         metadata.schema["@graph"].some(
-          (item) => item.email === "hello@specialeke.com",
+          (item) => item.email === "atypique.professional@gmail.com",
         ),
       );
       const expectedPath = name === "index" ? "/" : `/${name}.html`;
@@ -248,7 +248,7 @@ try {
   await page.locator("#formStatus.error").waitFor();
   assert.ok(
     (await page.locator("#formStatus").innerText()).includes(
-      "hello@specialeke.com",
+      "atypique.professional@gmail.com",
     ),
   );
   assert.ok((await page.locator("#message").inputValue()).length > 20);
@@ -256,7 +256,7 @@ try {
   await page.locator('.navbar [data-locale="fr"]').click();
   assert.ok(
     (await page.locator("#formStatus").innerText()).includes(
-      "hello@specialeke.com",
+      "atypique.professional@gmail.com",
     ),
   );
   await page.locator("#bot-field").evaluate((element) => {

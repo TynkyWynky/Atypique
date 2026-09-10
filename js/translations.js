@@ -391,7 +391,7 @@ window.SPECIALEKE_I18N = {
             "Please provide at least 20 characters in your message.",
           success: "Thanks. Your message was sent successfully.",
           error:
-            "Something went wrong. Email us directly at hello@specialeke.com.",
+            "Something went wrong. Email us directly at atypique.professional@gmail.com.",
         },
       },
       design: {
@@ -877,7 +877,7 @@ window.SPECIALEKE_I18N = {
             "Veuillez écrire au moins 20 caractères dans votre message.",
           success: "Merci. Votre message a bien été envoyé.",
           error:
-            "Un problème est survenu. Écrivez-nous directement à hello@specialeke.com.",
+            "Un problème est survenu. Écrivez-nous directement à atypique.professional@gmail.com.",
         },
       },
       design: {
@@ -1355,7 +1355,7 @@ window.SPECIALEKE_I18N = {
           validationMessage: "Voorzie minstens 20 tekens in je bericht.",
           success: "Bedankt. Je bericht is succesvol verzonden.",
           error:
-            "Er liep iets mis. Mail ons rechtstreeks via hello@specialeke.com.",
+            "Er liep iets mis. Mail ons rechtstreeks via atypique.professional@gmail.com.",
         },
       },
       design: {

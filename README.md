@@ -35,11 +35,11 @@ The browser checks run against `dist/` and cover all five pages in all three lan
 
 ## Contact delivery configuration
 
-The public email address is **hello@specialeke.com**, including mail links, translated error feedback, and structured data.
+The public email address is **atypique.professional@gmail.com**, including mail links, translated error feedback, and structured data.
 
 The contact form still uses **Netlify Forms**, with the existing `contact` form name, `form-name` field, `_subject` field, `bot-field` honeypot, and URL-encoded POST to `/`. No delivery destination is stored in this repository, and existing Netlify notification settings have not been changed.
 
-To route form notifications to the new mailbox, configure and verify `hello@specialeke.com` with the mail provider, then update the contact form's email notification recipient in the site's Netlify settings. Until then, existing configured recipients remain in use. Real email delivery must be checked on the deployed Netlify site; the local server deliberately does not accept submissions.
+The intended contact address is `atypique.professional@gmail.com`. Netlify manages form notification recipients separately from the public email links; existing notification settings remain unchanged. Real email delivery must be checked on the deployed Netlify site; the local server deliberately does not accept submissions.
 
 ## SEO and analytics
 

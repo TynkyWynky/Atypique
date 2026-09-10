@@ -277,7 +277,7 @@
       },
       image: pageImage,
       description: organizationDescription,
-      email: "hello@specialeke.com",
+      email: "atypique.professional@gmail.com",
       sameAs: [
         "https://www.instagram.com/specialeke.enterprise/",
         "https://www.linkedin.com/company/specialeke-enterprise/",
@@ -287,7 +287,7 @@
         {
           "@type": "ContactPoint",
           contactType: "sales",
-          email: "hello@specialeke.com",
+          email: "atypique.professional@gmail.com",
           availableLanguage: getSupportedLocales(),
         },
       ],
@@ -515,7 +515,7 @@
         "@type": "ContactPoint",
         "@id": pageUrl + "#contact-point",
         contactType: "sales",
-        email: "hello@specialeke.com",
+        email: "atypique.professional@gmail.com",
         availableLanguage: getSupportedLocales(),
       });
     }
