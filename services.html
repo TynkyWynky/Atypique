@@ -1,165 +1,598 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQM5PKTY3B"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JQM5PKTY3B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-JQM5PKTY3B');
-  </script>
-  <title data-i18n="services.meta.title">Specialeke Services | Design, Development, Product Support</title>
-  <meta name="description" data-i18n-content="services.meta.description" content="Specialeke services include web development, UX design, mobile experiences and practical growth support." />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="author" content="Specialeke" />
-  <meta name="theme-color" content="#101828" />
-  <link rel="canonical" id="seo-canonical" href="https://specialeke.com/services.html" />
-  <link rel="alternate" hreflang="en" href="https://specialeke.com/services.html" />
-  <link rel="alternate" hreflang="fr" href="https://specialeke.com/services.html?lang=fr" />
-  <link rel="alternate" hreflang="nl" href="https://specialeke.com/services.html?lang=nl" />
-  <link rel="alternate" hreflang="x-default" href="https://specialeke.com/services.html" />
-  <meta property="og:title" data-i18n-content="services.meta.ogTitle" content="Specialeke Services" />
-  <meta property="og:description" data-i18n-content="services.meta.ogDescription" content="Explore practical digital services built for business impact." />
-  <meta property="og:site_name" content="Specialeke" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" id="meta-og-url" content="https://specialeke.com/services.html" />
-  <meta property="og:locale" id="meta-og-locale" content="en_US" />
-  <meta property="og:locale:alternate" content="fr_BE" />
-  <meta property="og:locale:alternate" content="nl_BE" />
-  <meta property="og:image" content="https://specialeke.com/images/Specialeke_logo.png" />
-  <meta property="og:image:alt" content="Specialeke logo" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" data-i18n-content="services.meta.ogTitle" content="Specialeke Services" />
-  <meta name="twitter:description" data-i18n-content="services.meta.ogDescription" content="Explore practical digital services built for business impact." />
-  <meta name="twitter:image" content="https://specialeke.com/images/Specialeke_logo.png" />
-  <meta name="twitter:image:alt" content="Specialeke logo" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/services.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" type="image/png" href="images/Specialeke_logo.png" />
-</head>
-<body class="services-page" data-analytics-domain="specialeke.com">
-  <a class="skip-link" href="#main-content" data-i18n="shared.skipLink">Skip to content</a>
-
-  <nav class="navbar" data-i18n-aria-label="shared.nav.ariaLabel" aria-label="Main navigation">
-    <a href="index.html" class="logo" data-i18n-aria-label="shared.nav.logoAria" aria-label="Specialeke home">Specialeke</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" data-i18n="shared.nav.home">Home</a></li>
-      <li><a href="about.html" data-i18n="shared.nav.about">About Us</a></li>
-      <li><a href="services.html" class="active" aria-current="page" data-i18n="shared.nav.services">Services</a></li>
-      <li><a href="products.html" data-i18n="shared.nav.work">Work</a></li>
-      <li><a href="contact.html" data-i18n="shared.nav.contact">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <label class="sr-only" for="languageSelect" data-i18n="shared.language.label">Language</label>
-      <select id="languageSelect" class="language-select" data-i18n-aria-label="shared.language.selectAria" aria-label="Choose language">
-        <option value="en">English</option>
-        <option value="fr">Français</option>
-        <option value="nl">Nederlands</option>
-      </select>
-      <button class="hamburger" type="button" data-i18n-aria-label="shared.nav.toggleAria" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </div>
-  </nav>
-
-  <main id="main-content">
-    <section class="page-header animate-fade-in">
-      <span class="badge" data-i18n="services.header.badge">Services</span>
-      <h1 data-i18n="services.header.title">From idea to launch, with zero guesswork.</h1>
-      <p data-i18n="services.header.description">We provide targeted digital services that improve execution speed and customer experience.</p>
-    </section>
-
-    <section class="services-grid section">
-      <article class="service-card animate-up">
-        <i class="fas fa-code"></i>
-        <h3 data-i18n="services.cards.webTitle">Web Development</h3>
-        <p data-i18n="services.cards.webBody">High-performing websites and business platforms that stay maintainable after launch.</p>
-      </article>
-      <article class="service-card animate-up delay-1">
-        <i class="fas fa-palette"></i>
-        <h3 data-i18n="services.cards.uxTitle">UI/UX Design</h3>
-        <p data-i18n="services.cards.uxBody">Clear interfaces and interaction flows tailored to your users and business model.</p>
-      </article>
-      <article class="service-card animate-up delay-2">
-        <i class="fas fa-mobile-screen-button"></i>
-        <h3 data-i18n="services.cards.interfacesTitle">Product Interfaces</h3>
-        <p data-i18n="services.cards.interfacesBody">Cross-device design systems and front-end experiences with strong usability.</p>
-      </article>
-      <article class="service-card animate-up">
-        <i class="fas fa-magnifying-glass-chart"></i>
-        <h3 data-i18n="services.cards.growthTitle">Growth Support</h3>
-        <p data-i18n="services.cards.growthBody">SEO-ready structure, conversion-oriented pages and practical optimization loops.</p>
-      </article>
-    </section>
-
-    <section class="site-slider animate-fade-in delay-1 section">
-      <h2 data-i18n="services.launches.title">Recent Website Launches</h2>
-      <p data-i18n="services.launches.description">Live examples of public-facing websites designed and developed by Specialeke.</p>
-      <div class="case-grid">
-        <article class="case-card animate-up">
-          <span class="badge" data-i18n="services.launches.eventiumBadge">Live Website</span>
-          <h3>Eventium</h3>
-          <p data-i18n="services.launches.eventiumBody">Event discovery platform for local concerts and happenings, designed to feel playful, fast and easy to browse.</p>
-          <a href="https://www.eventium.be/" class="case-link" target="_blank" rel="noopener noreferrer" data-i18n="services.launches.eventiumLink">Visit eventium.be</a>
-        </article>
-        <article class="case-card animate-up delay-1">
-          <span class="badge" data-i18n="services.launches.chiroBadge">Community Website</span>
-          <img src="images/Chirologo_700px.png" alt="Chiro Negenmanneke logo" class="launch-logo" width="88" height="88" loading="lazy" decoding="async" />
-          <h3>Chiro Negenmanneke</h3>
-          <p data-i18n="services.launches.chiroBody">Clear information hub for parents, members and volunteers with practical pages for registration, activities and contact.</p>
-          <a href="https://www.chironegenmanneke.be/" class="case-link" target="_blank" rel="noopener noreferrer" data-i18n="services.launches.chiroLink">Visit chironegenmanneke.be</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="call-to-action animate-fade-in delay-2">
-      <h2 data-i18n="services.cta.title">Need a quote or roadmap for your project?</h2>
-      <p data-i18n="services.cta.description">Share your goals and constraints. We answer with practical next steps.</p>
-      <p><a href="contact.html" class="cta-btn" data-i18n="services.cta.button">Get in Touch</a></p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="images/Specialeke_logo.png" data-i18n-alt="shared.footer.logoAlt" alt="Specialeke logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
-      </div>
-      <div class="footer-nav">
-        <h3 data-i18n="shared.footer.quickLinks">Quick Links</h3>
-        <ul>
-          <li><a href="index.html" data-i18n="shared.nav.home">Home</a></li>
-          <li><a href="about.html" data-i18n="shared.nav.about">About Us</a></li>
-          <li><a href="services.html" data-i18n="shared.nav.services">Services</a></li>
-          <li><a href="products.html" data-i18n="shared.nav.work">Work</a></li>
-          <li><a href="contact.html" data-i18n="shared.nav.contact">Contact</a></li>
+      gtag("config", "G-JQM5PKTY3B");
+    </script>
+    <title data-i18n="services.meta.title">
+      Specialeke Services | Design, Development, Product Support
+    </title>
+    <meta
+      name="description"
+      data-i18n-content="services.meta.description"
+      content="A new idea, an existing product, or a website that needs to feel more like you. We bring structure, design, and development together."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="author" content="Specialeke" />
+    <meta name="theme-color" content="#F4F1EC" />
+    <link
+      rel="canonical"
+      id="seo-canonical"
+      href="https://specialeke.com/services.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://specialeke.com/services.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="fr"
+      href="https://specialeke.com/services.html?lang=fr"
+    />
+    <link
+      rel="alternate"
+      hreflang="nl"
+      href="https://specialeke.com/services.html?lang=nl"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://specialeke.com/services.html"
+    />
+    <meta
+      property="og:title"
+      data-i18n-content="services.meta.ogTitle"
+      content="Specialeke Services"
+    />
+    <meta
+      property="og:description"
+      data-i18n-content="services.meta.ogDescription"
+      content="A new idea, an existing product, or a website that needs to feel more like you. We bring structure, design, and development together."
+    />
+    <meta property="og:site_name" content="Specialeke" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      id="meta-og-url"
+      content="https://specialeke.com/services.html"
+    />
+    <meta property="og:locale" id="meta-og-locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_BE" />
+    <meta property="og:locale:alternate" content="nl_BE" />
+    <meta
+      property="og:image"
+      content="https://specialeke.com/images/SpecialekeLogo.png"
+    />
+    <meta property="og:image:alt" content="Specialeke logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      data-i18n-content="services.meta.ogTitle"
+      content="Specialeke Services"
+    />
+    <meta
+      name="twitter:description"
+      data-i18n-content="services.meta.ogDescription"
+      content="A new idea, an existing product, or a website that needs to feel more like you. We bring structure, design, and development together."
+    />
+    <meta
+      name="twitter:image"
+      content="https://specialeke.com/images/SpecialekeLogo.png"
+    />
+    <meta name="twitter:image:alt" content="Specialeke logo" />
+    <link
+      rel="preload"
+      href="images/SpecialekeLogo.png"
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="fonts/bricolage-grotesque-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/instrument-sans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  </head>
+  <body class="services-page" data-analytics-domain="specialeke.com">
+    <a class="skip-link" href="#main-content" data-i18n="shared.skipLink"
+      >Skip to content</a
+    >
+    <header class="site-header" id="top">
+      <nav
+        class="navbar wrap"
+        data-i18n-aria-label="shared.nav.ariaLabel"
+        aria-label="Main navigation"
+      >
+        <a
+          href="index.html"
+          class="logo"
+          data-i18n-aria-label="shared.nav.logoAria"
+          aria-label="Specialeke home"
+          ><span class="wordmark"
+            ><img
+              src="images/SpecialekeLogo.png"
+              alt="specialeke."
+              width="2172"
+              height="724"
+              decoding="async" /></span
+        ></a>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="products.html"
+              ><span data-i18n="shared.nav.work">Work</span></a
+            >
+          </li>
+          <li>
+            <a href="about.html"
+              ><span data-i18n="shared.nav.about">Studio</span></a
+            >
+          </li>
+          <li>
+            <a href="services.html" aria-current="page"
+              ><span data-i18n="shared.nav.services">Services</span></a
+            >
+          </li>
+          <li>
+            <a href="contact.html"
+              ><span data-i18n="shared.nav.contact">Contact</span></a
+            >
+          </li>
         </ul>
-      </div>
-      <div class="footer-contact">
-        <h3 data-i18n="shared.footer.contactUs">Contact Us</h3>
-        <p><span data-i18n="shared.footer.emailLabel">Email:</span> <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
-        <div class="socials">
-          <a href="https://www.instagram.com/specialeke.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" data-i18n-aria-label="shared.social.instagramAria" aria-label="Specialeke on Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/specialeke-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" data-i18n-aria-label="shared.social.linkedinAria" aria-label="Specialeke on LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <div class="nav-actions">
+          <div
+            class="language-links"
+            role="group"
+            data-i18n-aria-label="shared.language.selectAria"
+            aria-label="Choose language"
+          >
+            <a
+              href="?lang=fr"
+              lang="fr"
+              hreflang="fr"
+              data-locale="fr"
+              aria-label="Français"
+              >FR</a
+            ><span aria-hidden="true">/</span
+            ><a
+              href="?lang=nl"
+              lang="nl"
+              hreflang="nl"
+              data-locale="nl"
+              aria-label="Nederlands"
+              >NL</a
+            ><span aria-hidden="true">/</span
+            ><a
+              href="?lang=en"
+              lang="en"
+              hreflang="en"
+              data-locale="en"
+              aria-label="English"
+              aria-current="true"
+              >EN</a
+            >
+          </div>
+          <button
+            class="hamburger"
+            type="button"
+            data-i18n-aria-label="shared.nav.toggleAria"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navLinks"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="page-hero wrap">
+        <div class="section-label">
+          <span data-i18n="design.servicesLabel">What we do</span
+          ><span>03 / SPECIALEKE</span>
+        </div>
+        <h1
+          data-i18n="design.servicesHeading"
+          class="page-title preserve-lines"
+        >
+          FROM “WHAT IF” TO WHAT’S NEXT.
+        </h1>
+        <div class="page-hero-bottom">
+          <span class="hero-arrow" aria-hidden="true">↙</span>
+          <p data-i18n="design.servicesIntro">
+            A new idea, an existing product, or a website that needs to feel
+            more like you. We bring structure, design, and development together.
+          </p>
+        </div>
+      </section>
+      <section class="services-detail wrap" aria-label="Services">
+        <div class="service-rows">
+          <article class="service-row service-row-full" id="websites">
+            <span class="mono service-number">01</span>
+            <h2><span data-i18n="design.websites">Websites</span></h2>
+            <p data-i18n="design.websitesBody">
+              Distinctive websites that make your offer clear and give people a
+              reason to stay. Fast, accessible, and made to work on every
+              screen.
+            </p>
+            <span class="service-dot" aria-hidden="true"></span>
+          </article>
+          <article class="service-row service-row-full" id="products">
+            <span class="mono service-number">02</span>
+            <h2><span data-i18n="design.products">Digital products</span></h2>
+            <p data-i18n="design.productsBody">
+              Web applications, SaaS products, and useful tools. We turn complex
+              requirements into interfaces that feel simple to use.
+            </p>
+            <span class="service-dot" aria-hidden="true"></span>
+          </article>
+          <article class="service-row service-row-full" id="ux">
+            <span class="mono service-number">03</span>
+            <h2><span data-i18n="design.ux">UX / UI design</span></h2>
+            <p data-i18n="design.uxBody">
+              User journeys, wireframes, and visual systems. We work through the
+              structure and the small details that make an experience feel
+              right.
+            </p>
+            <span class="service-dot" aria-hidden="true"></span>
+          </article>
+          <article class="service-row service-row-full" id="development">
+            <span class="mono service-number">04</span>
+            <h2><span data-i18n="design.development">Development</span></h2>
+            <p data-i18n="design.developmentBody">
+              Responsive frontend experiences and custom development.
+              Maintainable code, considered interactions, and a practical
+              handover.
+            </p>
+            <span class="service-dot" aria-hidden="true"></span>
+          </article>
+        </div>
+      </section>
+      <section class="growth-section wrap section-space">
+        <h2 data-i18n="design.growthTitle" class="display-heading">
+          And after launch?
+        </h2>
+        <div>
+          <p data-i18n="design.growthBody" class="body-large">
+            A good launch is a beginning. We also help with SEO structure,
+            content improvements, and practical refinements as your product
+            grows.
+          </p>
+          <a class="text-link" href="contact.html"
+            ><span data-i18n="design.start">Start a project</span
+            ><span class="arrow" aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="process-section wrap section-space">
+        <div class="section-heading">
+          <p class="section-label">
+            <span data-i18n="design.processLabel">How we work</span
+            ><span>04</span>
+          </p>
+          <div class="section-heading-main">
+            <h2
+              data-i18n="design.processTitle"
+              class="display-heading preserve-lines"
+            >
+              From the first “what if” to the final full stop.
+            </h2>
+          </div>
+        </div>
+        <ol class="process-list">
+          <li>
+            <span class="mono">01</span>
+            <h3 data-i18n="home.process.stepOneTitle">Clarify</h3>
+            <p data-i18n="home.process.stepOneBody">
+              We define the audience, the offer, and the most important user
+              journeys first.
+            </p>
+          </li>
+          <li>
+            <span class="mono">02</span>
+            <h3 data-i18n="home.process.stepTwoTitle">Shape</h3>
+            <p data-i18n="home.process.stepTwoBody">
+              We turn the direction into interface structure, layout, and a
+              stronger visual system.
+            </p>
+          </li>
+          <li>
+            <span class="mono">03</span>
+            <h3 data-i18n="home.process.stepThreeTitle">Build</h3>
+            <p data-i18n="home.process.stepThreeBody">
+              We ship a polished front-end experience that is responsive,
+              usable, and ready to launch.
+            </p>
+          </li>
+        </ol>
+      </section>
+      <section class="related-work wrap section-space">
+        <div class="section-heading">
+          <p class="section-label">
+            <span data-i18n="design.selected">Selected work</span
+            ><span>01</span>
+          </p>
+          <div class="section-heading-main">
+            <h2
+              data-i18n="design.workTitle"
+              class="display-heading preserve-lines"
+            >
+              Made with purpose. And personality.
+            </h2>
+            <a class="text-link" href="products.html"
+              ><span data-i18n="design.allWork">Explore the work</span
+              ><span class="arrow" aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+        <article class="project">
+          <a
+            href="products.html#eventium"
+            class="project-image-link"
+            data-i18n-aria-label="home.selected.eventiumAria"
+            aria-label="Open the Eventium case study"
+            ><div class="project-visual eventium-visual">
+              <img
+                src="images/work/eventium.jpg"
+                data-i18n-alt="design.eventiumAlt"
+                alt="Eventium website showing event search and local event discovery"
+                width="1440"
+                height="1040"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="project-hover"
+              ><span data-i18n="design.view">View case study</span
+              ><span class="arrow" aria-hidden="true">↗</span></span
+            ></a
+          >
+          <div class="project-caption">
+            <span class="project-number mono">01</span>
+            <div>
+              <h3><a href="products.html#eventium">Eventium</a></h3>
+              <p data-i18n="design.eventiumType">Event discovery platform</p>
+            </div>
+            <span class="mono project-scope"
+              ><span data-i18n="design.disciplines"
+                >UX/UI · Design · Development</span
+              ></span
+            ><a
+              class="project-go"
+              href="products.html#eventium"
+              data-i18n-aria-label="home.selected.eventiumAria"
+              aria-label="Open the Eventium case study"
+              ><span class="arrow" aria-hidden="true">↗</span></a
+            >
+          </div>
+        </article>
+        <article class="project project-offset">
+          <a
+            href="products.html#chiro-negenmanneke"
+            class="project-image-link"
+            data-i18n-aria-label="home.selected.chiroAria"
+            aria-label="Open the Chiro Negenmanneke case study"
+            ><div class="project-visual chiro-visual">
+              <img
+                src="images/work/chiro.jpg"
+                data-i18n-alt="design.chiroAlt"
+                alt="Chiro Negenmanneke website with its welcome page and youth group information"
+                width="1440"
+                height="1040"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="project-hover"
+              ><span data-i18n="design.view">View case study</span
+              ><span class="arrow" aria-hidden="true">↗</span></span
+            ></a
+          >
+          <div class="project-caption">
+            <span class="project-number mono">02</span>
+            <div>
+              <h3>
+                <a href="products.html#chiro-negenmanneke"
+                  >Chiro Negenmanneke</a
+                >
+              </h3>
+              <p data-i18n="design.chiroType">A digital home for a community</p>
+            </div>
+            <span class="mono project-scope"
+              ><span data-i18n="design.disciplines"
+                >UX/UI · Design · Development</span
+              ></span
+            ><a
+              class="project-go"
+              href="products.html#chiro-negenmanneke"
+              data-i18n-aria-label="home.selected.chiroAria"
+              aria-label="Open the Chiro Negenmanneke case study"
+              ><span class="arrow" aria-hidden="true">↗</span></a
+            >
+          </div>
+        </article>
+        <article class="project">
+          <a
+            href="products.html#au-fil-du-sport"
+            class="project-image-link"
+            data-i18n-aria-label="home.selected.aufilAria"
+            aria-label="Open the Au Fil du Sport case study"
+            ><div class="project-visual aufil-visual">
+              <img
+                src="images/work/au-fil-du-sport.jpg"
+                data-i18n-alt="design.aufilAlt"
+                alt="Au Fil du Sport homepage with its sportswear introduction and a basketball team wearing personalised jerseys"
+                width="1440"
+                height="1040"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="project-hover"
+              ><span data-i18n="design.view">View case study</span
+              ><span class="arrow" aria-hidden="true">↗</span></span
+            ></a
+          >
+          <div class="project-caption">
+            <span class="project-number mono">03</span>
+            <div>
+              <h3>
+                <a href="products.html#au-fil-du-sport">Au Fil du Sport</a>
+              </h3>
+              <p data-i18n="design.aufilType">
+                Sportswear &amp; textile personalisation
+              </p>
+            </div>
+            <span class="mono project-scope"
+              ><span data-i18n="design.aufilRole"
+                >Website design · Development</span
+              ></span
+            ><a
+              class="project-go"
+              href="products.html#au-fil-du-sport"
+              data-i18n-aria-label="home.selected.aufilAria"
+              aria-label="Open the Au Fil du Sport case study"
+              ><span class="arrow" aria-hidden="true">↗</span></a
+            >
+          </div>
+        </article>
+      </section>
+      <section class="contact-band">
+        <div class="wrap">
+          <div class="section-label">
+            <span class="brand-dot" aria-hidden="true"></span
+            ><span data-i18n="design.studio">Independent digital studio</span>
+          </div>
+          <h2>
+            <span data-i18n="design.contactLineOne">SOMETHING</span><br /><span
+              data-i18n="design.contactLineTwo"
+              >SPECIAL IN MIND?</span
+            >
+          </h2>
+          <div class="contact-band-bottom">
+            <a class="talk-link" href="contact.html"
+              ><span data-i18n="design.talk">Let’s talk.</span
+              ><span class="brand-dot" aria-hidden="true"></span
+              ><span class="arrow" aria-hidden="true">↗</span></a
+            >
+            <div>
+              <p data-i18n="design.contactNote" class="preserve-lines">
+                An idea, a question, a half-written brief. It starts with a
+                conversation.
+              </p>
+              <a class="email-link" href="mailto:hello@specialeke.com"
+                >hello@specialeke.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer wrap">
+      <div class="footer-top">
+        <a
+          class="logo"
+          href="index.html"
+          data-i18n-aria-label="shared.nav.logoAria"
+          aria-label="Specialeke home"
+          ><span class="wordmark"
+            ><img
+              src="images/SpecialekeLogo.png"
+              alt="specialeke."
+              width="2172"
+              height="724"
+              decoding="async" /></span
+        ></a>
+        <p class="mono">
+          <span data-i18n="design.location">Brussels, Belgium</span><br /><span
+            data-i18n="design.worldwide"
+            >Working everywhere.</span
+          >
+        </p>
+        <div class="social-links">
+          <a
+            href="https://www.instagram.com/specialeke.enterprise/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram <span class="arrow" aria-hidden="true">↗</span></a
+          ><a
+            href="https://www.linkedin.com/company/specialeke-enterprise/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn <span class="arrow" aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div
+          class="language-links"
+          role="group"
+          data-i18n-aria-label="shared.language.selectAria"
+          aria-label="Choose language"
+        >
+          <a
+            href="?lang=fr"
+            lang="fr"
+            hreflang="fr"
+            data-locale="fr"
+            aria-label="Français"
+            >FR</a
+          ><span aria-hidden="true">/</span
+          ><a
+            href="?lang=nl"
+            lang="nl"
+            hreflang="nl"
+            data-locale="nl"
+            aria-label="Nederlands"
+            >NL</a
+          ><span aria-hidden="true">/</span
+          ><a
+            href="?lang=en"
+            lang="en"
+            hreflang="en"
+            data-locale="en"
+            aria-label="English"
+            aria-current="true"
+            >EN</a
+          >
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="currentYear"></span> <span data-i18n="shared.footer.rights">Specialeke | All Rights Reserved</span></p>
-    </div>
-  </footer>
-
-  <script src="js/translations.js" defer></script>
-  <script src="js/site.js" defer></script>
-</body>
+      <div class="footer-bottom">
+        <p class="mono">© <span id="currentYear">2026</span> Specialeke</p>
+        <a class="back-top mono" href="#top"
+          ><span data-i18n="design.backTop">Back to top</span
+          ><span aria-hidden="true">↑</span
+          ><span class="brand-dot" aria-hidden="true"></span
+        ></a>
+      </div>
+    </footer>
+    <script src="js/translations.js" defer></script>
+    <script src="js/site.js" defer></script>
+  </body>
 </html>
-
-

@@ -1,52 +1,32 @@
 (function () {
-  var STORAGE_KEY = 'specialeke-locale';
-  var SITE_ORIGIN = 'https://specialeke.com';
-  var DEFAULT_SOCIAL_IMAGE = SITE_ORIGIN + '/images/Specialeke_logo.png';
+  var STORAGE_KEY = "specialeke-locale";
+  var SITE_ORIGIN = "https://specialeke.com";
+  var DEFAULT_SOCIAL_IMAGE = SITE_ORIGIN + "/images/SpecialekeLogo.png";
   var OG_LOCALE_MAP = {
-    en: 'en_US',
-    fr: 'fr_BE',
-    nl: 'nl_BE'
+    en: "en_US",
+    fr: "fr_BE",
+    nl: "nl_BE",
   };
   var i18nApi = null;
-  var reducedMotionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
-
-  function prefersReducedMotion() {
-    return !!(reducedMotionQuery && reducedMotionQuery.matches);
-  }
-
-  function canUseScrollReveal() {
-    return !prefersReducedMotion() && 'IntersectionObserver' in window;
-  }
-
-  function primeMotionState() {
-    if (!document.body) {
-      return;
-    }
-
-    if (canUseScrollReveal()) {
-      document.body.classList.add('motion-ready');
-    } else {
-      document.body.classList.remove('motion-ready');
-    }
-  }
-
-  primeMotionState();
-
   function getI18nConfig() {
     return window.SPECIALEKE_I18N || null;
   }
 
   function getSupportedLocales() {
     var config = getI18nConfig();
-    if (config && Array.isArray(config.supportedLocales) && config.supportedLocales.length) {
+    if (
+      config &&
+      Array.isArray(config.supportedLocales) &&
+      config.supportedLocales.length
+    ) {
       return config.supportedLocales.slice();
     }
-    return ['en'];
+    return ["en"];
   }
 
   function getDefaultLocale() {
     var config = getI18nConfig();
-    return config && config.defaultLocale ? config.defaultLocale : 'en';
+    return config && config.defaultLocale ? config.defaultLocale : "en";
   }
 
   function normalizeLocale(locale) {
@@ -60,7 +40,7 @@
       return normalized;
     }
 
-    var shortLocale = normalized.split('-')[0];
+    var shortLocale = normalized.split("-")[0];
     if (supportedLocales.indexOf(shortLocale) !== -1) {
       return shortLocale;
     }
@@ -69,8 +49,8 @@
   }
 
   function getNestedValue(source, path) {
-    return path.split('.').reduce(function (current, part) {
-      if (!current || typeof current !== 'object') {
+    return path.split(".").reduce(function (current, part) {
+      if (!current || typeof current !== "object") {
         return undefined;
       }
       return current[part];
@@ -84,15 +64,17 @@
     }
 
     var requestedLocale = config.locales[locale];
-    var translation = requestedLocale ? getNestedValue(requestedLocale, key) : undefined;
-    if (typeof translation === 'string') {
+    var translation = requestedLocale
+      ? getNestedValue(requestedLocale, key)
+      : undefined;
+    if (typeof translation === "string") {
       return translation;
     }
 
     var fallbackLocale = getDefaultLocale();
     if (locale !== fallbackLocale && config.locales[fallbackLocale]) {
       translation = getNestedValue(config.locales[fallbackLocale], key);
-      if (typeof translation === 'string') {
+      if (typeof translation === "string") {
         return translation;
       }
     }
@@ -142,7 +124,9 @@
     var queryLocale = null;
 
     try {
-      queryLocale = normalizeLocale(new URLSearchParams(window.location.search).get('lang'));
+      queryLocale = normalizeLocale(
+        new URLSearchParams(window.location.search).get("lang"),
+      );
     } catch (error) {
       queryLocale = null;
     }
@@ -152,52 +136,47 @@
       return queryLocale;
     }
 
-    return normalizeLocale(readStoredLocale()) || detectBrowserLocale() || getDefaultLocale();
+    return (
+      normalizeLocale(readStoredLocale()) ||
+      detectBrowserLocale() ||
+      getDefaultLocale()
+    );
   }
 
   function getCurrentPagePath() {
-    var pathname = window.location.pathname || '/';
-    if (pathname === '/index.html') {
-      return '/';
+    var pathname = window.location.pathname || "/";
+    if (pathname === "/index.html") {
+      return "/";
     }
     return pathname;
   }
 
   function buildLocalizedUrl(locale) {
     var nextLocale = normalizeLocale(locale) || getDefaultLocale();
-    var url = new URL(getCurrentPagePath(), SITE_ORIGIN + '/');
+    var url = new URL(getCurrentPagePath(), SITE_ORIGIN + "/");
 
-    url.search = '';
+    url.search = "";
     if (nextLocale !== getDefaultLocale()) {
-      url.searchParams.set('lang', nextLocale);
+      url.searchParams.set("lang", nextLocale);
     }
 
     return url.toString();
   }
 
   function buildLocalizedHistoryPath(locale) {
-    var nextLocale = normalizeLocale(locale) || getDefaultLocale();
-    var path = getCurrentPagePath();
-
-    if (path === '/index.html') {
-      path = '/';
-    }
-
-    if (nextLocale !== getDefaultLocale()) {
-      return path + '?lang=' + encodeURIComponent(nextLocale);
-    }
-
-    return path;
+    var url = new URL(window.location.href);
+    url.searchParams.set("lang", normalizeLocale(locale) || getDefaultLocale());
+    return url.pathname + url.search + url.hash;
   }
 
   function buildLocalizedPathUrl(path, locale) {
     var nextLocale = normalizeLocale(locale) || getDefaultLocale();
-    var normalizedPath = path === '/index.html' ? '/' : path;
-    var url = new URL(normalizedPath, SITE_ORIGIN + '/');
+    var normalizedPath = path === "/index.html" ? "/" : path;
+    var url = new URL(normalizedPath, SITE_ORIGIN + "/");
 
-    url.search = '';
+    url.search = "";
     if (nextLocale !== getDefaultLocale()) {
-      url.searchParams.set('lang', nextLocale);
+      url.searchParams.set("lang", nextLocale);
     }
 
     return url.toString();
@@ -209,20 +188,20 @@
 
   function getMetaContent(selector) {
     var tag = getMetaTag(selector);
-    return tag ? tag.getAttribute('content') || '' : '';
+    return tag ? tag.getAttribute("content") || "" : "";
   }
 
   function setHref(selector, value) {
     var element = document.querySelector(selector);
     if (element) {
-      element.setAttribute('href', value);
+      element.setAttribute("href", value);
     }
   }
 
   function setContent(selector, value) {
     var element = getMetaTag(selector);
     if (element) {
-      element.setAttribute('content', value);
+      element.setAttribute("content", value);
     }
   }
 
@@ -231,31 +210,35 @@
     var currentLocale = normalizeLocale(locale) || getDefaultLocale();
 
     getSupportedLocales().forEach(function (supportedLocale) {
-      var alternate = document.querySelector('link[rel="alternate"][hreflang="' + supportedLocale + '"]');
+      var alternate = document.querySelector(
+        'link[rel="alternate"][hreflang="' + supportedLocale + '"]',
+      );
       if (alternate) {
-        alternate.setAttribute('href', buildLocalizedUrl(supportedLocale));
+        alternate.setAttribute("href", buildLocalizedUrl(supportedLocale));
       }
     });
 
-    var xDefault = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+    var xDefault = document.querySelector(
+      'link[rel="alternate"][hreflang="x-default"]',
+    );
     if (xDefault) {
-      xDefault.setAttribute('href', defaultUrl);
+      xDefault.setAttribute("href", defaultUrl);
     }
 
-    setHref('#seo-canonical', buildLocalizedUrl(currentLocale));
+    setHref("#seo-canonical", buildLocalizedUrl(currentLocale));
   }
 
   function getTranslationText(locale, key, fallback) {
     var value = getTranslation(locale, key);
-    return typeof value === 'string' ? value : fallback;
+    return typeof value === "string" ? value : fallback;
   }
 
   function buildBreadcrumbItem(position, name, item) {
     return {
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: position,
       name: name,
-      item: item
+      item: item,
     };
   }
 
@@ -264,203 +247,290 @@
     var pageUrl = buildLocalizedUrl(locale);
     var pageName = document.title;
     var pageDescription = getMetaContent('meta[name="description"]');
-    var pageImage = getMetaContent('meta[property="og:image"]') || DEFAULT_SOCIAL_IMAGE;
-    var websiteId = SITE_ORIGIN + '/#website';
-    var organizationId = SITE_ORIGIN + '/#organization';
+    var pageImage =
+      getMetaContent('meta[property="og:image"]') || DEFAULT_SOCIAL_IMAGE;
+    var websiteId = SITE_ORIGIN + "/#website";
+    var organizationId = SITE_ORIGIN + "/#organization";
     var graph = [];
     var organizationDescription = getTranslationText(
       locale,
-      'home.meta.description',
-      'Specialeke is a digital studio building modern web apps, SaaS products, and conversion-focused websites.'
+      "home.meta.description",
+      "Specialeke is a digital studio building modern web apps, SaaS products, and conversion-focused websites.",
     );
-    var pageType = 'WebPage';
+    var pageType = "WebPage";
     var breadcrumbItems = [
-      buildBreadcrumbItem(1, getTranslationText(locale, 'shared.nav.home', 'Home'), buildLocalizedPathUrl('/', locale))
+      buildBreadcrumbItem(
+        1,
+        getTranslationText(locale, "shared.nav.home", "Home"),
+        buildLocalizedPathUrl("/", locale),
+      ),
     ];
 
     graph.push({
-      '@type': 'ProfessionalService',
-      '@id': organizationId,
-      name: 'Specialeke',
-      url: SITE_ORIGIN + '/',
+      "@type": "ProfessionalService",
+      "@id": organizationId,
+      name: "Specialeke",
+      url: SITE_ORIGIN + "/",
       logo: {
-        '@type': 'ImageObject',
-        url: DEFAULT_SOCIAL_IMAGE
+        "@type": "ImageObject",
+        url: DEFAULT_SOCIAL_IMAGE,
       },
       image: pageImage,
       description: organizationDescription,
-      email: 'atypique.professional@gmail.com',
+      email: "hello@specialeke.com",
       sameAs: [
-        'https://www.instagram.com/specialeke.enterprise/',
-        'https://www.linkedin.com/company/specialeke-enterprise/'
+        "https://www.instagram.com/specialeke.enterprise/",
+        "https://www.linkedin.com/company/specialeke-enterprise/",
       ],
-      areaServed: ['BE', 'NL', 'FR', 'EU'],
+      areaServed: ["BE", "NL", "FR", "EU"],
       contactPoint: [
         {
-          '@type': 'ContactPoint',
-          contactType: 'sales',
-          email: 'atypique.professional@gmail.com',
-          availableLanguage: getSupportedLocales()
-        }
+          "@type": "ContactPoint",
+          contactType: "sales",
+          email: "hello@specialeke.com",
+          availableLanguage: getSupportedLocales(),
+        },
       ],
       knowsAbout: [
-        'Web development',
-        'UX design',
-        'UI design',
-        'Front-end development',
-        'SEO-ready website structure',
-        'SaaS product design'
-      ]
+        "Web development",
+        "UX design",
+        "UI design",
+        "Front-end development",
+        "SEO-ready website structure",
+        "SaaS product design",
+      ],
     });
 
     graph.push({
-      '@type': 'WebSite',
-      '@id': websiteId,
-      url: SITE_ORIGIN + '/',
-      name: 'Specialeke',
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: SITE_ORIGIN + "/",
+      name: "Specialeke",
       description: organizationDescription,
       inLanguage: locale,
       publisher: {
-        '@id': organizationId
-      }
+        "@id": organizationId,
+      },
     });
 
-    if (pagePath === '/about.html') {
-      pageType = 'AboutPage';
-      breadcrumbItems.push(buildBreadcrumbItem(2, getTranslationText(locale, 'shared.nav.about', 'About Us'), buildLocalizedPathUrl('/about.html', locale)));
-    } else if (pagePath === '/services.html') {
-      pageType = 'WebPage';
-      breadcrumbItems.push(buildBreadcrumbItem(2, getTranslationText(locale, 'shared.nav.services', 'Services'), buildLocalizedPathUrl('/services.html', locale)));
+    if (pagePath === "/about.html") {
+      pageType = "AboutPage";
+      breadcrumbItems.push(
+        buildBreadcrumbItem(
+          2,
+          getTranslationText(locale, "shared.nav.about", "About Us"),
+          buildLocalizedPathUrl("/about.html", locale),
+        ),
+      );
+    } else if (pagePath === "/services.html") {
+      pageType = "WebPage";
+      breadcrumbItems.push(
+        buildBreadcrumbItem(
+          2,
+          getTranslationText(locale, "shared.nav.services", "Services"),
+          buildLocalizedPathUrl("/services.html", locale),
+        ),
+      );
       graph.push({
-        '@type': 'OfferCatalog',
-        '@id': SITE_ORIGIN + '/services.html#catalog',
-        name: getTranslationText(locale, 'services.header.title', 'From idea to launch, with zero guesswork.'),
+        "@type": "OfferCatalog",
+        "@id": SITE_ORIGIN + "/services.html#catalog",
+        name: getTranslationText(
+          locale,
+          "design.servicesTitle",
+          "From idea to launch, with zero guesswork.",
+        ),
         itemListElement: [
           {
-            '@type': 'Offer',
+            "@type": "Offer",
             itemOffered: {
-              '@type': 'Service',
-              name: getTranslationText(locale, 'services.cards.webTitle', 'Web Development'),
-              description: getTranslationText(locale, 'services.cards.webBody', 'High-performing websites and business platforms that stay maintainable after launch.')
-            }
+              "@type": "Service",
+              name: getTranslationText(
+                locale,
+                "design.websites",
+                "Web Development",
+              ),
+              description: getTranslationText(
+                locale,
+                "design.websitesBody",
+                "High-performing websites and business platforms that stay maintainable after launch.",
+              ),
+            },
           },
           {
-            '@type': 'Offer',
+            "@type": "Offer",
             itemOffered: {
-              '@type': 'Service',
-              name: getTranslationText(locale, 'services.cards.uxTitle', 'UI/UX Design'),
-              description: getTranslationText(locale, 'services.cards.uxBody', 'Clear interfaces and interaction flows tailored to your users and business model.')
-            }
+              "@type": "Service",
+              name: getTranslationText(locale, "design.ux", "UI/UX Design"),
+              description: getTranslationText(
+                locale,
+                "design.uxBody",
+                "Clear interfaces and interaction flows tailored to your users and business model.",
+              ),
+            },
           },
           {
-            '@type': 'Offer',
+            "@type": "Offer",
             itemOffered: {
-              '@type': 'Service',
-              name: getTranslationText(locale, 'services.cards.interfacesTitle', 'Product Interfaces'),
-              description: getTranslationText(locale, 'services.cards.interfacesBody', 'Cross-device design systems and front-end experiences with strong usability.')
-            }
+              "@type": "Service",
+              name: getTranslationText(
+                locale,
+                "design.products",
+                "Product Interfaces",
+              ),
+              description: getTranslationText(
+                locale,
+                "design.productsBody",
+                "Cross-device design systems and front-end experiences with strong usability.",
+              ),
+            },
           },
           {
-            '@type': 'Offer',
+            "@type": "Offer",
             itemOffered: {
-              '@type': 'Service',
-              name: getTranslationText(locale, 'services.cards.growthTitle', 'Growth Support'),
-              description: getTranslationText(locale, 'services.cards.growthBody', 'SEO-ready structure, conversion-oriented pages and practical optimization loops.')
-            }
-          }
-        ]
+              "@type": "Service",
+              name: getTranslationText(
+                locale,
+                "design.development",
+                "Growth Support",
+              ),
+              description: getTranslationText(
+                locale,
+                "design.developmentBody",
+                "SEO-ready structure, conversion-oriented pages and practical optimization loops.",
+              ),
+            },
+          },
+        ],
       });
-    } else if (pagePath === '/products.html') {
-      pageType = 'CollectionPage';
-      breadcrumbItems.push(buildBreadcrumbItem(2, getTranslationText(locale, 'shared.nav.work', 'Work'), buildLocalizedPathUrl('/products.html', locale)));
+    } else if (pagePath === "/products.html") {
+      pageType = "CollectionPage";
+      breadcrumbItems.push(
+        buildBreadcrumbItem(
+          2,
+          getTranslationText(locale, "shared.nav.work", "Work"),
+          buildLocalizedPathUrl("/products.html", locale),
+        ),
+      );
       graph.push({
-        '@type': 'ItemList',
-        '@id': SITE_ORIGIN + '/products.html#portfolio',
-        name: getTranslationText(locale, 'products.header.title', 'Selected projects built for clarity, usability, and momentum.'),
+        "@type": "ItemList",
+        "@id": SITE_ORIGIN + "/products.html#portfolio",
+        name: getTranslationText(
+          locale,
+          "products.header.title",
+          "Selected projects built for clarity, usability, and momentum.",
+        ),
         itemListElement: [
           {
-            '@type': 'ListItem',
+            "@type": "ListItem",
             position: 1,
             item: {
-              '@type': 'CreativeWork',
-              name: 'Eventium',
-              url: SITE_ORIGIN + '/products.html#eventium',
-              description: getTranslationText(locale, 'products.eventium.summary', 'Eventium is a discovery platform that helps people find concerts, nightlife, and local events.')
-            }
+              "@type": "CreativeWork",
+              name: "Eventium",
+              url: SITE_ORIGIN + "/products.html#eventium",
+              description: getTranslationText(
+                locale,
+                "products.eventium.summary",
+                "Eventium is a discovery platform that helps people find concerts, nightlife, and local events.",
+              ),
+            },
           },
           {
-            '@type': 'ListItem',
+            "@type": "ListItem",
             position: 2,
             item: {
-              '@type': 'CreativeWork',
-              name: 'Chiro Negenmanneke',
-              url: SITE_ORIGIN + '/products.html#chiro-negenmanneke',
-              description: getTranslationText(locale, 'products.chiro.summary', 'Chiro Negenmanneke is a community website built to help parents, members, and volunteers quickly access practical information.')
-            }
-          }
-        ]
+              "@type": "CreativeWork",
+              name: "Chiro Negenmanneke",
+              url: SITE_ORIGIN + "/products.html#chiro-negenmanneke",
+              description: getTranslationText(
+                locale,
+                "products.chiro.summary",
+                "Chiro Negenmanneke is a community website built to help parents, members, and volunteers quickly access practical information.",
+              ),
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+              "@type": "CreativeWork",
+              name: "Au Fil du Sport",
+              url: SITE_ORIGIN + "/products.html#au-fil-du-sport",
+              description: getTranslationText(
+                locale,
+                "products.aufil.summary",
+                "A website for a small sportswear and textile personalisation business, with a catalogue and a tailored enquiry form.",
+              ),
+            },
+          },
+        ],
       });
-    } else if (pagePath === '/contact.html') {
-      pageType = 'ContactPage';
-      breadcrumbItems.push(buildBreadcrumbItem(2, getTranslationText(locale, 'shared.nav.contact', 'Contact'), buildLocalizedPathUrl('/contact.html', locale)));
+    } else if (pagePath === "/contact.html") {
+      pageType = "ContactPage";
+      breadcrumbItems.push(
+        buildBreadcrumbItem(
+          2,
+          getTranslationText(locale, "shared.nav.contact", "Contact"),
+          buildLocalizedPathUrl("/contact.html", locale),
+        ),
+      );
     }
 
     var pageNode = {
-      '@type': pageType,
-      '@id': pageUrl + '#webpage',
+      "@type": pageType,
+      "@id": pageUrl + "#webpage",
       url: pageUrl,
       name: pageName,
       description: pageDescription,
       inLanguage: locale,
       isPartOf: {
-        '@id': websiteId
+        "@id": websiteId,
       },
       about: {
-        '@id': organizationId
+        "@id": organizationId,
       },
       primaryImageOfPage: {
-        '@type': 'ImageObject',
-        url: pageImage
-      }
+        "@type": "ImageObject",
+        url: pageImage,
+      },
     };
 
-    if (pagePath !== '/') {
+    if (pagePath !== "/") {
       pageNode.breadcrumb = {
-        '@id': pageUrl + '#breadcrumb'
+        "@id": pageUrl + "#breadcrumb",
       };
     }
 
     graph.push(pageNode);
 
-    if (pagePath !== '/') {
+    if (pagePath !== "/") {
       graph.push({
-        '@type': 'BreadcrumbList',
-        '@id': pageUrl + '#breadcrumb',
-        itemListElement: breadcrumbItems
+        "@type": "BreadcrumbList",
+        "@id": pageUrl + "#breadcrumb",
+        itemListElement: breadcrumbItems,
       });
     }
 
-    if (pagePath === '/contact.html') {
+    if (pagePath === "/contact.html") {
       graph.push({
-        '@type': 'ContactPoint',
-        '@id': pageUrl + '#contact-point',
-        contactType: 'sales',
-        email: 'atypique.professional@gmail.com',
-        availableLanguage: getSupportedLocales()
+        "@type": "ContactPoint",
+        "@id": pageUrl + "#contact-point",
+        contactType: "sales",
+        email: "hello@specialeke.com",
+        availableLanguage: getSupportedLocales(),
       });
     }
 
-    var schemaScript = document.getElementById('dynamic-structured-data');
+    var schemaScript = document.getElementById("dynamic-structured-data");
     if (!schemaScript) {
-      schemaScript = document.createElement('script');
-      schemaScript.type = 'application/ld+json';
-      schemaScript.id = 'dynamic-structured-data';
+      schemaScript = document.createElement("script");
+      schemaScript.type = "application/ld+json";
+      schemaScript.id = "dynamic-structured-data";
       document.head.appendChild(schemaScript);
     }
 
     schemaScript.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@graph': graph
+      "@context": "https://schema.org",
+      "@graph": graph,
     });
   }
 
@@ -468,23 +538,26 @@
     var nextLocale = normalizeLocale(locale) || getDefaultLocale();
 
     updateAlternateLinks(nextLocale);
-    setContent('#meta-og-url', buildLocalizedUrl(nextLocale));
-    setContent('#meta-og-locale', OG_LOCALE_MAP[nextLocale] || OG_LOCALE_MAP.en);
+    setContent("#meta-og-url", buildLocalizedUrl(nextLocale));
+    setContent(
+      "#meta-og-locale",
+      OG_LOCALE_MAP[nextLocale] || OG_LOCALE_MAP.en,
+    );
     updateStructuredData(nextLocale);
   }
 
   function applyTranslatedValue(element, binding, value) {
-    if (binding.mode === 'text') {
+    if (binding.mode === "text") {
       element.textContent = value;
       return;
     }
 
-    if (binding.mode === 'html') {
+    if (binding.mode === "html") {
       element.innerHTML = value;
       return;
     }
 
-    if (binding.mode === 'value') {
+    if (binding.mode === "value") {
       element.value = value;
     }
 
@@ -493,14 +566,44 @@
 
   function applyTranslations(locale) {
     var bindings = [
-      { selector: '[data-i18n]', datasetKey: 'i18n', mode: 'text' },
-      { selector: '[data-i18n-html]', datasetKey: 'i18nHtml', mode: 'html' },
-      { selector: '[data-i18n-placeholder]', datasetKey: 'i18nPlaceholder', mode: 'attribute', attribute: 'placeholder' },
-      { selector: '[data-i18n-aria-label]', datasetKey: 'i18nAriaLabel', mode: 'attribute', attribute: 'aria-label' },
-      { selector: '[data-i18n-content]', datasetKey: 'i18nContent', mode: 'attribute', attribute: 'content' },
-      { selector: '[data-i18n-value]', datasetKey: 'i18nValue', mode: 'value', attribute: 'value' },
-      { selector: '[data-i18n-alt]', datasetKey: 'i18nAlt', mode: 'attribute', attribute: 'alt' },
-      { selector: '[data-i18n-title]', datasetKey: 'i18nTitle', mode: 'attribute', attribute: 'title' }
+      { selector: "[data-i18n]", datasetKey: "i18n", mode: "text" },
+      { selector: "[data-i18n-html]", datasetKey: "i18nHtml", mode: "html" },
+      {
+        selector: "[data-i18n-placeholder]",
+        datasetKey: "i18nPlaceholder",
+        mode: "attribute",
+        attribute: "placeholder",
+      },
+      {
+        selector: "[data-i18n-aria-label]",
+        datasetKey: "i18nAriaLabel",
+        mode: "attribute",
+        attribute: "aria-label",
+      },
+      {
+        selector: "[data-i18n-content]",
+        datasetKey: "i18nContent",
+        mode: "attribute",
+        attribute: "content",
+      },
+      {
+        selector: "[data-i18n-value]",
+        datasetKey: "i18nValue",
+        mode: "value",
+        attribute: "value",
+      },
+      {
+        selector: "[data-i18n-alt]",
+        datasetKey: "i18nAlt",
+        mode: "attribute",
+        attribute: "alt",
+      },
+      {
+        selector: "[data-i18n-title]",
+        datasetKey: "i18nTitle",
+        mode: "attribute",
+        attribute: "title",
+      },
     ];
 
     document.documentElement.lang = locale;
@@ -509,36 +612,58 @@
       document.querySelectorAll(binding.selector).forEach(function (element) {
         var key = element.dataset[binding.datasetKey];
         var translation = getTranslation(locale, key);
-        if (typeof translation === 'string') {
+        if (typeof translation === "string") {
           applyTranslatedValue(element, binding, translation);
         }
       });
     });
 
-    var languageSelect = document.getElementById('languageSelect');
-    if (languageSelect) {
-      languageSelect.value = locale;
-    }
+    document.querySelectorAll("[data-locale]").forEach(function (link) {
+      var targetLocale = link.getAttribute("data-locale");
+      var target = new URL(window.location.href);
+      target.searchParams.set("lang", targetLocale);
+      link.setAttribute("href", target.pathname + target.search + target.hash);
+      if (targetLocale === locale) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    document.querySelectorAll("a[href]").forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (link.hasAttribute("data-locale") || href.charAt(0) === "#") return;
+      var target = new URL(href, window.location.href);
+      if (
+        target.origin === window.location.origin &&
+        /(?:\.html|\/)$/.test(target.pathname)
+      ) {
+        target.searchParams.set("lang", locale);
+        link.setAttribute(
+          "href",
+          target.pathname + target.search + target.hash,
+        );
+      }
+    });
 
     updateSeoSignals(locale);
   }
 
   function translate(key, fallback) {
-    if (!i18nApi || typeof i18nApi.getText !== 'function') {
-      return fallback || '';
+    if (!i18nApi || typeof i18nApi.getText !== "function") {
+      return fallback || "";
     }
 
     var value = i18nApi.getText(key);
-    if (typeof value === 'string') {
+    if (typeof value === "string") {
       return value;
     }
 
-    return fallback || '';
+    return fallback || "";
   }
 
   function setupI18n() {
     var currentLocale = detectPreferredLocale();
-    var languageSelect = document.getElementById('languageSelect');
 
     function setLocale(locale, shouldPersist) {
       var nextLocale = normalizeLocale(locale) || getDefaultLocale();
@@ -547,17 +672,30 @@
         storeLocale(nextLocale);
       }
       applyTranslations(nextLocale);
-      if (window.history && typeof window.history.replaceState === 'function') {
-        window.history.replaceState(null, '', buildLocalizedHistoryPath(nextLocale));
+      if (window.history && typeof window.history.replaceState === "function") {
+        window.history.replaceState(
+          null,
+          "",
+          buildLocalizedHistoryPath(nextLocale),
+        );
       }
       return nextLocale;
     }
 
-    if (languageSelect) {
-      languageSelect.addEventListener('change', function (event) {
-        setLocale(event.target.value);
+    document.querySelectorAll("[data-locale]").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        if (
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey
+        )
+          return;
+        event.preventDefault();
+        setLocale(link.getAttribute("data-locale"));
       });
-    }
+    });
 
     setLocale(currentLocale, false);
 
@@ -570,485 +708,172 @@
       },
       setLocale: function (locale) {
         return setLocale(locale);
-      }
+      },
     };
   }
 
   function setupNavbar() {
-    var navLinks = document.getElementById('navLinks');
-    var hamburger = document.querySelector('.hamburger');
-    var navbar = document.querySelector('.navbar');
-    var navActions = document.querySelector('.nav-actions');
+    var nav = document.getElementById("navLinks");
+    var toggle = document.querySelector(".hamburger");
+    var navbar = document.querySelector(".navbar");
+    if (!nav || !toggle || !navbar) return;
+    document.body.classList.add("nav-ready");
 
-    if (!navLinks || !hamburger || !navbar) {
-      return;
+    function closeMenu(restoreFocus) {
+      nav.classList.remove("active");
+      toggle.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      if (restoreFocus) toggle.focus();
     }
 
-    function closeMenu() {
-      navLinks.classList.remove('active');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      navbar.classList.remove('hidden');
-    }
-
-    function syncNavbarVisibility() {
-      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      var isMenuOpen = navLinks.classList.contains('active');
-
-      if (!isMenuOpen && currentScroll > syncNavbarVisibility.lastScroll && currentScroll > 96) {
-        navbar.classList.add('hidden');
-      } else {
-        navbar.classList.remove('hidden');
-      }
-
-      syncNavbarVisibility.lastScroll = currentScroll <= 0 ? 0 : currentScroll;
-      syncNavbarVisibility.ticking = false;
-    }
-
-    syncNavbarVisibility.lastScroll = 0;
-    syncNavbarVisibility.ticking = false;
-
-    window.toggleMenu = function () {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
-      navbar.classList.remove('hidden');
-    };
-
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeMenu);
+    toggle.addEventListener("click", function () {
+      var open = toggle.getAttribute("aria-expanded") !== "true";
+      nav.classList.toggle("active", open);
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      if (open) nav.querySelector("a").focus();
     });
-
-    document.addEventListener('click', function (event) {
-      if (!navLinks.classList.contains('active')) {
-        return;
-      }
-
-      var clickedInsideMenu =
-        navLinks.contains(event.target) ||
-        hamburger.contains(event.target) ||
-        (navActions && navActions.contains(event.target));
-
-      if (!clickedInsideMenu) {
-        closeMenu();
-      }
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeMenu(false);
+      });
     });
-
-    window.addEventListener('scroll', function () {
-      if (syncNavbarVisibility.ticking) {
-        return;
-      }
-
-      syncNavbarVisibility.ticking = true;
-      window.requestAnimationFrame(syncNavbarVisibility);
-    }, { passive: true });
-
-    window.addEventListener('resize', syncNavbarVisibility);
-    syncNavbarVisibility();
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        toggle.getAttribute("aria-expanded") === "true"
+      )
+        closeMenu(true);
+    });
+    document.addEventListener("click", function (event) {
+      if (!navbar.contains(event.target)) closeMenu(false);
+    });
+    navbar.addEventListener("focusout", function (event) {
+      if (event.relatedTarget && !navbar.contains(event.relatedTarget))
+        closeMenu(false);
+    });
+    window
+      .matchMedia("(min-width: 761px)")
+      .addEventListener("change", function () {
+        closeMenu(false);
+      });
   }
 
   function setupCurrentYear() {
-    var yearEl = document.getElementById('currentYear');
-    if (yearEl) {
-      yearEl.textContent = String(new Date().getFullYear());
-    }
-  }
-
-  function setupAttentionTitle() {
-    var defaultTitle = document.title;
-    var hiddenTitle = 'Reviens Ket !';
-
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) {
-        document.title = hiddenTitle;
-        return;
-      }
-
-      defaultTitle = getTranslationText(
-        i18nApi && typeof i18nApi.getLocale === 'function' ? i18nApi.getLocale() : getDefaultLocale(),
-        'home.meta.title',
-        defaultTitle
-      );
-      document.title = defaultTitle;
-    });
-  }
-
-  function setupRevealAnimations() {
-    var animatedEls = document.querySelectorAll('.animate-up, .animate-fade-in');
-    if (!animatedEls.length) {
-      return;
-    }
-
-    if (!canUseScrollReveal()) {
-      animatedEls.forEach(function (el) {
-        el.classList.add('visible');
-      });
-      return;
-    }
-
-    var observer = new IntersectionObserver(function (entries, currentObserver) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        entry.target.classList.add('visible');
-        currentObserver.unobserve(entry.target);
-      });
-    }, {
-      threshold: 0.14,
-      rootMargin: '0px 0px -10% 0px'
-    });
-
-    animatedEls.forEach(function (el) {
-      var rect = el.getBoundingClientRect();
-      var alreadyInView = rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
-
-      if (alreadyInView) {
-        el.classList.add('visible');
-        return;
-      }
-
-      observer.observe(el);
-    });
-  }
-
-  function setupScrollProgress() {
-    var navbar = document.querySelector('.navbar');
-    if (!navbar || prefersReducedMotion()) {
-      return;
-    }
-
-    var progress = document.createElement('div');
-    var bar = document.createElement('span');
-    var ticking = false;
-
-    progress.className = 'nav-progress';
-    progress.setAttribute('aria-hidden', 'true');
-    bar.className = 'nav-progress-bar';
-    progress.appendChild(bar);
-    navbar.appendChild(progress);
-
-    function updateProgress() {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      var ratio = maxScroll > 0 ? Math.min(scrollTop / maxScroll, 1) : 0;
-      bar.style.transform = 'scaleX(' + ratio + ')';
-      ticking = false;
-    }
-
-    window.addEventListener('scroll', function () {
-      if (ticking) {
-        return;
-      }
-
-      ticking = true;
-      window.requestAnimationFrame(updateProgress);
-    }, { passive: true });
-
-    window.addEventListener('resize', updateProgress);
-    updateProgress();
-  }
-
-  function setupHomepageMotion() {
-    if (!document.body || !document.body.classList.contains('main-page') || prefersReducedMotion()) {
-      return;
-    }
-
-    if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') {
-      return;
-    }
-
-    var hero = document.querySelector('.hero');
-    if (!hero) {
-      return;
-    }
-
-    var gsap = window.gsap;
-    var ScrollTrigger = window.ScrollTrigger;
-    var media = typeof gsap.matchMedia === 'function' ? gsap.matchMedia() : null;
-
-    if (typeof gsap.registerPlugin === 'function') {
-      gsap.registerPlugin(ScrollTrigger);
-    }
-
-    function buildDesktopMotion() {
-      var heroBackground = hero.querySelector('.hero-background');
-      var heroGrid = hero.querySelector('.hero-grid');
-      var heroOrbOne = hero.querySelector('.hero-orb-one');
-      var heroOrbTwo = hero.querySelector('.hero-orb-two');
-      var heroCopy = hero.querySelector('.hero-copy');
-      var heroProof = hero.querySelector('.hero-proof');
-      var heroRevealItems = hero.querySelectorAll('.hero-service-pill, .metric-card');
-      var workCards = document.querySelectorAll('.work-card');
-
-      workCards.forEach(function (card) {
-        card.classList.add('visible');
-      });
-
-      if (heroRevealItems.length) {
-        gsap.from(heroRevealItems, {
-          opacity: 0,
-          y: 22,
-          duration: 0.9,
-          stagger: 0.08,
-          ease: 'power2.out',
-          delay: 0.16,
-          clearProps: 'opacity,transform'
-        });
-      }
-
-      if (heroBackground) {
-        gsap.to(heroBackground, {
-          yPercent: 12,
-          scale: 1.08,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: hero,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 0.8
-          }
-        });
-      }
-
-      if (heroGrid) {
-        gsap.to(heroGrid, {
-          yPercent: 8,
-          opacity: 0.22,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: hero,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1
-          }
-        });
-      }
-
-      if (heroOrbOne) {
-        gsap.to(heroOrbOne, {
-          yPercent: -18,
-          xPercent: 6,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: hero,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1.1
-          }
-        });
-      }
-
-      if (heroOrbTwo) {
-        gsap.to(heroOrbTwo, {
-          yPercent: 16,
-          xPercent: -5,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: hero,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1.15
-          }
-        });
-      }
-
-      if (heroCopy) {
-        gsap.to(heroCopy, {
-          yPercent: -4,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: hero,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 0.8
-          }
-        });
-      }
-
-      if (heroProof) {
-        gsap.to(heroProof, {
-          yPercent: -10,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: hero,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1
-          }
-        });
-      }
-
-      workCards.forEach(function (card, index) {
-        gsap.fromTo(card, {
-          y: index === 0 ? 36 : 58,
-          opacity: index === 0 ? 0.45 : 0.3,
-          scale: index === 0 ? 0.985 : 0.965
-        }, {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 82%',
-            end: 'top 38%',
-            scrub: 0.9
-          }
-        });
-
-        ScrollTrigger.create({
-          trigger: card,
-          start: 'top 62%',
-          end: 'bottom 46%',
-          onToggle: function (state) {
-            card.classList.toggle('is-current', state.isActive);
-          }
-        });
-      });
-
-      ScrollTrigger.refresh();
-
-      return function () {
-        workCards.forEach(function (card) {
-          card.classList.remove('is-current');
-        });
+    var year = document.getElementById("currentYear");
+    if (year) year.textContent = String(new Date().getFullYear());
+    var clock = document.querySelector(".local-time");
+    if (clock) {
+      var updateClock = function () {
+        clock.textContent = new Intl.DateTimeFormat("en-GB", {
+          timeZone: "Europe/Brussels",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        }).format(new Date());
       };
-    }
-
-    if (media) {
-      media.add('(min-width: 981px)', buildDesktopMotion);
-      return;
-    }
-
-    if (window.innerWidth >= 981) {
-      buildDesktopMotion();
+      updateClock();
+      window.setInterval(updateClock, 60000);
     }
   }
 
   function setupContactForm() {
-    var form = document.getElementById('contactForm');
-    if (!form) {
-      return;
+    var form = document.getElementById("contactForm");
+    if (!form) return;
+    var status = document.getElementById("formStatus");
+    var submit = document.getElementById("submitBtn");
+    var fields = [
+      form.elements.name,
+      form.elements.email,
+      form.elements.message,
+    ];
+
+    function setStatus(key, type) {
+      status.textContent = key ? translate(key) : "";
+      status.className = "form-status" + (type ? " " + type : "");
+      if (key) status.setAttribute("data-i18n", key);
+      else status.removeAttribute("data-i18n");
     }
 
-    var statusEl = document.getElementById('formStatus');
-    var submitBtn = document.getElementById('submitBtn');
-    var nameField = form.querySelector('input[name="name"]');
-    var emailField = form.querySelector('input[name="email"]');
-    var messageField = form.querySelector('textarea[name="message"]');
+    fields.forEach(function (field) {
+      field.addEventListener("input", function () {
+        field.removeAttribute("aria-invalid");
+      });
+    });
 
-    function setStatus(message, type) {
-      if (!statusEl) {
-        return;
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      if (submit.disabled || form.elements["bot-field"].value) return;
+      var checks = [
+        fields[0].value.trim().length >= 2 && fields[0].value.length <= 80,
+        /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(fields[1].value.trim()) &&
+          fields[1].value.length <= 120,
+        fields[2].value.trim().length >= 20 && fields[2].value.length <= 3000,
+      ];
+      var keys = ["validationName", "validationEmail", "validationMessage"];
+      fields.forEach(function (field) {
+        field.removeAttribute("aria-invalid");
+      });
+      for (var i = 0; i < checks.length; i += 1) {
+        if (!checks[i]) {
+          fields[i].setAttribute("aria-invalid", "true");
+          setStatus("contact.form." + keys[i], "error");
+          fields[i].focus();
+          return;
+        }
       }
-      statusEl.textContent = message;
-      statusEl.classList.remove('success', 'error');
-      if (type) {
-        statusEl.classList.add(type);
-      }
-    }
-
-    function encode(data) {
-      return Object.keys(data)
-        .map(function (key) {
-          return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
-        })
-        .join('&');
-    }
-
-    function validate() {
-      if (!nameField.value.trim() || nameField.value.trim().length < 2) {
-        setStatus(translate('contact.form.validationName', 'Please enter a valid name (at least 2 characters).'), 'error');
-        nameField.focus();
-        return false;
-      }
-
-      var email = emailField.value.trim();
-      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-      if (!emailPattern.test(email)) {
-        setStatus(translate('contact.form.validationEmail', 'Please enter a valid email address.'), 'error');
-        emailField.focus();
-        return false;
-      }
-
-      if (!messageField.value.trim() || messageField.value.trim().length < 20) {
-        setStatus(translate('contact.form.validationMessage', 'Please provide at least 20 characters in your message.'), 'error');
-        messageField.focus();
-        return false;
-      }
-
-      setStatus('');
-      return true;
-    }
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      if (!validate()) {
-        return;
-      }
-
-      submitBtn.classList.add('is-loading');
-      submitBtn.textContent = translate('contact.form.sending', 'Sending...');
-
-      var formData = new FormData(form);
-      formData.set('form-name', form.getAttribute('name'));
-
-      if (formData.get('bot-field')) {
-        submitBtn.classList.remove('is-loading');
-        submitBtn.textContent = translate('contact.form.submit', 'Send Message');
-        return;
-      }
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode(Object.fromEntries(formData.entries()))
-      })
-        .then(function (res) {
-          if (!res.ok) {
-            throw new Error('Request failed');
-          }
-          form.reset();
-          setStatus(translate('contact.form.success', 'Thanks. Your message was sent successfully.'), 'success');
-        })
-        .catch(function () {
-          setStatus(
-            translate('contact.form.error', 'Something went wrong. Email us directly at atypique.professional@gmail.com.'),
-            'error'
-          );
-        })
-        .finally(function () {
-          submitBtn.classList.remove('is-loading');
-          submitBtn.textContent = translate('contact.form.submit', 'Send Message');
+      setStatus("");
+      submit.disabled = true;
+      submit.setAttribute("data-i18n", "contact.form.sending");
+      submit.textContent = translate("contact.form.sending", "Sending...");
+      form.setAttribute("aria-busy", "true");
+      var data = new FormData(form);
+      data.set("form-name", form.getAttribute("name"));
+      var controller = new AbortController();
+      var timeout = window.setTimeout(function () {
+        controller.abort();
+      }, 15000);
+      try {
+        var response = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(data).toString(),
+          signal: controller.signal,
         });
+        if (!response.ok) throw new Error("Form delivery failed");
+        form.reset();
+        // Reset restores the HTML default; keep the email subject in the chosen language.
+        form.elements._subject.value = translate("contact.form.subject");
+        setStatus("contact.form.success", "success");
+      } catch {
+        setStatus("contact.form.error", "error");
+      } finally {
+        window.clearTimeout(timeout);
+        submit.disabled = false;
+        submit.setAttribute("data-i18n", "contact.form.submit");
+        submit.textContent = translate("contact.form.submit", "Send Message");
+        form.removeAttribute("aria-busy");
+      }
     });
   }
 
   function setupAnalytics() {
-    var domain = document.body.getAttribute('data-analytics-domain');
+    var domain = document.body.getAttribute("data-analytics-domain");
     if (!domain) {
       return;
     }
 
-    var script = document.createElement('script');
+    var script = document.createElement("script");
     script.defer = true;
-    script.setAttribute('data-domain', domain);
-    script.src = 'https://plausible.io/js/script.js';
+    script.setAttribute("data-domain", domain);
+    script.src = "https://plausible.io/js/script.js";
     document.head.appendChild(script);
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    primeMotionState();
+  document.addEventListener("DOMContentLoaded", function () {
     i18nApi = setupI18n();
-    setupAttentionTitle();
     setupNavbar();
     setupCurrentYear();
-    setupRevealAnimations();
-    setupScrollProgress();
-    setupHomepageMotion();
     setupContactForm();
     setupAnalytics();
   });

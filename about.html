@@ -1,155 +1,460 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQM5PKTY3B"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JQM5PKTY3B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-JQM5PKTY3B');
-  </script>
-  <title data-i18n="about.meta.title">About Specialeke | Practical Digital Craft</title>
-  <meta name="description" data-i18n-content="about.meta.description" content="Specialeke combines design clarity and engineering discipline to build practical digital solutions for growing businesses." />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="author" content="Specialeke" />
-  <meta name="theme-color" content="#101828" />
-  <link rel="canonical" id="seo-canonical" href="https://specialeke.com/about.html" />
-  <link rel="alternate" hreflang="en" href="https://specialeke.com/about.html" />
-  <link rel="alternate" hreflang="fr" href="https://specialeke.com/about.html?lang=fr" />
-  <link rel="alternate" hreflang="nl" href="https://specialeke.com/about.html?lang=nl" />
-  <link rel="alternate" hreflang="x-default" href="https://specialeke.com/about.html" />
-  <meta property="og:title" data-i18n-content="about.meta.ogTitle" content="About Specialeke" />
-  <meta property="og:description" data-i18n-content="about.meta.ogDescription" content="Meet the team philosophy behind Specialeke: practical, elegant and business-oriented digital work." />
-  <meta property="og:site_name" content="Specialeke" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" id="meta-og-url" content="https://specialeke.com/about.html" />
-  <meta property="og:locale" id="meta-og-locale" content="en_US" />
-  <meta property="og:locale:alternate" content="fr_BE" />
-  <meta property="og:locale:alternate" content="nl_BE" />
-  <meta property="og:image" content="https://specialeke.com/images/Specialeke_logo.png" />
-  <meta property="og:image:alt" content="Specialeke team at work" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" data-i18n-content="about.meta.ogTitle" content="About Specialeke" />
-  <meta name="twitter:description" data-i18n-content="about.meta.ogDescription" content="Meet the team philosophy behind Specialeke: practical, elegant and business-oriented digital work." />
-  <meta name="twitter:image" content="https://specialeke.com/images/Specialeke_logo.png" />
-  <meta name="twitter:image:alt" content="Specialeke team at work" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/about.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8J1JgYx04ecqIHJ7Q+2O4CXkh7P0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" type="image/png" href="images/Specialeke_logo.png" />
-</head>
-<body class="about-page" data-analytics-domain="specialeke.com">
-  <a class="skip-link" href="#main-content" data-i18n="shared.skipLink">Skip to content</a>
-
-  <nav class="navbar" data-i18n-aria-label="shared.nav.ariaLabel" aria-label="Main navigation">
-    <a href="index.html" class="logo" data-i18n-aria-label="shared.nav.logoAria" aria-label="Specialeke home">Specialeke</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" data-i18n="shared.nav.home">Home</a></li>
-      <li><a href="about.html" class="active" aria-current="page" data-i18n="shared.nav.about">About Us</a></li>
-      <li><a href="services.html" data-i18n="shared.nav.services">Services</a></li>
-      <li><a href="products.html" data-i18n="shared.nav.work">Work</a></li>
-      <li><a href="contact.html" data-i18n="shared.nav.contact">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <label class="sr-only" for="languageSelect" data-i18n="shared.language.label">Language</label>
-      <select id="languageSelect" class="language-select" data-i18n-aria-label="shared.language.selectAria" aria-label="Choose language">
-        <option value="en">English</option>
-        <option value="fr">Français</option>
-        <option value="nl">Nederlands</option>
-      </select>
-      <button class="hamburger" type="button" data-i18n-aria-label="shared.nav.toggleAria" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </div>
-  </nav>
-
-  <main id="main-content">
-    <section class="about-hero animate-fade-in">
-      <span class="badge" data-i18n="about.hero.badge">About Specialeke</span>
-      <h1 data-i18n="about.hero.title">We build with business reality in mind.</h1>
-      <p data-i18n="about.hero.description">Our work focuses on useful outcomes: cleaner workflows, stronger digital presence and products your team can run confidently.</p>
-    </section>
-
-    <section class="about-content section">
-      <div class="about-image animate-up">
-        <img src="images/aboutPic.png" data-i18n-alt="about.content.imageAlt" alt="Specialeke team at work" width="700" height="500" loading="lazy" decoding="async" />
-      </div>
-
-      <div class="about-text animate-fade-in delay-1">
-        <h2 data-i18n="about.content.missionTitle">Our Mission</h2>
-        <p data-i18n="about.content.missionBody">Specialeke helps entrepreneurs and small organizations translate ideas into clear digital products. We prioritize usability, speed and long-term maintainability over short-lived hype.</p>
-
-        <h2 data-i18n="about.content.workTitle">How We Work</h2>
-        <p data-i18n="about.content.workBody">Every project starts with constraints: timeline, budget, priorities and existing tools. Then we design and build around those constraints so the final result fits your daily operations.</p>
-
-        <h2 data-i18n="about.content.differenceTitle">What Makes Us Different</h2>
-        <p data-i18n="about.content.differenceBody">We keep the team compact, communicate directly and deliver in iterative milestones. You always know what is done, what is next and why each decision was made.</p>
-
-        <div class="values-grid">
-          <article class="value-card animate-up">
-            <h3 data-i18n="about.content.clarityTitle">Clarity First</h3>
-            <p data-i18n="about.content.clarityBody">No ambiguity in scope, timeline or deliverables.</p>
-          </article>
-          <article class="value-card animate-up delay-1">
-            <h3 data-i18n="about.content.craftTitle">Craft + Utility</h3>
-            <p data-i18n="about.content.craftBody">Strong visual identity with practical UX decisions.</p>
-          </article>
-          <article class="value-card animate-up delay-2">
-            <h3 data-i18n="about.content.fitTitle">Long-Term Fit</h3>
-            <p data-i18n="about.content.fitBody">Solutions that stay useful as your business grows.</p>
-          </article>
-        </div>
-
-        <p>
-          <a href="contact.html" class="cta-btn" data-i18n="about.content.cta">Discuss Your Project</a>
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="images/Specialeke_logo.png" data-i18n-alt="shared.footer.logoAlt" alt="Specialeke logo" class="footer-logo-img" width="100" height="100" loading="lazy" decoding="async" />
-      </div>
-
-      <div class="footer-nav">
-        <h3 data-i18n="shared.footer.quickLinks">Quick Links</h3>
-        <ul>
-          <li><a href="index.html" data-i18n="shared.nav.home">Home</a></li>
-          <li><a href="about.html" data-i18n="shared.nav.about">About Us</a></li>
-          <li><a href="services.html" data-i18n="shared.nav.services">Services</a></li>
-          <li><a href="products.html" data-i18n="shared.nav.work">Work</a></li>
-          <li><a href="contact.html" data-i18n="shared.nav.contact">Contact</a></li>
+      gtag("config", "G-JQM5PKTY3B");
+    </script>
+    <title data-i18n="about.meta.title">Studio — Specialeke</title>
+    <meta
+      name="description"
+      data-i18n-content="about.meta.description"
+      content="Specialeke is an independent digital studio in Brussels. We work directly with people who care about what they are building. From the first sketch to the final line of code, we keep the thinking clear and the details considered."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="author" content="Specialeke" />
+    <meta name="theme-color" content="#F4F1EC" />
+    <link
+      rel="canonical"
+      id="seo-canonical"
+      href="https://specialeke.com/about.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://specialeke.com/about.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="fr"
+      href="https://specialeke.com/about.html?lang=fr"
+    />
+    <link
+      rel="alternate"
+      hreflang="nl"
+      href="https://specialeke.com/about.html?lang=nl"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://specialeke.com/about.html"
+    />
+    <meta
+      property="og:title"
+      data-i18n-content="about.meta.ogTitle"
+      content="Studio — Specialeke"
+    />
+    <meta
+      property="og:description"
+      data-i18n-content="about.meta.ogDescription"
+      content="Specialeke is an independent digital studio in Brussels. We work directly with people who care about what they are building. From the first sketch to the final line of code, we keep the thinking clear and the details considered."
+    />
+    <meta property="og:site_name" content="Specialeke" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      id="meta-og-url"
+      content="https://specialeke.com/about.html"
+    />
+    <meta property="og:locale" id="meta-og-locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_BE" />
+    <meta property="og:locale:alternate" content="nl_BE" />
+    <meta
+      property="og:image"
+      content="https://specialeke.com/images/SpecialekeLogo.png"
+    />
+    <meta property="og:image:alt" content="Specialeke wordmark" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      data-i18n-content="about.meta.ogTitle"
+      content="Studio — Specialeke"
+    />
+    <meta
+      name="twitter:description"
+      data-i18n-content="about.meta.ogDescription"
+      content="Specialeke is an independent digital studio in Brussels. We work directly with people who care about what they are building. From the first sketch to the final line of code, we keep the thinking clear and the details considered."
+    />
+    <meta
+      name="twitter:image"
+      content="https://specialeke.com/images/SpecialekeLogo.png"
+    />
+    <meta name="twitter:image:alt" content="Specialeke wordmark" />
+    <link
+      rel="preload"
+      href="images/SpecialekeLogo.png"
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="fonts/bricolage-grotesque-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/instrument-sans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  </head>
+  <body class="about-page" data-analytics-domain="specialeke.com">
+    <a class="skip-link" href="#main-content" data-i18n="shared.skipLink"
+      >Skip to content</a
+    >
+    <header class="site-header" id="top">
+      <nav
+        class="navbar wrap"
+        data-i18n-aria-label="shared.nav.ariaLabel"
+        aria-label="Main navigation"
+      >
+        <a
+          href="index.html"
+          class="logo"
+          data-i18n-aria-label="shared.nav.logoAria"
+          aria-label="Specialeke home"
+          ><span class="wordmark"
+            ><img
+              src="images/SpecialekeLogo.png"
+              alt="specialeke."
+              width="2172"
+              height="724"
+              decoding="async" /></span
+        ></a>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="products.html"
+              ><span data-i18n="shared.nav.work">Work</span></a
+            >
+          </li>
+          <li>
+            <a href="about.html" aria-current="page"
+              ><span data-i18n="shared.nav.about">Studio</span></a
+            >
+          </li>
+          <li>
+            <a href="services.html"
+              ><span data-i18n="shared.nav.services">Services</span></a
+            >
+          </li>
+          <li>
+            <a href="contact.html"
+              ><span data-i18n="shared.nav.contact">Contact</span></a
+            >
+          </li>
         </ul>
+        <div class="nav-actions">
+          <div
+            class="language-links"
+            role="group"
+            data-i18n-aria-label="shared.language.selectAria"
+            aria-label="Choose language"
+          >
+            <a
+              href="?lang=fr"
+              lang="fr"
+              hreflang="fr"
+              data-locale="fr"
+              aria-label="Français"
+              >FR</a
+            ><span aria-hidden="true">/</span
+            ><a
+              href="?lang=nl"
+              lang="nl"
+              hreflang="nl"
+              data-locale="nl"
+              aria-label="Nederlands"
+              >NL</a
+            ><span aria-hidden="true">/</span
+            ><a
+              href="?lang=en"
+              lang="en"
+              hreflang="en"
+              data-locale="en"
+              aria-label="English"
+              aria-current="true"
+              >EN</a
+            >
+          </div>
+          <button
+            class="hamburger"
+            type="button"
+            data-i18n-aria-label="shared.nav.toggleAria"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navLinks"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="page-hero wrap">
+        <div class="section-label">
+          <span data-i18n="design.studioLabel">The studio</span
+          ><span>02 / SPECIALEKE</span>
+        </div>
+        <h1 data-i18n="design.studioHeading" class="page-title preserve-lines">
+          A LITTLE DIFFERENT.
+        </h1>
+        <div class="page-hero-bottom">
+          <span class="hero-arrow" aria-hidden="true">↙</span>
+          <p data-i18n="design.studioBody">
+            Specialeke is an independent digital studio in Brussels. We work
+            directly with people who care about what they are building. From the
+            first sketch to the final line of code, we keep the thinking clear
+            and the details considered.
+          </p>
+        </div>
+      </section>
+      <section class="studio-statement wrap section-space">
+        <div class="definition-sheet">
+          <span class="mono"
+            >01 /
+            <span data-i18n="design.studioDefinition">specialeke</span></span
+          >
+          <p class="definition-word">
+            specialeke<span class="brand-dot" aria-hidden="true"></span>
+          </p>
+          <p data-i18n="design.pronunciation" class="mono">
+            [speh-shah-leh-kuh]
+          </p>
+          <p data-i18n="design.definition" class="preserve-lines">
+            A little something special. That’s the idea behind everything we
+            make.
+          </p>
+        </div>
+        <h2 data-i18n="design.studioSub" class="display-heading preserve-lines">
+          In the thinking. In the details. In the way we work.
+        </h2>
+      </section>
+      <div class="studio-principles wrap section-space">
+        <section class="principle-row">
+          <span class="mono">01</span>
+          <h2 data-i18n="about.content.missionTitle">Our Mission</h2>
+          <p data-i18n="about.content.missionBody">
+            Specialeke helps entrepreneurs and small organizations translate
+            ideas into clear digital products. We prioritize usability, speed
+            and long-term maintainability over short-lived hype.
+          </p>
+        </section>
+        <section class="principle-row">
+          <span class="mono">02</span>
+          <h2 data-i18n="about.content.workTitle">How We Work</h2>
+          <p data-i18n="about.content.workBody">
+            Every project starts with constraints: timeline, budget, priorities
+            and existing tools. Then we design and build around those
+            constraints so the final result fits your daily operations.
+          </p>
+        </section>
+        <section class="principle-row">
+          <span class="mono">03</span>
+          <h2 data-i18n="about.content.differenceTitle">
+            What Makes Us Different
+          </h2>
+          <p data-i18n="about.content.differenceBody">
+            We keep the team compact, communicate directly and deliver in
+            iterative milestones. You always know what is done, what is next and
+            why each decision was made.
+          </p>
+        </section>
       </div>
-
-      <div class="footer-contact">
-        <h3 data-i18n="shared.footer.contactUs">Contact Us</h3>
-        <p><span data-i18n="shared.footer.emailLabel">Email:</span> <a href="mailto:atypique.professional@gmail.com">atypique.professional@gmail.com</a></p>
-        <div class="socials">
-          <a href="https://www.instagram.com/specialeke.enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" data-i18n-aria-label="shared.social.instagramAria" aria-label="Specialeke on Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/specialeke-enterprise/" target="_blank" rel="noopener noreferrer" class="social-icon" data-i18n-aria-label="shared.social.linkedinAria" aria-label="Specialeke on LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <section class="values wrap">
+        <h2 class="sr-only" data-i18n="about.content.differenceTitle">
+          What makes us different
+        </h2>
+        <div>
+          <h3 data-i18n="about.content.clarityTitle">Clarity First</h3>
+          <p data-i18n="about.content.clarityBody">
+            No ambiguity in scope, timeline or deliverables.
+          </p>
+        </div>
+        <div>
+          <h3 data-i18n="about.content.craftTitle">Craft + Utility</h3>
+          <p data-i18n="about.content.craftBody">
+            Strong visual identity with practical UX decisions.
+          </p>
+        </div>
+        <div>
+          <h3 data-i18n="about.content.fitTitle">Long-Term Fit</h3>
+          <p data-i18n="about.content.fitBody">
+            Solutions that stay useful as your business grows.
+          </p>
+        </div>
+      </section>
+      <section class="process-section wrap section-space">
+        <div class="section-heading">
+          <p class="section-label">
+            <span data-i18n="design.processLabel">How we work</span
+            ><span>04</span>
+          </p>
+          <div class="section-heading-main">
+            <h2
+              data-i18n="design.processTitle"
+              class="display-heading preserve-lines"
+            >
+              From the first “what if” to the final full stop.
+            </h2>
+          </div>
+        </div>
+        <ol class="process-list">
+          <li>
+            <span class="mono">01</span>
+            <h3 data-i18n="home.process.stepOneTitle">Clarify</h3>
+            <p data-i18n="home.process.stepOneBody">
+              We define the audience, the offer, and the most important user
+              journeys first.
+            </p>
+          </li>
+          <li>
+            <span class="mono">02</span>
+            <h3 data-i18n="home.process.stepTwoTitle">Shape</h3>
+            <p data-i18n="home.process.stepTwoBody">
+              We turn the direction into interface structure, layout, and a
+              stronger visual system.
+            </p>
+          </li>
+          <li>
+            <span class="mono">03</span>
+            <h3 data-i18n="home.process.stepThreeTitle">Build</h3>
+            <p data-i18n="home.process.stepThreeBody">
+              We ship a polished front-end experience that is responsive,
+              usable, and ready to launch.
+            </p>
+          </li>
+        </ol>
+      </section>
+      <section class="contact-band">
+        <div class="wrap">
+          <div class="section-label">
+            <span class="brand-dot" aria-hidden="true"></span
+            ><span data-i18n="design.studio">Independent digital studio</span>
+          </div>
+          <h2>
+            <span data-i18n="design.contactLineOne">SOMETHING</span><br /><span
+              data-i18n="design.contactLineTwo"
+              >SPECIAL IN MIND?</span
+            >
+          </h2>
+          <div class="contact-band-bottom">
+            <a class="talk-link" href="contact.html"
+              ><span data-i18n="design.talk">Let’s talk.</span
+              ><span class="brand-dot" aria-hidden="true"></span
+              ><span class="arrow" aria-hidden="true">↗</span></a
+            >
+            <div>
+              <p data-i18n="design.contactNote" class="preserve-lines">
+                An idea, a question, a half-written brief. It starts with a
+                conversation.
+              </p>
+              <a class="email-link" href="mailto:hello@specialeke.com"
+                >hello@specialeke.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer wrap">
+      <div class="footer-top">
+        <a
+          class="logo"
+          href="index.html"
+          data-i18n-aria-label="shared.nav.logoAria"
+          aria-label="Specialeke home"
+          ><span class="wordmark"
+            ><img
+              src="images/SpecialekeLogo.png"
+              alt="specialeke."
+              width="2172"
+              height="724"
+              decoding="async" /></span
+        ></a>
+        <p class="mono">
+          <span data-i18n="design.location">Brussels, Belgium</span><br /><span
+            data-i18n="design.worldwide"
+            >Working everywhere.</span
+          >
+        </p>
+        <div class="social-links">
+          <a
+            href="https://www.instagram.com/specialeke.enterprise/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram <span class="arrow" aria-hidden="true">↗</span></a
+          ><a
+            href="https://www.linkedin.com/company/specialeke-enterprise/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn <span class="arrow" aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div
+          class="language-links"
+          role="group"
+          data-i18n-aria-label="shared.language.selectAria"
+          aria-label="Choose language"
+        >
+          <a
+            href="?lang=fr"
+            lang="fr"
+            hreflang="fr"
+            data-locale="fr"
+            aria-label="Français"
+            >FR</a
+          ><span aria-hidden="true">/</span
+          ><a
+            href="?lang=nl"
+            lang="nl"
+            hreflang="nl"
+            data-locale="nl"
+            aria-label="Nederlands"
+            >NL</a
+          ><span aria-hidden="true">/</span
+          ><a
+            href="?lang=en"
+            lang="en"
+            hreflang="en"
+            data-locale="en"
+            aria-label="English"
+            aria-current="true"
+            >EN</a
+          >
         </div>
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; <span id="currentYear"></span> <span data-i18n="shared.footer.rights">Specialeke | All Rights Reserved</span></p>
-    </div>
-  </footer>
-
-  <script src="js/translations.js" defer></script>
-  <script src="js/site.js" defer></script>
-</body>
+      <div class="footer-bottom">
+        <p class="mono">© <span id="currentYear">2026</span> Specialeke</p>
+        <a class="back-top mono" href="#top"
+          ><span data-i18n="design.backTop">Back to top</span
+          ><span aria-hidden="true">↑</span
+          ><span class="brand-dot" aria-hidden="true"></span
+        ></a>
+      </div>
+    </footer>
+    <script src="js/translations.js" defer></script>
+    <script src="js/site.js" defer></script>
+  </body>
 </html>
-
-
